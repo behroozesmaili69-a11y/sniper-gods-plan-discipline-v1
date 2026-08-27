@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SNIPER GOD'S PLAN — DISCIPLINE V1</title>
+
+<title>SNIPER GOD'S PLAN V3.6.9</title>
 
 <style>
 *{
@@ -39,6 +40,7 @@ body{
 .logo{
     font-size:27px;
     font-weight:900;
+    letter-spacing:.5px;
 }
 
 .subtitle{
@@ -90,12 +92,6 @@ body{
     border-color:#9c3434;
 }
 
-.badge.gold{
-    color:#f5dc87;
-    border-color:#806724;
-    background:#332a10;
-}
-
 .card{
     background:linear-gradient(145deg,#101725,#0b1019);
     border:1px solid #263247;
@@ -110,6 +106,11 @@ body{
     margin-bottom:7px;
 }
 
+.card h3{
+    font-size:15px;
+    margin-bottom:10px;
+}
+
 .description{
     color:#8995a9;
     font-size:13px;
@@ -122,6 +123,18 @@ body{
     font-weight:800;
     line-height:1.55;
     margin-bottom:18px;
+}
+
+.multiHint{
+    display:inline-block;
+    margin-top:7px;
+    padding:6px 10px;
+    border-radius:7px;
+    background:#10213a;
+    border:1px solid #28558d;
+    color:#9fc5ff;
+    font-size:11px;
+    font-weight:normal;
 }
 
 .options{
@@ -150,11 +163,6 @@ body{
     border-color:#4d91ff;
     background:#12294a;
     box-shadow:0 0 0 1px rgba(77,145,255,.15);
-}
-
-.option.dangerSelected{
-    border-color:#b84b4b;
-    background:#321416;
 }
 
 .option strong{
@@ -191,106 +199,6 @@ body{
 
 .check span{
     line-height:1.5;
-}
-
-.progress{
-    height:6px;
-    background:#111927;
-    border-radius:10px;
-    overflow:hidden;
-    margin:14px 0 20px;
-}
-
-.progress div{
-    height:100%;
-    background:#397fe2;
-    width:0;
-    transition:.3s;
-}
-
-.alert{
-    padding:14px;
-    border-radius:10px;
-    margin:12px 0;
-    line-height:1.7;
-    font-size:13px;
-}
-
-.alert.info{
-    background:#10213a;
-    border:1px solid #28558d;
-    color:#a9cbff;
-}
-
-.alert.warning{
-    background:#332a10;
-    border:1px solid #806724;
-    color:#f2d777;
-}
-
-.alert.danger{
-    background:#321416;
-    border:1px solid #83383d;
-    color:#ff9b9b;
-}
-
-.alert.success{
-    background:#102b1d;
-    border:1px solid #276c46;
-    color:#8de2ae;
-}
-
-.alert.gold{
-    background:#2d2510;
-    border:1px solid #806724;
-    color:#f5dc87;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:12px;
-}
-
-.stat{
-    padding:15px;
-    border-radius:11px;
-    background:#0d1420;
-    border:1px solid #263449;
-}
-
-.stat .label{
-    font-size:11px;
-    color:#77849a;
-}
-
-.stat .value{
-    font-size:23px;
-    font-weight:900;
-    margin-top:6px;
-}
-
-textarea,
-input[type=text],
-input[type=number]{
-    width:100%;
-    background:#0a101a;
-    border:1px solid #2a374c;
-    color:#fff;
-    padding:12px;
-    border-radius:9px;
-    outline:none;
-}
-
-textarea{
-    min-height:90px;
-    resize:vertical;
-}
-
-textarea[readonly]{
-    color:#9fc5ff;
-    border-color:#28558d;
-    background:#0b1524;
 }
 
 button{
@@ -344,31 +252,98 @@ button{
     cursor:not-allowed;
 }
 
-.intentBox{
-    border:1px solid #806724;
-    background:#241e0d;
-    padding:18px;
-    border-radius:12px;
-    margin-top:18px;
+.progress{
+    height:6px;
+    background:#111927;
+    border-radius:10px;
+    overflow:hidden;
+    margin:14px 0 20px;
 }
 
-.intentBox h3{
-    color:#f5dc87;
-    margin-bottom:10px;
+.progress div{
+    height:100%;
+    background:#397fe2;
+    width:0;
+    transition:.3s;
 }
 
-.bigWarning{
-    font-size:18px;
-    font-weight:900;
+.alert{
+    padding:14px;
+    border-radius:10px;
+    margin:12px 0;
     line-height:1.7;
+    font-size:13px;
 }
 
-.timer{
-    text-align:center;
-    font-size:32px;
+.alert.info{
+    background:#10213a;
+    border:1px solid #28558d;
+    color:#a9cbff;
+}
+
+.alert.warning{
+    background:#332a10;
+    border:1px solid #806724;
+    color:#f2d777;
+}
+
+.alert.danger{
+    background:#321416;
+    border:1px solid #83383d;
+    color:#ff9b9b;
+}
+
+.alert.success{
+    background:#102b1d;
+    border:1px solid #276c46;
+    color:#8de2ae;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:12px;
+}
+
+.stat{
+    padding:15px;
+    border-radius:11px;
+    background:#0d1420;
+    border:1px solid #263449;
+}
+
+.stat .label{
+    font-size:11px;
+    color:#77849a;
+}
+
+.stat .value{
+    font-size:23px;
     font-weight:900;
-    margin:15px 0;
-    color:#f5dc87;
+    margin-top:6px;
+}
+
+textarea,
+input[type=text],
+input[type=number]{
+    width:100%;
+    background:#0a101a;
+    border:1px solid #2a374c;
+    color:#fff;
+    padding:12px;
+    border-radius:9px;
+    outline:none;
+}
+
+textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+textarea[readonly]{
+    color:#9fc5ff;
+    border-color:#28558d;
+    background:#0b1524;
 }
 
 .tablewrap{
@@ -378,7 +353,7 @@ button{
 table{
     width:100%;
     border-collapse:collapse;
-    min-width:1100px;
+    min-width:1000px;
 }
 
 th,td{
@@ -429,6 +404,62 @@ summary{
     text-align:left;
 }
 
+.disciplineBox{
+    border:1px solid #806724;
+    background:linear-gradient(145deg,#2a2410,#17140a);
+    border-radius:14px;
+    padding:20px;
+    margin-top:15px;
+}
+
+.disciplineTitle{
+    font-size:22px;
+    font-weight:900;
+    color:#f5dc87;
+    margin-bottom:8px;
+}
+
+.disciplineQuestion{
+    font-size:15px;
+    line-height:1.7;
+    color:#e9edf5;
+}
+
+.pauseBox{
+    text-align:center;
+    padding:25px 15px;
+    border:1px solid #28558d;
+    background:#0b1524;
+    border-radius:14px;
+    margin-top:15px;
+}
+
+.pauseNumber{
+    font-size:58px;
+    font-weight:900;
+    color:#9fc5ff;
+    margin:12px 0;
+}
+
+.pauseText{
+    color:#aab5c8;
+    line-height:1.7;
+}
+
+.authBox{
+    border:1px solid #276c46;
+    background:#102b1d;
+    padding:20px;
+    border-radius:14px;
+    text-align:center;
+}
+
+.authTitle{
+    color:#8de2ae;
+    font-size:22px;
+    font-weight:900;
+}
+
 .footer{
     text-align:center;
     color:#56637a;
@@ -441,9 +472,21 @@ summary{
 }
 
 @media(max-width:600px){
-    .app{padding:10px}
-    .card{padding:16px}
-    .question{font-size:17px}
+    .app{
+        padding:10px;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+    .pauseNumber{
+        font-size:48px;
+    }
 }
 </style>
 </head>
@@ -454,656 +497,1313 @@ summary{
 
 <header class="header">
 
-<div class="logo">🦅 SNIPER GOD'S PLAN</div>
+    <div class="logo">🦅 SNIPER GOD'S PLAN</div>
 
-<div class="subtitle">
-V3.6.9 + V5 — DISCIPLINE PROTOCOL V1
-</div>
+    <div class="subtitle">
+        V3.6.9 — STRUCTURAL SNIPER + V5 SUPER SCALP
+    </div>
 
-<div class="motto">
-Trust the process. It's all just part of the journey and God's plan
-to make you a better and stronger person. Be patient, follow God's plan,
-and don't be scared.
-<br><br>
-<strong>RULE #1 — YOU DO NOT NEED TO TRADE.</strong>
-</div>
+    <div class="motto">
+        Trust the process. It's all just part of the journey and God's plan
+        to make you a better and stronger person. Be patient, follow God's plan,
+        and don't be scared.
+    </div>
 
-<div class="statusbar">
+    <div class="statusbar">
 
-<div id="modeBadge" class="badge">
-MODE: NOT SELECTED
-</div>
+        <div id="modeBadge" class="badge">
+            MODE: NOT SELECTED
+        </div>
 
-<div id="sessionBadge" class="badge">
-SESSION: NOT SELECTED
-</div>
+        <div id="sessionBadge" class="badge">
+            SESSION: NOT SELECTED
+        </div>
 
-<div id="tradeBadge" class="badge">
-TRADES: 0 / 3
-</div>
+        <div id="tradeBadge" class="badge">
+            TRADES: 0 / 3
+        </div>
 
-<div id="riskBadge" class="badge">
-RISK: ACTIVE
-</div>
+        <div id="riskBadge" class="badge">
+            RISK: ACTIVE
+        </div>
 
-<div id="disciplineBadge" class="badge gold">
-DISCIPLINE: LOCKED
-</div>
+        <div id="disciplineBadge" class="badge">
+            DISCIPLINE: READY
+        </div>
 
-</div>
+    </div>
 
 </header>
 
 
-<!-- DAILY PREPARATION -->
+<!-- =====================================================
+     DAILY PREPARATION
+===================================================== -->
 
 <section id="dailyPreparation" class="card">
 
-<h2>🔒 DAILY PREPARATION</h2>
+    <h2>🔒 DAILY PREPARATION</h2>
 
-<div class="description">
-قبل از اینکه بازار را تحلیل کنی، باید وضعیت ذهنی و انضباطی خودت را بررسی کنی.
-هدف این مرحله جلوگیری از شروع معامله از روی هیجان است.
-</div>
+    <div class="description">
+        قبل از شروع سیستم، هر سه مرحله Daily Preparation باید انجام شده باشد.
+        اگر حتی یکی از مراحل کامل نشده باشد، سیستم اجازه ورود به مرحله بعد را نمی‌دهد.
+    </div>
 
-<div class="checklist">
+    <div class="checklist">
 
-<label class="check">
-<input type="checkbox" id="gratitude">
-<span>
-<strong>🙏 Daily Gratitude</strong><br>
-شکرگزاری روزانه را انجام داده‌ام.
-</span>
-</label>
+        <label class="check">
 
-<label class="check">
-<input type="checkbox" id="focus333">
-<span>
-<strong>🧠 3:33 Focus Exercise</strong><br>
-تمرین تمرکز 3:33 را انجام داده‌ام.
-</span>
-</label>
+            <input type="checkbox" id="gratitude">
 
-<label class="check">
-<input type="checkbox" id="meditation">
-<span>
-<strong>🧘 Meditation</strong><br>
-مدیتیشن روزانه را انجام داده‌ام.
-</span>
-</label>
+            <span>
+                <strong>🙏 Daily Gratitude</strong><br>
+                شکرگزاری روزانه را انجام داده‌ام.
+            </span>
 
-</div>
+        </label>
 
-<div id="prepMessage" class="alert warning">
-🔒 Complete all three preparation steps.
-</div>
 
-<button class="btn primary" onclick="completePreparation()">
-CONTINUE →
-</button>
+        <label class="check">
+
+            <input type="checkbox" id="focus333">
+
+            <span>
+                <strong>🧠 3:33 Focus Exercise</strong><br>
+                تمرین تمرکز 3:33 را انجام داده‌ام.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input type="checkbox" id="meditation">
+
+            <span>
+                <strong>🧘 Meditation</strong><br>
+                مدیتیشن روزانه را انجام داده‌ام.
+            </span>
+
+        </label>
+
+    </div>
+
+    <div id="prepMessage" class="alert warning">
+        🔒 Complete all three preparation steps to unlock the system.
+    </div>
+
+    <button class="btn primary" onclick="completePreparation()">
+        CONTINUE →
+    </button>
 
 </section>
 
 
-<!-- SESSION -->
+<!-- =====================================================
+     SESSION
+===================================================== -->
 
 <section id="sessionSection" class="card hidden">
 
-<h2>🌍 SESSION SELECTION</h2>
+    <h2>🌍 SESSION SELECTION</h2>
 
-<div class="description">
-Session فقط Trading Hours و Liquidity Context را مشخص می‌کند.
-Session به‌تنهایی Direction Filter یا Entry Signal نیست.
-</div>
+    <div class="description">
+        Session فقط Trading Hours و Liquidity Context را مشخص می‌کند.
+        Session به‌تنهایی Direction Filter یا Entry Signal نیست.
+    </div>
 
-<div class="options">
+    <div class="options">
 
-<div class="option" onclick="selectSession('London',this)">
-<strong>🇬🇧 LONDON</strong>
-<small>London Trading Hours</small>
-</div>
+        <div class="option" onclick="selectSession('London',this)">
+            <strong>🇬🇧 LONDON</strong>
+            <small>London Trading Hours</small>
+        </div>
 
-<div class="option" onclick="selectSession('New York',this)">
-<strong>🇺🇸 NEW YORK</strong>
-<small>New York Trading Hours</small>
-</div>
+        <div class="option" onclick="selectSession('New York',this)">
+            <strong>🇺🇸 NEW YORK</strong>
+            <small>New York Trading Hours</small>
+        </div>
 
-</div>
+    </div>
 
-<div id="sessionMessage" class="alert info">
-Session فعلی را انتخاب کن.
-</div>
+    <div id="sessionMessage" class="alert info">
+        Session فعلی را انتخاب کن.
+    </div>
 
-<button id="sessionContinue"
-class="btn primary"
-disabled
-onclick="goToMode()">
-CONTINUE →
-</button>
+    <button
+        id="sessionContinue"
+        class="btn primary"
+        disabled
+        onclick="goToMode()">
+
+        CONTINUE →
+
+    </button>
 
 </section>
 
 
-<!-- MODE -->
+<!-- =====================================================
+     MODE
+===================================================== -->
 
 <section id="modeSection" class="card hidden">
 
-<h2>⚔️ SELECT TRADING MODE</h2>
+    <h2>⚔️ SELECT TRADING MODE</h2>
 
-<div class="description">
-موتور معاملاتی موردنظر را انتخاب کن.
-</div>
+    <div class="description">
+        موتور معاملاتی موردنظر را انتخاب کن.
+        V3.6.9 برای Structural Sniper و V5 برای Super Scalp است.
+    </div>
 
-<div class="options">
+    <div class="options">
 
-<div class="option" onclick="selectMode('DAY',this)">
-<strong>🦅 DAY TRADE — V3.6.9</strong>
-<small>
-Context → Structure → Liquidity → Location →
-Confirmation → Execution → Management
-</small>
-</div>
+        <div class="option" onclick="selectMode('DAY',this)">
 
-<div class="option" onclick="selectMode('SCALP',this)">
-<strong>⚡ SUPER SCALP — V5</strong>
-<small>
-Immediate Liquidity → Event → M1 Structure →
-Trigger → Tight SL → Nearby Target
-</small>
-</div>
+            <strong>🦅 DAY TRADE — V3.6.9</strong>
 
-</div>
+            <small>
+                Context → Structure → Liquidity → Location →
+                Confirmation → Execution → Management
+            </small>
 
-<button id="modeContinue"
-class="btn primary"
-disabled
-onclick="startSystem()">
-ENTER SYSTEM →
-</button>
+        </div>
+
+
+        <div class="option" onclick="selectMode('SCALP',this)">
+
+            <strong>⚡ SUPER SCALP — V5</strong>
+
+            <small>
+                Immediate Liquidity → Event → M1 Structure →
+                Trigger → Tight SL → Nearby Target
+            </small>
+
+        </div>
+
+    </div>
+
+    <button
+        id="modeContinue"
+        class="btn primary"
+        disabled
+        onclick="startSystem()">
+
+        ENTER SYSTEM →
+
+    </button>
 
 </section>
 
 
-<!-- ASSISTANT -->
+<!-- =====================================================
+     ASSISTANT
+===================================================== -->
 
 <section id="assistantSection" class="card hidden">
 
-<h2 id="assistantTitle">
-TRADING ASSISTANT
-</h2>
+    <h2 id="assistantTitle">
+        TRADING ASSISTANT
+    </h2>
 
-<div class="progress">
-<div id="progressBar"></div>
-</div>
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
 
-<div id="stepCounter" class="description"></div>
+    <div id="stepCounter" class="description"></div>
 
-<div id="questionArea"></div>
+    <div id="questionArea"></div>
 
-<div id="decisionArea"></div>
+    <div id="decisionArea"></div>
 
-<div class="btnrow">
+    <div class="btnrow">
 
-<button
-id="backBtn"
-class="btn"
-onclick="previousStep()">
-← BACK
-</button>
+        <button
+            id="backBtn"
+            class="btn"
+            onclick="previousStep()">
 
-<button
-id="resetBtn"
-class="btn danger"
-onclick="resetPlan()">
-🔄 RESET PLAN
-</button>
+            ← BACK
 
-<button
-id="nextBtn"
-class="btn primary"
-onclick="nextStep()"
-disabled>
-NEXT →
-</button>
+        </button>
 
-</div>
+
+        <button
+            id="resetBtn"
+            class="btn danger"
+            onclick="resetPlan()">
+
+            🔄 RESET PLAN
+
+        </button>
+
+
+        <button
+            id="nextBtn"
+            class="btn primary"
+            onclick="nextStep()"
+            disabled>
+
+            NEXT →
+
+        </button>
+
+    </div>
 
 </section>
 
 
-<!-- DISCIPLINE GATE -->
+<!-- =====================================================
+     DISCIPLINE GATE
+===================================================== -->
 
 <section id="disciplineSection" class="card hidden">
 
-<h2>🧠 DISCIPLINE GATE</h2>
+    <h2>🔒 DISCIPLINE GATE</h2>
 
-<div class="description">
-این مرحله عمداً بعد از Strategy Assistant قرار گرفته است.
-قبل از اینکه اجازه ثبت معامله داده شود، باید مشخص شود که تصمیم تو
-واقعاً طبق سیستم است یا نتیجه FOMO / Revenge / Impulse است.
-</div>
+    <div class="description">
 
-<div id="disciplineContent"></div>
+        ENTRY READY به‌تنهایی اجازه ورود نیست.
+        قبل از اجرای هر معامله باید وضعیت ذهنی و انضباطی معامله بررسی شود.
+
+        <br><br>
+
+        <strong>
+            اگر Setup معتبر است ولی Discipline معتبر نیست،
+            معامله انجام نمی‌شود.
+        </strong>
+
+    </div>
+
+
+    <div class="disciplineBox">
+
+        <div class="disciplineTitle">
+            🛑 STOP — CHECK YOURSELF
+        </div>
+
+        <div class="disciplineQuestion">
+
+            قبل از ادامه، بدون دروغ به خودت جواب بده.
+            هدف این بخش پیدا کردن Setup نیست؛
+            هدف جلوگیری از تصمیم هیجانی است.
+
+        </div>
+
+    </div>
+
+
+    <div class="checklist" style="margin-top:15px">
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplinePlan">
+
+            <span>
+                <strong>1️⃣ SETUP طبق PLAN است</strong><br>
+                این معامله دقیقاً بر اساس قوانین سیستم شکل گرفته
+                و من چیزی به آن اضافه یا کم نکرده‌ام.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplineNoFomo">
+
+            <span>
+                <strong>2️⃣ FOMO ندارم</strong><br>
+                اگر همین الان وارد نشوم، احساس نمی‌کنم که باید به زور معامله کنم.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplineNoRevenge">
+
+            <span>
+                <strong>3️⃣ REVENGE TRADE نیست</strong><br>
+                قصد جبران ضرر قبلی یا پس گرفتن پول از بازار را ندارم.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplineNoRush">
+
+            <span>
+                <strong>4️⃣ عجله ندارم</strong><br>
+                برای گرفتن این حرکت تحت فشار زمانی یا هیجانی نیستم.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplineReason">
+
+            <span>
+                <strong>5️⃣ دلیل ورودم واضح است</strong><br>
+                می‌توانم دلیل این معامله را در یک جمله مشخص توضیح بدهم.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplineAcceptLoss">
+
+            <span>
+                <strong>6️⃣ Loss را می‌پذیرم</strong><br>
+                اگر SL زده شود، بدون تغییر قانون و بدون Revenge Trade
+                نتیجه را می‌پذیرم.
+            </span>
+
+        </label>
+
+
+        <label class="check">
+
+            <input
+                type="checkbox"
+                id="disciplineCanSkip">
+
+            <span>
+                <strong>7️⃣ آماده‌ام معامله را از دست بدهم</strong><br>
+                اگر Setup کامل نباشد، ترجیح می‌دهم هیچ معامله‌ای نکنم.
+            </span>
+
+        </label>
+
+    </div>
+
+
+    <div id="disciplineMessage"
+         class="alert warning">
+
+        🔒 تمام موارد را با صداقت بررسی کن.
+
+    </div>
+
+
+    <div class="btnrow">
+
+        <button
+            class="btn danger"
+            onclick="failDiscipline()">
+
+            ❌ CANCEL THIS SETUP
+
+        </button>
+
+
+        <button
+            id="disciplineContinue"
+            class="btn success"
+            onclick="passDiscipline()">
+
+            VERIFY DISCIPLINE →
+
+        </button>
+
+    </div>
 
 </section>
 
 
-<!-- JOURNAL -->
+<!-- =====================================================
+     10 SECOND PAUSE
+===================================================== -->
+
+<section id="pauseSection" class="card hidden">
+
+    <h2>⏸️ 10-SECOND PAUSE</h2>
+
+    <div class="description">
+
+        هنوز اجازه ورود نداری.
+
+        <br><br>
+
+        این ۱۰ ثانیه برای جلوگیری از ورود لحظه‌ای،
+        FOMO و تصمیم ناگهانی طراحی شده است.
+
+    </div>
+
+
+    <div class="pauseBox">
+
+        <div class="pauseText">
+
+            STOP.
+
+            <br><br>
+
+            اگر این معامله را انجام ندهم،
+            آیا هنوز طبق Plan عمل کرده‌ام؟
+
+        </div>
+
+
+        <div
+            id="pauseNumber"
+            class="pauseNumber">
+
+            10
+
+        </div>
+
+
+        <div class="pauseText">
+
+            عجله نکن.
+            بازار بعدی هم وجود دارد.
+
+        </div>
+
+    </div>
+
+
+    <div id="pauseMessage"
+         class="alert warning">
+
+        ⏳ PAUSE ACTIVE — WAIT...
+
+    </div>
+
+
+    <div class="btnrow">
+
+        <button
+            class="btn danger"
+            onclick="cancelFromPause()">
+
+            ❌ CANCEL SETUP
+
+        </button>
+
+
+        <button
+            id="authorizationBtn"
+            class="btn success"
+            onclick="authorizeExecution()"
+            disabled>
+
+            🔒 WAIT...
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXECUTION AUTHORIZATION
+===================================================== -->
+
+<section id="authorizationSection" class="card hidden">
+
+    <h2>🟢 EXECUTION AUTHORIZATION</h2>
+
+    <div class="authBox">
+
+        <div class="authTitle">
+            DISCIPLINE VERIFIED
+        </div>
+
+        <br>
+
+        <div>
+            Strategy valid.
+            <br>
+            Risk Gate passed.
+            <br>
+            Discipline Gate passed.
+            <br>
+            10-second pause completed.
+        </div>
+
+        <br>
+
+        <strong>
+            فقط با فشردن دکمه زیر Execution مجاز می‌شود.
+        </strong>
+
+    </div>
+
+
+    <div class="alert warning">
+
+        ⚠️ آخرین سؤال:
+
+        <br><br>
+
+        آیا هنوز می‌خواهی این معامله را طبق همان
+        Entry / SL / TP که در Plan تعیین شده اجرا کنی؟
+
+    </div>
+
+
+    <div class="btnrow">
+
+        <button
+            class="btn danger"
+            onclick="cancelAuthorization()">
+
+            ❌ NO — CANCEL
+
+        </button>
+
+
+        <button
+            class="btn success"
+            onclick="finalAuthorize()">
+
+            🟢 YES — AUTHORIZE EXECUTION
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JOURNAL
+===================================================== -->
 
 <section id="journalSection" class="card hidden">
 
-<h2>📓 TRADE JOURNAL</h2>
+    <h2>📓 TRADE JOURNAL</h2>
 
-<div id="journalReadyMessage" class="alert success">
-🟢 Strategy Decision ثبت شد.
-</div>
+    <div class="description">
 
-<div class="grid">
+        این بخش فقط بعد از تکمیل کامل Strategy Assistant،
+        Discipline Gate و Execution Authorization باز می‌شود.
 
-<div>
-<label class="description">Direction</label>
-<input id="jDirection" type="text" placeholder="LONG / SHORT">
-</div>
+        <br><br>
 
-<div>
-<label class="description">Entry</label>
-<input id="jEntry" type="number" step="any">
-</div>
+        اطلاعات Strategy به‌صورت خودکار ثبت شده‌اند.
+        فقط اطلاعات واقعی اجرای معامله را وارد کن.
 
-<div>
-<label class="description">SL</label>
-<input id="jSL" type="number" step="any">
-</div>
+    </div>
 
-<div>
-<label class="description">TP</label>
-<input id="jTP" type="number" step="any">
-</div>
 
-<div>
-<label class="description">Result / R</label>
-<input id="jResult" type="text" placeholder="WIN +1R / LOSS -1R">
-</div>
+    <div id="journalReadyMessage"
+         class="alert success">
 
-</div>
+        🟢 Execution Authorized.
 
-<br>
+    </div>
 
-<label class="description">
-AUTO STRATEGY RECORD
-</label>
 
-<textarea
-id="jStrategyRecord"
-readonly>
-</textarea>
+    <div class="grid">
 
-<br>
+        <div>
 
-<label class="description">
-Setup / Reason / Notes
-</label>
+            <label class="description">
+                Direction
+            </label>
 
-<textarea
-id="jNotes"
-placeholder="Reason for trade...">
-</textarea>
+            <input
+                id="jDirection"
+                type="text"
+                placeholder="LONG / SHORT">
 
-<div class="btnrow">
+        </div>
 
-<button
-class="btn success"
-onclick="addTrade()">
-+ SAVE TRADE
-</button>
 
-<button
-class="btn danger"
-onclick="clearJournal()">
-CLEAR JOURNAL
-</button>
+        <div>
 
-</div>
+            <label class="description">
+                Entry
+            </label>
 
-<div
-id="journalTable"
-class="tablewrap"
-style="margin-top:20px">
-</div>
+            <input
+                id="jEntry"
+                type="number"
+                step="any">
+
+        </div>
+
+
+        <div>
+
+            <label class="description">
+                SL
+            </label>
+
+            <input
+                id="jSL"
+                type="number"
+                step="any">
+
+        </div>
+
+
+        <div>
+
+            <label class="description">
+                TP
+            </label>
+
+            <input
+                id="jTP"
+                type="number"
+                step="any">
+
+        </div>
+
+
+        <div>
+
+            <label class="description">
+                Result / R
+            </label>
+
+            <input
+                id="jResult"
+                type="text"
+                placeholder="WIN +1R / LOSS -1R">
+
+        </div>
+
+
+        <div>
+
+            <label class="description">
+                RULE FOLLOWED?
+            </label>
+
+            <div class="options">
+
+                <div
+                    id="ruleYes"
+                    class="option"
+                    onclick="selectRuleFollowed('YES')">
+
+                    <strong>✅ YES</strong>
+
+                    <small>
+                        معامله کاملاً طبق Plan اجرا شد.
+                    </small>
+
+                </div>
+
+
+                <div
+                    id="ruleNo"
+                    class="option"
+                    onclick="selectRuleFollowed('NO')">
+
+                    <strong>❌ NO</strong>
+
+                    <small>
+                        حداقل یک قانون در Execution شکسته شد.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <br>
+
+
+    <label class="description">
+        AUTO STRATEGY RECORD
+    </label>
+
+    <textarea
+        id="jStrategyRecord"
+        readonly
+        placeholder="Strategy decision record will appear here..."></textarea>
+
+
+    <br>
+
+
+    <label class="description">
+        Setup / Reason / Notes
+    </label>
+
+    <textarea
+        id="jNotes"
+        placeholder="Reason for trade..."></textarea>
+
+
+    <div class="btnrow">
+
+        <button
+            class="btn success"
+            onclick="addTrade()">
+
+            + SAVE TRADE
+
+        </button>
+
+
+        <button
+            class="btn danger"
+            onclick="clearJournal()">
+
+            CLEAR JOURNAL
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="journalTable"
+        class="tablewrap"
+        style="margin-top:20px">
+
+    </div>
 
 </section>
 
 
-<!-- PLAYBOOK -->
+<!-- =====================================================
+     PLAYBOOK
+===================================================== -->
 
 <section id="playbookSection" class="card hidden">
 
-<h2>📖 FULL PLAYBOOK</h2>
+    <h2>📖 FULL PLAYBOOK</h2>
 
-<div class="description">
-مرجع داخلی SNIPER GOD'S PLAN.
-</div>
+    <div class="description">
+        مرجع داخلی SNIPER GOD'S PLAN.
+    </div>
 
-<details>
-<summary>🔒 PART 0 — MASTER LAW</summary>
-<div class="detailbody">
 
-SNIPER GOD'S PLAN از دو موتور مستقل تشکیل شده است:
+    <details>
 
-<br><br>
+        <summary>
+            🔒 PART 0 — MASTER LAW
+        </summary>
 
-V3.6.9 Structural Sniper<br>
-V5 Super Scalp
+        <div class="detailbody">
 
-<br><br>
+            SNIPER GOD'S PLAN از دو موتور مستقل تشکیل شده است:
 
-Maximum Daily Trades = 3<br>
-2 Consecutive Losses → STOP FOR THE DAY
+            <br><br>
 
-<br><br>
+            V3.6.9 Structural Sniper<br>
+            V5 Super Scalp
 
-<strong>
-NO SETUP = NO TRADE
-</strong>
+            <br><br>
 
-<br>
+            Maximum Daily Trades = 3<br>
+            2 Consecutive Losses → STOP FOR THE DAY
 
-<strong>
-NO PLAN = NO TRADE
-</strong>
+            <br><br>
 
-<br>
+            Discipline Gate Fail →
+            Current Setup Cancelled Only.
 
-<strong>
-EMOTION = NO TRADE
-</strong>
+        </div>
 
-</div>
-</details>
+    </details>
 
-<details>
-<summary>🧠 DISCIPLINE PROTOCOL</summary>
-<div class="detailbody">
 
-هر معامله باید قبل از ورود سه شرط داشته باشد:
+    <details>
 
-<br><br>
+        <summary>
+            🧠 V3.6.9 — MASTER ARCHITECTURE
+        </summary>
 
-1. سیستم Setup معتبر داده باشد.<br>
-2. Trader Intent مشخص و مکتوب باشد.<br>
-3. Impulse Check بدون هشدار باشد.
+        <div class="detailbody">
 
-<br><br>
+            Context → Structure → Liquidity →
+            HTF Liquidity Reaction → Location →
+            Setup → Confirmation → Execution →
+            Management → Exit
 
-اگر معامله فقط به دلیل FOMO،
-Revenge،
-Boredom،
-Loss Recovery
-یا ترس از دست دادن حرکت ایجاد شده باشد:
+        </div>
 
-<br><br>
+    </details>
 
-<strong>NO TRADE</strong>
 
-</div>
-</details>
+    <details>
 
-<details>
-<summary>🦅 V3.6.9 ARCHITECTURE</summary>
-<div class="detailbody">
+        <summary>
+            🌐 HTF CONTEXT
+        </summary>
 
-Context → Structure → Liquidity →
-HTF Liquidity Reaction → Location →
-Setup → Confirmation → Execution →
-Management → Exit
+        <div class="detailbody">
 
-</div>
-</details>
+            Monthly → Weekly → Daily → H4 → H1
 
-<details>
-<summary>🌐 HTF CONTEXT</summary>
-<div class="detailbody">
+            <br><br>
 
-Monthly → Weekly → Daily → H4 → H1
+            H4 Bullish = HH → HL → HH<br>
+            H4 Bearish = LL → LH → LL<br>
+            H4 Range = Valid Range Structure<br>
 
-<br><br>
+            H4 Transition =
+            Previous Structure Broken +
+            New Structure Not Confirmed
 
-H4 Bullish = HH → HL → HH<br>
-H4 Bearish = LL → LH → LL<br>
-H4 Range = Valid Range Structure<br>
-H4 Transition = NO TRADE CONTEXT
+            <br><br>
 
-</div>
-</details>
+            H4 Transition = NO TRADE CONTEXT
 
-<details>
-<summary>🔄 H1 CORRECTION</summary>
-<div class="detailbody">
+        </div>
 
-اگر H4 و H1 هم‌جهت باشند → Alignment.
+    </details>
 
-<br><br>
 
-اگر H4 Bullish و H1 Bearish باشد →
-H1 Correction فعال است.
+    <details>
 
-<br><br>
+        <summary>
+            🔄 H1 CORRECTION / COUNTER-TREND
+        </summary>
 
-Touch #1 = Context Only<br>
-Touch #2 = Critical Event<br>
-Touch #3 = Quality Enhancement
+        <div class="detailbody">
 
-<br><br>
+            اگر H4 و H1 هم‌جهت باشند → Alignment.
 
-Touch به‌تنهایی Entry نیست.
+            <br><br>
 
-</div>
-</details>
+            اگر H4 Bullish و H1 Bearish باشد →
+            H1 Correction فعال است.
 
-<details>
-<summary>💧 LIQUIDITY MAP</summary>
-<div class="detailbody">
+            <br><br>
 
-Monthly High / Low<br>
-Weekly High / Low<br>
-Daily High / Low<br>
-Previous Day High / Low<br>
-H4 Major Swing High / Low<br>
-H1 Major Swing High / Low<br>
-Daily Swing High / Low<br>
-Asia High / Low<br>
-London High / Low<br>
-New York High / Low<br>
-M15 Liquidity<br>
-M5 Liquidity<br>
-M1 Micro Liquidity<br>
-Internal Liquidity<br>
-EQ<br>
-Range High / Low
-
-</div>
-</details>
-
-<details>
-<summary>🔥 HTF LIQUIDITY REACTION</summary>
-<div class="detailbody">
-
-Break → Close Beyond → Hold → Acceptance
-
-<br><br>
-
-یا
-
-<br><br>
-
-Sweep → Rejection → Reclaim → Confirmation
-
-<br><br>
-
-Reaction Pending = WAIT
-
-</div>
-</details>
-
-<details>
-<summary>📍 LOCATION</summary>
-<div class="detailbody">
-
-HTF Extreme<br>
-Daily Swing<br>
-Previous Day High / Low<br>
-Session Liquidity<br>
-Range High / Low<br>
-Supply / Demand<br>
-Major Swing<br>
-Reversal Zone<br>
-Reclaimed Level<br>
-Breakout Retest<br>
-Structural Edge
-
-<br><br>
-
-Range Middle / EQ = NO TRADE
-
-</div>
-</details>
-
-<details>
-<summary>⚡ V5 SUPER SCALP</summary>
-<div class="detailbody">
-
-Session →
-Immediate Location →
-Liquidity Event →
-M1 Structure →
-M1 Trigger →
-Tight SL →
-Nearby Target
-
-<br><br>
-
-HTF Hard Filter فعال نیست.<br>
-M5 اجباری نیست.
-
-</div>
-</details>
-
-<details>
-<summary>🛑 MASTER NO-TRADE</summary>
-<div class="detailbody">
-
-Context نامشخص<br>
-H4 Transition<br>
-H1 Structure نامشخص<br>
-Range Middle<br>
-Liquidity نامشخص<br>
-HTF Reaction Pending<br>
-Location ضعیف<br>
-Confirmation ناقص<br>
-M5 Structure ناقص در V3.6.9<br>
-M1 Trigger ناقص<br>
-Reclaim ناقص<br>
-Target Space ناکافی<br>
-Risk نامناسب<br>
-Setup Invalid<br>
-3 Trades Completed<br>
-2 Consecutive Losses<br>
-Impulse Detected<br>
-FOMO Detected<br>
-Revenge Trading Detected<br>
-Plan Violation
-
-</div>
-</details>
+            Counter-Trend Line:
+
+            <br><br>
+
+            Touch #1 = Context Only<br>
+            Touch #2 = Critical Event<br>
+            Touch #3 = Quality Enhancement
+
+            <br><br>
+
+            Touch به‌تنهایی Entry نیست.
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            💧 LIQUIDITY MAP
+        </summary>
+
+        <div class="detailbody">
+
+            Monthly High / Low<br>
+            Weekly High / Low<br>
+            Daily High / Low<br>
+            Previous Day High / Low<br>
+            H4 Major Swing High / Low<br>
+            H1 Major Swing High / Low<br>
+            Daily Swing High / Low<br>
+            Asia High / Low<br>
+            London High / Low<br>
+            New York High / Low<br>
+            M15 Liquidity<br>
+            M5 Liquidity<br>
+            M1 Micro Liquidity<br>
+            Internal Liquidity<br>
+            EQ<br>
+            Range High / Low
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            🔥 HTF LIQUIDITY REACTION
+        </summary>
+
+        <div class="detailbody">
+
+            وقتی قیمت وارد HTF Liquidity Pool می‌شود،
+            تا مشخص شدن واکنش Entry ممنوع است.
+
+            <br><br>
+
+            MODEL A:<br>
+            Break → Close Beyond → Hold → Acceptance
+
+            <br><br>
+
+            MODEL B:<br>
+            Sweep → Rejection → Reclaim →
+            Reversal Confirmation
+
+            <br><br>
+
+            Reaction Pending = WAIT
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            🔄 RECLAIM
+        </summary>
+
+        <div class="detailbody">
+
+            Break / Sweep<br>
+            ↓<br>
+            Return<br>
+            ↓<br>
+            Valid Close<br>
+            ↓<br>
+            Hold / Reaction
+
+            <br><br>
+
+            Wick ≠ Reclaim
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            📍 LOCATION ENGINE
+        </summary>
+
+        <div class="detailbody">
+
+            HTF Extreme<br>
+            Daily Swing<br>
+            Previous Day High / Low<br>
+            Session Liquidity<br>
+            Range High / Low<br>
+            Supply / Demand<br>
+            Major Swing<br>
+            Reversal Zone<br>
+            Reclaimed Level<br>
+            Breakout Retest<br>
+            Structural Edge
+
+            <br><br>
+
+            Range Middle / EQ = NO TRADE
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            🦅 V3.6.9 M15 CONFIRMATION
+        </summary>
+
+        <div class="detailbody">
+
+            MODEL 1:<br>
+            Liquidity Sweep → Rejection → MSS
+
+            <br><br>
+
+            MODEL 2:<br>
+            Sweep → Strong Displacement →
+            Close → Structure Shift
+
+            <br><br>
+
+            MODEL 3:<br>
+            Breakout → Close Beyond → Retest → Hold
+
+            <br><br>
+
+            MODEL 4:<br>
+            Fake Breakout → Failure → Return →
+            Reclaim → Structure Confirmation
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            🟦 V3.6.9 M5
+        </summary>
+
+        <div class="detailbody">
+
+            M5 وظیفه دارد Confirmation را
+            به ساختار قابل معامله تبدیل کند.
+
+            <br><br>
+
+            MSS<br>
+            Displacement<br>
+            BOS<br>
+            Retest<br>
+            Hold
+
+            <br><br>
+
+            Sequence ایده‌آل:
+
+            <br><br>
+
+            M15 Confirmation →
+            M5 MSS →
+            M5 Displacement →
+            Retest / Hold →
+            M1 Trigger
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            🎯 V3.6.9 M1
+        </summary>
+
+        <div class="detailbody">
+
+            M1 فقط Execution Trigger است.
+
+            <br><br>
+
+            Break → Retest → Trigger<br>
+            Engulfing Trigger<br>
+            M1 MSS<br>
+            M1 Displacement<br>
+            Micro Sweep → Reclaim → Trigger
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            ⚡ V5 SUPER SCALP
+        </summary>
+
+        <div class="detailbody">
+
+            V5 برای حرکات کوتاه و سریع طراحی شده است.
+
+            <br><br>
+
+            HTF Hard Filter فعال نیست.<br>
+            M5 اجباری نیست.
+
+            <br><br>
+
+            Session →
+            Immediate Location →
+            Liquidity Event →
+            M1 Structure →
+            M1 Trigger →
+            Tight SL →
+            Nearby Target
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            🛑 MASTER NO-TRADE
+        </summary>
+
+        <div class="detailbody">
+
+            Context نامشخص<br>
+            H4 Transition<br>
+            H1 Structure نامشخص<br>
+            Range Middle<br>
+            Liquidity نامشخص<br>
+            HTF Reaction Pending<br>
+            Location ضعیف<br>
+            Confirmation ناقص<br>
+            M5 Structure ناقص در V3.6.9<br>
+            M1 Trigger ناقص<br>
+            Reclaim ناقص<br>
+            Target Space ناکافی<br>
+            Risk نامناسب<br>
+            Setup Invalid<br>
+            3 Trades Completed<br>
+            2 Consecutive Losses
+
+            <br><br>
+
+            Discipline Gate Failed<br>
+            FOMO<br>
+            Revenge Trade<br>
+            Emotional Entry<br>
+            Rule Break
+
+        </div>
+
+    </details>
 
 </section>
 
 
-<!-- TREE -->
+<!-- =====================================================
+     DECISION TREE
+===================================================== -->
 
 <section id="treeSection" class="card hidden">
 
-<h2>🧭 DECISION TREE</h2>
+    <h2>🧭 DECISION TREE</h2>
 
-<div class="tree">
+    <div class="tree">
+
+SNIPER GOD'S PLAN
 
 DAILY PREPARATION
        │
+       ├── 3 CHECKS COMPLETE?
+       │       └── NO → LOCK
+       │
        ▼
 SESSION
+London / New York
        │
        ▼
 MODE
        │
-       ▼
-STRATEGY ASSISTANT
+       ├───────────────┐
+       ▼               ▼
+ V3.6.9 DAY       V5 SUPER SCALP
+       │               │
+       ▼               ▼
+DAILY LIMIT       DAILY LIMIT
+       │               │
+       ▼               ▼
+MONTHLY           SESSION
+       │               │
+WEEKLY             LOCATION
+       │               │
+DAILY              LIQUIDITY EVENT
+       │               │
+H4 STATE           M1 STRUCTURE
+       │               │
+H1 STATE           M1 TRIGGER
+       │               │
+COUNTER-TREND       SL
+       │               │
+LIQUIDITY           TARGET
+       │               │
+HTF REACTION       ENTRY
        │
-       ▼
-VALID SETUP?
+LOCATION
        │
-       ├── NO → WAIT / NO TRADE
+M15 CONFIRMATION
        │
-       ▼
+M5 STRUCTURE
+       │
+M1 TRIGGER
+       │
+RISK + SL + TP
+       │
+TARGET SPACE
+       │
+ENTRY READY
+       │
 DISCIPLINE GATE
        │
-       ├── FOMO → LOCK
-       │
-       ├── REVENGE → LOCK
-       │
-       ├── BOREDOM → LOCK
-       │
-       ├── OUTSIDE PLAN → LOCK
-       │
-       ├── EMOTIONAL URGE → LOCK
+       ├── FAIL → CANCEL CURRENT SETUP
        │
        ▼
-INTENT CHECK
+10 SECOND PAUSE
+       │
+       ├── CANCEL → WAIT
        │
        ▼
-IMPULSE CHECK
+EXECUTION AUTHORIZATION
        │
        ▼
-60 SECOND PAUSE
+TRADE JOURNAL
        │
        ▼
-FINAL COMMITMENT
+MANAGEMENT
        │
        ▼
-JOURNAL
-       │
-       ▼
-TRADE
+EXIT
 
 MASTER:
 
-NO PLAN → NO TRADE
-NO SETUP → NO TRADE
-EMOTION → NO TRADE
+No Context → No Trade
+No Location → No Trade
+No Required Confirmation → No Trade
+No Target Space → No Trade
+Invalid Risk → No Trade
+
 FOMO → NO TRADE
 REVENGE → NO TRADE
-IMPULSE → NO TRADE
-3 TRADES → STOP
-2 CONSECUTIVE LOSSES → STOP
+EMOTIONAL ENTRY → NO TRADE
+RULE BREAK → NO TRADE
 
-</div>
+3 Trades → STOP
+2 Consecutive Losses → STOP
+
+Discipline Fail:
+CURRENT SETUP CANCELLED
+TRADING DAY REMAINS ACTIVE
+
+    </div>
 
 </section>
 
 
 <footer class="footer">
 
-SNIPER GOD'S PLAN — DISCIPLINE PROTOCOL V1
+    SNIPER GOD'S PLAN — V3.6.9 + V5 SUPER SCALP
 
-<br>
+    <br>
 
-Market gives the setup → SNIPER executes.
-
-<br><br>
-
-<strong>
-You are not paid for trading.
-You are paid for waiting for your setup.
-</strong>
+    Market gives the setup → SNIPER executes.
 
 </footer>
 
@@ -1113,7 +1813,7 @@ You are paid for waiting for your setup.
 <script>
 
 /* =========================================================
-GLOBAL STATE
+   GLOBAL STATE
 ========================================================= */
 
 const state = {
@@ -1128,9 +1828,13 @@ const state = {
 
     answers:{},
 
-    disciplineAnswers:{},
-
     disciplinePassed:false,
+
+    executionAuthorized:false,
+
+    ruleFollowed:null,
+
+    pauseTimer:null,
 
     trades:JSON.parse(
         localStorage.getItem("sniperTrades") || "[]"
@@ -1140,13 +1844,12 @@ const state = {
 
 
 /* =========================================================
-DAILY DATA
+   DAILY TRADE FUNCTIONS
 ========================================================= */
 
-function dailyTrades(){
+const dailyTrades = () => {
 
-    const today =
-        new Date()
+    const today = new Date()
         .toISOString()
         .slice(0,10);
 
@@ -1154,7 +1857,7 @@ function dailyTrades(){
         t => t.date === today
     );
 
-}
+};
 
 
 function consecutiveLosses(){
@@ -1165,8 +1868,7 @@ function consecutiveLosses(){
 
     for(let i=today.length-1;i>=0;i--){
 
-        const result=
-            (today[i].result || "")
+        const result=(today[i].result || "")
             .toUpperCase()
             .trim();
 
@@ -1191,7 +1893,7 @@ function consecutiveLosses(){
 
 
 /* =========================================================
-DAILY PREPARATION
+   DAILY PREPARATION
 ========================================================= */
 
 function completePreparation(){
@@ -1231,20 +1933,11 @@ function completePreparation(){
     document.getElementById("sessionSection")
         .classList.remove("hidden");
 
-    document.getElementById("disciplineBadge")
-        .textContent="DISCIPLINE: ACTIVE";
-
-    document.getElementById("disciplineBadge")
-        .classList.remove("gold");
-
-    document.getElementById("disciplineBadge")
-        .classList.add("green");
-
 }
 
 
 /* =========================================================
-SESSION
+   SESSION
 ========================================================= */
 
 function selectSession(session,element){
@@ -1253,11 +1946,12 @@ function selectSession(session,element){
 
     document.querySelectorAll(
         "#sessionSection .option"
-    ).forEach(
-        x=>x.classList.remove("selected")
+    ).forEach(x =>
+        x.classList.remove("selected")
     );
 
     element.classList.add("selected");
+
 
     const badge=
         document.getElementById("sessionBadge");
@@ -1297,7 +1991,7 @@ function goToMode(){
 
 
 /* =========================================================
-MODE
+   MODE
 ========================================================= */
 
 function selectMode(mode,element){
@@ -1306,8 +2000,8 @@ function selectMode(mode,element){
 
     document.querySelectorAll(
         "#modeSection .option"
-    ).forEach(
-        x=>x.classList.remove("selected")
+    ).forEach(x =>
+        x.classList.remove("selected")
     );
 
     element.classList.add("selected");
@@ -1331,7 +2025,7 @@ function selectMode(mode,element){
 
 
 /* =========================================================
-START
+   START
 ========================================================= */
 
 function startSystem(){
@@ -1339,7 +2033,10 @@ function startSystem(){
     if(!state.mode)return;
 
 
-    if(dailyTrades().length>=3){
+    const todayTrades=dailyTrades();
+
+
+    if(todayTrades.length>=3){
 
         alert(
             "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
@@ -1367,11 +2064,19 @@ function startSystem(){
     document.getElementById("assistantSection")
         .classList.remove("hidden");
 
+
     document.getElementById("journalSection")
         .classList.add("hidden");
 
     document.getElementById("disciplineSection")
         .classList.add("hidden");
+
+    document.getElementById("pauseSection")
+        .classList.add("hidden");
+
+    document.getElementById("authorizationSection")
+        .classList.add("hidden");
+
 
     document.getElementById("playbookSection")
         .classList.remove("hidden");
@@ -1384,13 +2089,55 @@ function startSystem(){
 
     state.answers={};
 
-    state.disciplineAnswers={};
-
     state.disciplinePassed=false;
+
+    state.executionAuthorized=false;
+
+    state.ruleFollowed=null;
 
 
     document.getElementById("jStrategyRecord")
         .value="";
+
+    document.getElementById("jDirection")
+        .value="";
+
+    document.getElementById("jEntry")
+        .value="";
+
+    document.getElementById("jSL")
+        .value="";
+
+    document.getElementById("jTP")
+        .value="";
+
+    document.getElementById("jResult")
+        .value="";
+
+    document.getElementById("jNotes")
+        .value="";
+
+
+    document.getElementById("disciplineBadge")
+        .textContent="DISCIPLINE: READY";
+
+    document.getElementById("disciplineBadge")
+        .classList.remove("red","green");
+
+
+    document.querySelectorAll(
+        "#disciplineSection input[type=checkbox]"
+    ).forEach(
+        x=>x.checked=false
+    );
+
+
+    document.getElementById("ruleYes")
+        .classList.remove("selected");
+
+    document.getElementById("ruleNo")
+        .classList.remove("selected");
+
 
     renderStep();
 
@@ -1402,379 +2149,375 @@ function startSystem(){
 
 
 /* =========================================================
-DAY STEPS
+   STEP DATA
 ========================================================= */
 
 const daySteps=[
 
 {
-title:"STEP 1 — DAILY TRADE LIMIT",
-question:"امروز چند معامله ثبت شده است؟",
-multi:false,
-options:[
-["0–1 TRADE","ظرفیت معامله وجود دارد."],
-["2 TRADES","فقط یک معامله دیگر مجاز است."],
-["3 TRADES","Trading Day Closed."]
-]
+    title:"STEP 1 — DAILY TRADE LIMIT",
+    question:"امروز چند معامله ثبت شده است؟",
+    multi:false,
+    options:[
+        ["0–1 TRADE","ظرفیت معامله وجود دارد."],
+        ["2 TRADES","فقط یک معامله دیگر مجاز است."],
+        ["3 TRADES","Trading Day Closed."]
+    ]
 },
 
 {
-title:"STEP 2 — DAILY RISK STATE",
-question:"وضعیت ریسک امروز چیست؟",
-multi:false,
-options:[
-["NO LOSS LIMIT BREACHED","Risk Engine فعال است."],
-["1 LOSS","ادامه با کنترل ریسک."],
-["2 CONSECUTIVE LOSSES","STOP FOR THE DAY."]
-]
+    title:"STEP 2 — DAILY RISK STATE",
+    question:"وضعیت ریسک امروز چیست؟",
+    multi:false,
+    options:[
+        ["NO LOSS LIMIT BREACHED","Risk Engine فعال است."],
+        ["1 LOSS","ادامه با کنترل ریسک."],
+        ["2 CONSECUTIVE LOSSES","STOP FOR THE DAY."]
+    ]
 },
 
 {
-title:"STEP 3 — MONTHLY CONTEXT",
-question:"در تایم‌فریم Monthly، Context اصلی چیست؟",
-multi:false,
-options:[
-["BULLISH","ساختار و External Liquidity صعودی است."],
-["BEARISH","ساختار و External Liquidity نزولی است."],
-["RANGE","بازار در Range معتبر است."],
-["NEUTRAL","Context کافی برای تصمیم وجود ندارد."]
-]
+    title:"STEP 3 — MONTHLY CONTEXT",
+    question:"در تایم‌فریم Monthly، Context اصلی چیست؟",
+    multi:false,
+    options:[
+        ["BULLISH","ساختار و External Liquidity صعودی است."],
+        ["BEARISH","ساختار و External Liquidity نزولی است."],
+        ["RANGE","بازار در Range معتبر است."],
+        ["NEUTRAL","Context کافی برای تصمیم وجود ندارد."]
+    ]
 },
 
 {
-title:"STEP 4 — WEEKLY CONTEXT",
-question:"در تایم‌فریم Weekly، Context اصلی چیست؟",
-multi:false,
-options:[
-["BULLISH / EXPANSION","ساختار و Expansion صعودی."],
-["BEARISH / EXPANSION","ساختار و Expansion نزولی."],
-["CORRECTION","بازار در Correction است."],
-["RANGE / UNCLEAR","Range یا Context نامشخص."]
-]
+    title:"STEP 4 — WEEKLY CONTEXT",
+    question:"در تایم‌فریم Weekly، Context اصلی چیست؟",
+    multi:false,
+    options:[
+        ["BULLISH / EXPANSION","ساختار و Expansion صعودی."],
+        ["BEARISH / EXPANSION","ساختار و Expansion نزولی."],
+        ["CORRECTION","بازار در Correction است."],
+        ["RANGE / UNCLEAR","Range یا Context نامشخص."]
+    ]
 },
 
 {
-title:"STEP 5 — DAILY CONTEXT",
-question:"در تایم‌فریم Daily، Context اصلی چیست؟",
-multi:false,
-options:[
-["BULLISH","Daily Structure صعودی."],
-["BEARISH","Daily Structure نزولی."],
-["RANGE","Daily Range."],
-["CORRECTION","Daily Correction."],
-["UNCLEAR","Context مشخص نیست."]
-]
+    title:"STEP 5 — DAILY CONTEXT",
+    question:"در تایم‌فریم Daily، Context اصلی چیست؟",
+    multi:false,
+    options:[
+        ["BULLISH","Daily Structure صعودی."],
+        ["BEARISH","Daily Structure نزولی."],
+        ["RANGE","Daily Range."],
+        ["CORRECTION","Daily Correction."],
+        ["UNCLEAR","Context مشخص نیست."]
+    ]
 },
 
 {
-title:"STEP 6 — H4 MARKET STATE",
-question:"در تایم‌فریم H4، Market State چیست؟",
-multi:false,
-options:[
-["BULLISH","HH → HL → HH"],
-["BEARISH","LL → LH → LL"],
-["RANGE","Valid Range Structure"],
-["TRANSITION","ساختار قبلی شکسته ولی ساختار جدید هنوز تأیید نشده."]
-]
+    title:"STEP 6 — H4 MARKET STATE",
+    question:"در تایم‌فریم H4، Market State چیست؟",
+    multi:false,
+    options:[
+        ["BULLISH","HH → HL → HH"],
+        ["BEARISH","LL → LH → LL"],
+        ["RANGE","Valid Range Structure"],
+        ["TRANSITION","ساختار قبلی شکسته ولی ساختار جدید هنوز تأیید نشده."]
+    ]
 },
 
 {
-title:"STEP 7 — H1 ROUTER",
-question:"در تایم‌فریم H1، وضعیت ساختار نسبت به H4 چیست؟",
-multi:false,
-options:[
-["ALIGNMENT","H1 و H4 هم‌جهت هستند."],
-["H1 CORRECTION","H1 خلاف جهت H4 و در Correction است."],
-["COUNTER-TREND CANDIDATE","شرایط بررسی Counter-Trend وجود دارد."],
-["UNCLEAR","ساختار H1 مشخص نیست."]
-]
+    title:"STEP 7 — H1 ROUTER",
+    question:"در تایم‌فریم H1، وضعیت ساختار نسبت به H4 چیست؟",
+    multi:false,
+    options:[
+        ["ALIGNMENT","H1 و H4 هم‌جهت هستند."],
+        ["H1 CORRECTION","H1 خلاف جهت H4 و در Correction است."],
+        ["COUNTER-TREND CANDIDATE","شرایط بررسی Counter-Trend وجود دارد."],
+        ["UNCLEAR","ساختار H1 مشخص نیست."]
+    ]
 },
 
 {
-title:"STEP 8 — COUNTER-TREND ENGINE",
-question:"در تایم‌فریم H1/H4، Counter-Trend Line چه وضعیتی دارد؟",
-multi:false,
-options:[
-["NOT ACTIVE","Counter-Trend فعال نیست."],
-["TOUCH #1","فقط Context؛ Entry ممنوع."],
-["TOUCH #2","Critical Event؛ Triggerها را بررسی کن."],
-["TOUCH #3","Quality Enhancement."],
-["INVALID","شرایط Counter-Trend کامل نیست."]
-]
+    title:"STEP 8 — COUNTER-TREND ENGINE",
+    question:"در تایم‌فریم H1/H4، Counter-Trend Line چه وضعیتی دارد؟",
+    multi:false,
+    options:[
+        ["NOT ACTIVE","Counter-Trend فعال نیست."],
+        ["TOUCH #1","فقط Context؛ Entry ممنوع."],
+        ["TOUCH #2","Critical Event؛ Triggerها را بررسی کن."],
+        ["TOUCH #3","Quality Enhancement."],
+        ["INVALID","شرایط Counter-Trend کامل نیست."]
+    ]
 },
 
 {
-title:"STEP 9 — LIQUIDITY MAP",
-question:"در حال حاضر کدام Liquidity Levelها در قیمت فعال یا نزدیک هستند؟",
-multi:true,
-options:[
-["MONTHLY / WEEKLY LIQUIDITY","Monthly یا Weekly High/Low."],
-["DAILY LIQUIDITY","Daily High/Low یا Previous Day High/Low."],
-["DAILY SWING","Daily Major Swing High/Low."],
-["H4 / H1 SWING","H4 یا H1 Major Swing."],
-["SESSION LIQUIDITY","Asia / London / New York High/Low."],
-["RANGE LIQUIDITY","Range High / Low / EQ."],
-["LOWER TF LIQUIDITY","M15 / M5 / M1 Liquidity."],
-["INTERNAL LIQUIDITY","Internal Liquidity."],
-["UNCLEAR","Liquidity معتبر مشخص نیست."]
-]
+    title:"STEP 9 — LIQUIDITY MAP",
+    question:"در حال حاضر کدام Liquidity Levelها در قیمت فعال یا نزدیک هستند؟",
+    multi:true,
+    options:[
+        ["MONTHLY / WEEKLY LIQUIDITY","Monthly یا Weekly High/Low."],
+        ["DAILY LIQUIDITY","Daily High/Low یا Previous Day High/Low."],
+        ["DAILY SWING","Daily Major Swing High/Low."],
+        ["H4 / H1 SWING","H4 یا H1 Major Swing."],
+        ["SESSION LIQUIDITY","Asia / London / New York High/Low."],
+        ["RANGE LIQUIDITY","Range High / Low / EQ."],
+        ["LOWER TF LIQUIDITY","M15 / M5 / M1 Liquidity."],
+        ["INTERNAL LIQUIDITY","Internal Liquidity."],
+        ["UNCLEAR","Liquidity معتبر مشخص نیست."]
+    ]
 },
 
 {
-title:"STEP 10 — HTF LIQUIDITY REACTION",
-question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی ایجاد شده است؟",
-multi:false,
-options:[
-["BREAK & ACCEPTANCE","Break → Close Beyond → Hold → Acceptance."],
-["SWEEP & REVERSAL","Sweep → Rejection → Reclaim → Confirmation."],
-["REACTION PENDING","واکنش هنوز مشخص نیست؛ WAIT."],
-["NO HTF POOL","قیمت در HTF Liquidity Pool نیست."]
-]
+    title:"STEP 10 — HTF LIQUIDITY REACTION",
+    question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی در تایم‌فریم مربوطه ایجاد شده است؟",
+    multi:false,
+    options:[
+        ["BREAK & ACCEPTANCE","Break → Close Beyond → Hold → Acceptance."],
+        ["SWEEP & REVERSAL","Sweep → Rejection → Reclaim → Confirmation."],
+        ["REACTION PENDING","واکنش هنوز مشخص نیست؛ WAIT."],
+        ["NO HTF POOL","قیمت در HTF Liquidity Pool نیست."]
+    ]
 },
 
 {
-title:"STEP 11 — LOCATION",
-question:"در حال حاضر قیمت در کدام Locationها قرار دارد؟",
-multi:true,
-options:[
-["HTF EXTREME / REVERSAL ZONE","Monthly / Weekly / Daily Extreme یا Reversal Zone."],
-["DAILY SWING","قیمت روی Daily Swing High/Low یا نزدیک آن است."],
-["PREVIOUS DAY HIGH / LOW","قیمت روی High/Low روز قبل یا نزدیک آن است."],
-["SESSION LIQUIDITY","قیمت روی Session Liquidity است."],
-["H4 / H1 MAJOR SWING","قیمت در Major Swing تایم‌فریم بالاتر است."],
-["RANGE HIGH / LOW","قیمت در لبه Range قرار دارد."],
-["SUPPLY / DEMAND","قیمت در Zone معتبر Supply/Demand است."],
-["RECLAIMED LEVEL","قیمت روی Level Reclaimed قرار دارد."],
-["BREAKOUT RETEST","قیمت در Breakout Retest قرار دارد."],
-["STRUCTURAL EDGE","قیمت در Structural Edge قرار دارد."],
-["RANGE MIDDLE / EQ","قیمت در Middle / EQ Range است؛ NO TRADE."]
-]
+    title:"STEP 11 — LOCATION",
+    question:"در حال حاضر قیمت در کدام Locationها قرار دارد؟",
+    multi:true,
+    options:[
+        ["HTF EXTREME / REVERSAL ZONE","Monthly / Weekly / Daily Extreme یا Reversal Zone."],
+        ["DAILY SWING","قیمت روی Daily Swing High/Low یا نزدیک آن است."],
+        ["PREVIOUS DAY HIGH / LOW","قیمت روی High/Low روز قبل یا نزدیک آن است."],
+        ["SESSION LIQUIDITY","قیمت روی Asia/London/New York Liquidity است."],
+        ["H4 / H1 MAJOR SWING","قیمت در Major Swing تایم‌فریم بالاتر است."],
+        ["RANGE HIGH / LOW","قیمت در لبه Range قرار دارد."],
+        ["SUPPLY / DEMAND","قیمت در Zone معتبر Supply/Demand است."],
+        ["RECLAIMED LEVEL","قیمت روی Level Reclaimed قرار دارد."],
+        ["BREAKOUT RETEST","قیمت در Breakout Retest قرار دارد."],
+        ["STRUCTURAL EDGE","قیمت در Structural Edge قرار دارد."],
+        ["RANGE MIDDLE / EQ","قیمت در Middle / EQ Range است؛ NO TRADE."]
+    ]
 },
 
 {
-title:"STEP 12 — LIQUIDITY EVENT",
-question:"در کدام تایم‌فریم‌ها و با چه نوعی Liquidity Event ایجاد شده است؟",
-multi:true,
-options:[
-["M15 SWEEP","در M15 Sweep + Reaction ایجاد شده."],
-["M15 FAKE BREAKOUT","در M15 Fake Breakout + Failure ایجاد شده."],
-["M15 RECLAIM","در M15 Reclaim ایجاد شده."],
-["M15 BREAKOUT","در M15 Break + Close Beyond ایجاد شده."],
-["M5 LIQUIDITY EVENT","در M5 Liquidity Event ایجاد شده."],
-["M1 MICRO SWEEP","در M1 Micro Liquidity Sweep ایجاد شده."],
-["M1 RECLAIM","در M1 Micro Level Reclaim ایجاد شده."],
-["NONE","Liquidity Event معتبر وجود ندارد."]
-]
+    title:"STEP 12 — LIQUIDITY EVENT",
+    question:"در کدام تایم‌فریم‌ها و با چه نوعی Liquidity Event ایجاد شده است؟",
+    multi:true,
+    options:[
+        ["M15 SWEEP","در M15 Sweep + Reaction ایجاد شده."],
+        ["M15 FAKE BREAKOUT","در M15 Fake Breakout + Failure ایجاد شده."],
+        ["M15 RECLAIM","در M15 Break/Sweep → Return → Valid Close → Hold."],
+        ["M15 BREAKOUT","در M15 Break + Close Beyond ایجاد شده."],
+        ["M5 LIQUIDITY EVENT","در M5 Liquidity Event ایجاد شده."],
+        ["M1 MICRO SWEEP","در M1 Micro Liquidity Sweep ایجاد شده."],
+        ["M1 RECLAIM","در M1 Micro Level Reclaim ایجاد شده."],
+        ["NONE","Liquidity Event معتبر وجود ندارد."]
+    ]
 },
 
 {
-title:"STEP 13 — M15 CONFIRMATION",
-question:"در تایم‌فریم M15 چه Confirmationای ایجاد شده است؟",
-multi:true,
-options:[
-["SWEEP → MSS","Sweep → Rejection → MSS."],
-["SWEEP → DISPLACEMENT","Sweep → Strong Displacement → Structure Shift."],
-["BREAKOUT → RETEST → HOLD","Break → Close → Retest → Hold."],
-["FAKE BREAKOUT → RECLAIM","Failure → Return → Reclaim → Structure."],
-["NONE","Confirmation معتبر ایجاد نشده."]
-]
+    title:"STEP 13 — M15 CONFIRMATION",
+    question:"در تایم‌فریم M15 چه Confirmationای ایجاد شده است؟",
+    multi:true,
+    options:[
+        ["SWEEP → MSS","Sweep → Rejection → MSS."],
+        ["SWEEP → DISPLACEMENT","Sweep → Strong Displacement → Structure Shift."],
+        ["BREAKOUT → RETEST → HOLD","Break → Close → Retest → Hold."],
+        ["FAKE BREAKOUT → RECLAIM","Failure → Return → Reclaim → Structure."],
+        ["NONE","Confirmation معتبر ایجاد نشده."]
+    ]
 },
 
 {
-title:"STEP 14 — M5 STRUCTURE",
-question:"در تایم‌فریم M5 کدام Structureها تأیید شده‌اند؟",
-multi:true,
-options:[
-["MSS","M5 Market Structure Shift."],
-["DISPLACEMENT","M5 Directional Displacement."],
-["BOS","M5 Break of Structure."],
-["RETEST + HOLD","M5 Retest و Hold."],
-["NONE","M5 Structure هنوز کامل نیست."]
-]
+    title:"STEP 14 — M5 STRUCTURE",
+    question:"در تایم‌فریم M5 کدام Structureها تأیید شده‌اند؟",
+    multi:true,
+    options:[
+        ["MSS","M5 Market Structure Shift."],
+        ["DISPLACEMENT","M5 Directional Displacement."],
+        ["BOS","M5 Break of Structure."],
+        ["RETEST + HOLD","M5 Retest و Hold."],
+        ["NONE","M5 Structure هنوز کامل نیست."]
+    ]
 },
 
 {
-title:"STEP 15 — M1 EXECUTION",
-question:"در تایم‌فریم M1 کدام Execution Trigger ایجاد شده است؟",
-multi:true,
-options:[
-["BREAK → RETEST → TRIGGER","Break → Retest → Entry Trigger."],
-["ENGULFING","M1 Engulfing Trigger."],
-["M1 MSS","M1 Market Structure Shift."],
-["M1 DISPLACEMENT","M1 Displacement."],
-["MICRO SWEEP → RECLAIM","Micro Sweep → Reclaim → Trigger."],
-["NONE","M1 Trigger معتبر وجود ندارد."]
-]
+    title:"STEP 15 — M1 EXECUTION",
+    question:"در تایم‌فریم M1 کدام Execution Trigger ایجاد شده است؟",
+    multi:true,
+    options:[
+        ["BREAK → RETEST → TRIGGER","Break → Retest → Entry Trigger."],
+        ["ENGULFING","M1 Engulfing Trigger."],
+        ["M1 MSS","M1 Market Structure Shift."],
+        ["M1 DISPLACEMENT","M1 Displacement."],
+        ["MICRO SWEEP → RECLAIM","Micro Sweep → Reclaim → Trigger."],
+        ["NONE","M1 Trigger معتبر وجود ندارد."]
+    ]
 },
 
 {
-title:"STEP 16 — TARGET SPACE",
-question:"آیا بین Entry و Target، فضای کافی و قابل معامله وجود دارد؟",
-multi:false,
-options:[
-["YES","Target Space کافی است."],
-["NO","NO TRADE."],
-["UNCLEAR","WAIT تا Target Space مشخص شود."]
-]
+    title:"STEP 16 — TARGET SPACE",
+    question:"آیا بین Entry و Target، فضای کافی و قابل معامله وجود دارد؟",
+    multi:false,
+    options:[
+        ["YES","Target Space کافی است."],
+        ["NO","NO TRADE."],
+        ["UNCLEAR","WAIT تا Target Space مشخص شود."]
+    ]
 },
 
 {
-title:"STEP 17 — FINAL RISK GATE",
-question:"آیا Entry، SL، TP و Risk به‌صورت کامل مشخص و معتبر هستند؟",
-multi:false,
-options:[
-["VALID","SL پشت Invalidation Point و Target مشخص است."],
-["INVALID","Risk یا SL/TP مناسب نیست."],
-["UNCLEAR","قبل از Entry باید مشخص شود."]
-]
+    title:"STEP 17 — FINAL RISK GATE",
+    question:"آیا Entry، SL، TP و Risk به‌صورت کامل مشخص و معتبر هستند؟",
+    multi:false,
+    options:[
+        ["VALID","SL پشت Invalidation Point و Target مشخص است."],
+        ["INVALID","Risk یا SL/TP مناسب نیست."],
+        ["UNCLEAR","قبل از Entry باید مشخص شود."]
+    ]
 },
 
 {
-title:"FINAL — V3.6.9 ENTRY GATE",
-question:"آیا تمام شروط لازم برای Entry هم‌زمان معتبر هستند؟",
-multi:false,
-options:[
-["ENTRY READY","Context + Location + Liquidity + Confirmation + Risk."],
-["WAIT","Setup هنوز کامل نشده است."],
-["NO TRADE","Scenario معتبر نیست."]
-]
+    title:"FINAL — V3.6.9 ENTRY GATE",
+    question:"آیا تمام شروط لازم برای Entry هم‌زمان معتبر هستند؟",
+    multi:false,
+    options:[
+        ["ENTRY READY","Context + Location + Liquidity + Confirmation + Risk."],
+        ["WAIT","Setup هنوز کامل نشده است."],
+        ["NO TRADE","Scenario معتبر نیست."]
+    ]
 }
 
 ];
 
-
-/* =========================================================
-V5 STEPS
-========================================================= */
 
 const scalpSteps=[
 
 {
-title:"V5 — STEP 1: DAILY LIMIT",
-question:"امروز چند معامله ثبت شده است؟",
-multi:false,
-options:[
-["0–1 TRADE","ظرفیت معامله وجود دارد."],
-["2 TRADES","فقط یک معامله دیگر مجاز است."],
-["3 TRADES","Trading Day Closed."]
-]
+    title:"V5 — STEP 1: DAILY LIMIT",
+    question:"امروز چند معامله ثبت شده است؟",
+    multi:false,
+    options:[
+        ["0–1 TRADE","ظرفیت معامله وجود دارد."],
+        ["2 TRADES","فقط یک معامله دیگر مجاز است."],
+        ["3 TRADES","Trading Day Closed."]
+    ]
 },
 
 {
-title:"V5 — STEP 2: SESSION",
-question:"در Session انتخاب‌شده، آیا بازار از نظر حرکت و Liquidity قابل معامله است؟",
-multi:false,
-options:[
-["YES","بازار فعال و Liquidity مناسب است."],
-["NO","No Trade / Wait."]
-]
+    title:"V5 — STEP 2: SESSION",
+    question:"در Session انتخاب‌شده، آیا بازار از نظر حرکت و Liquidity قابل معامله است؟",
+    multi:false,
+    options:[
+        ["YES","بازار فعال و Liquidity مناسب است."],
+        ["NO","No Trade / Wait."]
+    ]
 },
 
 {
-title:"V5 — STEP 3: IMMEDIATE LOCATION",
-question:"در تایم‌فریم‌های نزدیک به قیمت، قیمت اکنون در کدام Locationها قرار دارد؟",
-multi:true,
-options:[
-["SESSION LIQUIDITY","Asia / London / New York High/Low."],
-["PREVIOUS DAY HIGH / LOW","High/Low روز قبل."],
-["DAILY SWING","Daily Swing High/Low."],
-["RANGE EDGE","Range High / Low."],
-["LOCAL SUPPORT / RESISTANCE","سطح نزدیک و معتبر."],
-["RECENT SWING","Recent Micro / Local Swing."],
-["RECLAIMED LEVEL","Level تازه Reclaim شده."],
-["BREAKOUT RETEST","Breakout Retest نزدیک."],
-["RANGE MIDDLE","قیمت در Middle Range قرار دارد؛ Location ضعیف."],
-["UNCLEAR","Location مشخص نیست."]
-]
+    title:"V5 — STEP 3: IMMEDIATE LOCATION",
+    question:"در تایم‌فریم‌های نزدیک به قیمت، قیمت اکنون در کدام Locationها قرار دارد؟",
+    multi:true,
+    options:[
+        ["SESSION LIQUIDITY","Asia / London / New York High/Low."],
+        ["PREVIOUS DAY HIGH / LOW","High/Low روز قبل."],
+        ["DAILY SWING","Daily Swing High/Low."],
+        ["RANGE EDGE","Range High / Low."],
+        ["LOCAL SUPPORT / RESISTANCE","سطح نزدیک و معتبر."],
+        ["RECENT SWING","Recent Micro / Local Swing."],
+        ["RECLAIMED LEVEL","Level تازه Reclaim شده."],
+        ["BREAKOUT RETEST","Breakout Retest نزدیک."],
+        ["RANGE MIDDLE","قیمت در Middle Range قرار دارد؛ Location ضعیف."],
+        ["UNCLEAR","Location مشخص نیست."]
+    ]
 },
 
 {
-title:"V5 — STEP 4: LIQUIDITY EVENT",
-question:"در تایم‌فریم M1/M5، چه Liquidity Eventهایی همین حالا ایجاد شده‌اند؟",
-multi:true,
-options:[
-["M1 MICRO SWEEP","M1 Liquidity Sweep."],
-["M5 SWEEP","M5 Liquidity Sweep."],
-["BREAKOUT","Breakout فوری."],
-["FAKE BREAKOUT","Breakout Failure + Return."],
-["RECLAIM","Level Reclaimed."],
-["SESSION LIQUIDITY SWEEP","Session High/Low swept شده."],
-["NONE","Liquidity Event معتبر وجود ندارد."]
-]
+    title:"V5 — STEP 4: LIQUIDITY EVENT",
+    question:"در تایم‌فریم M1/M5، چه Liquidity Eventهایی همین حالا ایجاد شده‌اند؟",
+    multi:true,
+    options:[
+        ["M1 MICRO SWEEP","M1 Liquidity Sweep."],
+        ["M5 SWEEP","M5 Liquidity Sweep."],
+        ["BREAKOUT","Breakout فوری."],
+        ["FAKE BREAKOUT","Breakout Failure + Return."],
+        ["RECLAIM","Level Reclaimed."],
+        ["SESSION LIQUIDITY SWEEP","Session High/Low swept شده."],
+        ["NONE","Liquidity Event معتبر وجود ندارد."]
+    ]
 },
 
 {
-title:"V5 — STEP 5: M1 STRUCTURE",
-question:"در تایم‌فریم M1 چه Structureای ایجاد شده است؟",
-multi:true,
-options:[
-["MSS","Micro Structure Shift."],
-["DISPLACEMENT","Strong Directional Displacement."],
-["MSS + DISPLACEMENT","High-quality sequence."],
-["BREAK + RETEST","Break and Retest."],
-["BOS","Micro Break of Structure."],
-["NONE","Structure معتبر وجود ندارد."]
-]
+    title:"V5 — STEP 5: M1 STRUCTURE",
+    question:"در تایم‌فریم M1 چه Structureای ایجاد شده است؟",
+    multi:true,
+    options:[
+        ["MSS","Micro Structure Shift."],
+        ["DISPLACEMENT","Strong Directional Displacement."],
+        ["MSS + DISPLACEMENT","High-quality sequence."],
+        ["BREAK + RETEST","Break and Retest."],
+        ["BOS","Micro Break of Structure."],
+        ["NONE","Structure معتبر وجود ندارد."]
+    ]
 },
 
 {
-title:"V5 — STEP 6: M1 TRIGGER",
-question:"در تایم‌فریم M1 کدام Trigger برای Entry وجود دارد؟",
-multi:true,
-options:[
-["MICRO SWEEP → MSS → DISPLACEMENT","Fast high-quality setup."],
-["BREAK → RETEST → ENTRY","Breakout execution."],
-["SWEEP → RECLAIM → TRIGGER","Reclaim execution."],
-["ENGULFING / MOMENTUM","Fast Momentum Trigger."],
-["M1 MSS + DISPLACEMENT","Structure + Displacement."],
-["NONE","No Entry Trigger."]
-]
+    title:"V5 — STEP 6: M1 TRIGGER",
+    question:"در تایم‌فریم M1 کدام Trigger برای Entry وجود دارد؟",
+    multi:true,
+    options:[
+        ["MICRO SWEEP → MSS → DISPLACEMENT","Fast high-quality setup."],
+        ["BREAK → RETEST → ENTRY","Breakout execution."],
+        ["SWEEP → RECLAIM → TRIGGER","Reclaim execution."],
+        ["ENGULFING / MOMENTUM","Fast Momentum Trigger."],
+        ["M1 MSS + DISPLACEMENT","Structure + Displacement."],
+        ["NONE","No Entry Trigger."]
+    ]
 },
 
 {
-title:"V5 — STEP 7: SL LOCATION",
-question:"در تایم‌فریم M1، نقطه Invalidation کجاست؟",
-multi:false,
-options:[
-["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر."],
-["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep."],
-["BEHIND RECLAIM INVALIDATION","SL پشت Invalidation Setup."],
-["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation."],
-["TOO WIDE","SL بیش از حد وسیع؛ NO TRADE."],
-["UNCLEAR","Invalidation مشخص نیست."]
-]
+    title:"V5 — STEP 7: SL LOCATION",
+    question:"در تایم‌فریم M1، نقطه Invalidation کجاست و SL باید کجا قرار بگیرد؟",
+    multi:false,
+    options:[
+        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر قرار می‌گیرد."],
+        ["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep قرار می‌گیرد."],
+        ["BEHIND RECLAIM INVALIDATION","SL پشت Level/Structureای قرار می‌گیرد که با شکست آن Setup باطل می‌شود."],
+        ["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation قرار می‌گیرد."],
+        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است؛ NO TRADE."],
+        ["UNCLEAR","Invalidation Point مشخص نیست؛ WAIT."]
+    ]
 },
 
 {
-title:"V5 — STEP 8: TARGET",
-question:"در مسیر Entry، Target اصلی کدام است؟",
-multi:true,
-options:[
-["NEARBY LIQUIDITY","اولین Liquidity نزدیک."],
-["SESSION LIQUIDITY","Session High/Low."],
-["LOCAL SWING","Nearby Local Swing."],
-["RECENT HIGH / LOW","Recent High/Low."],
-["RANGE EDGE","لبه Range."],
-["NO CLEAR TARGET","Target مشخص نیست."]
-]
+    title:"V5 — STEP 8: TARGET",
+    question:"در مسیر Entry در تایم‌فریم‌های نزدیک، Target اصلی کدام است؟",
+    multi:true,
+    options:[
+        ["NEARBY LIQUIDITY","اولین Liquidity نزدیک."],
+        ["SESSION LIQUIDITY","Session High/Low."],
+        ["LOCAL SWING","Nearby Local Swing."],
+        ["RECENT HIGH / LOW","Recent High/Low."],
+        ["RANGE EDGE","لبه Range."],
+        ["NO CLEAR TARGET","Target مشخص نیست؛ NO TRADE."]
+    ]
 },
 
 {
-title:"V5 — FINAL GATE",
-question:"آیا یک حرکت کوتاه، سریع و کاملاً مشخص برای Super Scalp وجود دارد؟",
-multi:false,
-options:[
-["V5 ENTRY READY","Location + Liquidity Event + M1 Structure + Trigger + SL + Target."],
-["WAIT","Setup هنوز در حال شکل‌گیری است."],
-["NO TRADE","Opportunity معتبر وجود ندارد."]
-]
+    title:"V5 — FINAL GATE",
+    question:"آیا یک حرکت کوتاه، سریع و کاملاً مشخص برای Super Scalp وجود دارد؟",
+    multi:false,
+    options:[
+        ["V5 ENTRY READY","Location + Liquidity Event + M1 Structure + Trigger + SL + Target."],
+        ["WAIT","Setup هنوز در حال شکل‌گیری است."],
+        ["NO TRADE","Opportunity معتبر وجود ندارد."]
+    ]
 }
 
 ];
 
 
 /* =========================================================
-HELPERS
+   STEP HELPERS
 ========================================================= */
 
 function currentSteps(){
@@ -1818,7 +2561,7 @@ function isExclusiveOption(label){
 
 
 /* =========================================================
-RENDER
+   RENDER STEP
 ========================================================= */
 
 function renderStep(){
@@ -1829,8 +2572,8 @@ function renderStep(){
 
     if(!s)return;
 
-    const selected=
-        getSelectedAnswers();
+
+    const selected=getSelectedAnswers();
 
 
     document.getElementById("assistantTitle")
@@ -1852,52 +2595,49 @@ function renderStep(){
 
     let html=`
 
-<div class="question">
+        <div class="question">
 
-${s.title}
+            ${s.title}
 
-<br>
+            <br>
 
-${s.question}
+            ${s.question}
 
-${
-s.multi
-?
-`<div class="alert info">
-☑ MULTI-SELECTION — می‌توانی چند گزینه را انتخاب کنی.
-</div>`
-:
-``}
+            ${
+                s.multi
+                ?
+                `<div class="multiHint">
+                    ☑ MULTI-SELECTION — می‌توانی چند گزینه را هم‌زمان انتخاب کنی.
+                </div>`
+                :
+                ``
+            }
 
-</div>
+        </div>
 
-<div class="options">
-`;
+        <div class="options">
+
+    `;
 
 
     s.options.forEach((opt,i)=>{
 
-        const active=
-            selected.includes(i);
-
-        const danger=
-            isHardStop(opt[0]);
+        const active=selected.includes(i);
 
         html+=`
 
-<div
-class="option
-${active?"selected":""}
-${active && danger?"dangerSelected":""}"
-onclick="chooseAnswer(${i})">
+            <div
+                class="option ${active?"selected":""}"
+                onclick="chooseAnswer(${i},this)"
+            >
 
-<strong>${opt[0]}</strong>
+                <strong>${opt[0]}</strong>
 
-<small>${opt[1]}</small>
+                <small>${opt[1]}</small>
 
-</div>
+            </div>
 
-`;
+        `;
 
     });
 
@@ -1930,7 +2670,7 @@ onclick="chooseAnswer(${i})">
 
 
 /* =========================================================
-ANSWER
+   CHOOSE ANSWER
 ========================================================= */
 
 function chooseAnswer(index){
@@ -1950,8 +2690,7 @@ function chooseAnswer(index){
 
     }else{
 
-        const exclusive=
-            isExclusiveOption(label);
+        const exclusive=isExclusiveOption(label);
 
 
         if(exclusive){
@@ -1960,20 +2699,18 @@ function chooseAnswer(index){
 
         }else{
 
-            selected=
-                selected.filter(i =>
-                    !isExclusiveOption(
-                        s.options[i][0]
-                    )
-                );
+            selected=selected.filter(i =>
+                !isExclusiveOption(
+                    s.options[i][0]
+                )
+            );
 
 
             if(selected.includes(index)){
 
-                selected=
-                    selected.filter(
-                        i=>i!==index
-                    );
+                selected=selected.filter(
+                    i=>i!==index
+                );
 
             }else{
 
@@ -1994,16 +2731,15 @@ function chooseAnswer(index){
 
 
 /* =========================================================
-DECISION MESSAGE
+   DECISION MESSAGE
 ========================================================= */
 
 function updateDecisionMessage(){
 
-    const selectedIndexes=
-        getSelectedAnswers();
+    const selectedIndexes=getSelectedAnswers();
 
 
-    if(!selectedIndexes.length){
+    if(selectedIndexes.length===0){
 
         document.getElementById("decisionArea")
             .innerHTML="";
@@ -2016,50 +2752,66 @@ function updateDecisionMessage(){
     const s=getCurrentStep();
 
 
-    const labels=
+    const selectedLabels=
         selectedIndexes.map(
             i=>s.options[i][0]
         );
 
 
-    if(labels.some(isHardStop)){
+    const hasHardStop=
+        selectedLabels.some(
+            label=>isHardStop(label)
+        );
+
+
+    const hasWait=
+        selectedLabels.some(
+            label=>isWaitCondition(label)
+        );
+
+
+    if(hasHardStop){
 
         document.getElementById("decisionArea")
             .innerHTML=`
 
-<div class="alert danger">
+            <div class="alert danger">
 
-🔴 NO TRADE / STOP CONDITION
+                🔴 NO TRADE / STOP CONDITION
 
-<br>
+                <br>
 
-${labels.join(" + ")}
+                <small>
+                    ${selectedLabels.join(" + ")}
+                </small>
 
-</div>
+            </div>
 
-`;
+            `;
 
         return;
 
     }
 
 
-    if(labels.some(isWaitCondition)){
+    if(hasWait){
 
         document.getElementById("decisionArea")
             .innerHTML=`
 
-<div class="alert warning">
+            <div class="alert warning">
 
-🟡 WAIT — SETUP DEVELOPING
+                🟡 WAIT — SETUP DEVELOPING
 
-<br>
+                <br>
 
-${labels.join(" + ")}
+                <small>
+                    ${selectedLabels.join(" + ")}
+                </small>
 
-</div>
+            </div>
 
-`;
+            `;
 
         return;
 
@@ -2069,29 +2821,30 @@ ${labels.join(" + ")}
     document.getElementById("decisionArea")
         .innerHTML=`
 
-<div class="alert success">
+        <div class="alert success">
 
-🟢 CONDITION ACCEPTED
+            🟢 CONDITION ACCEPTED
 
-<br>
+            <br>
 
-${labels.join(" + ")}
+            <small>
+                ${selectedLabels.join(" + ")}
+            </small>
 
-</div>
+        </div>
 
-`;
+        `;
 
 }
 
 
 /* =========================================================
-HARD STOP
+   HARD STOP
 ========================================================= */
 
 function isHardStop(label){
 
-    const text=
-        label.toUpperCase();
+    const text=label.toUpperCase();
 
 
     return(
@@ -2125,8 +2878,7 @@ function isHardStop(label){
 
 function isWaitCondition(label){
 
-    const text=
-        label.toUpperCase();
+    const text=label.toUpperCase();
 
 
     return(
@@ -2135,7 +2887,9 @@ function isWaitCondition(label){
 
         text==="WAIT" ||
 
-        text.includes("UNCLEAR")
+        text.includes("UNCLEAR") ||
+
+        text.includes("MSS ONLY")
 
     );
 
@@ -2143,13 +2897,12 @@ function isWaitCondition(label){
 
 
 /* =========================================================
-STRATEGY RECORD
+   STRATEGY RECORD
 ========================================================= */
 
 function buildStrategyRecord(){
 
-    const steps=
-        currentSteps();
+    const steps=currentSteps();
 
     let lines=[];
 
@@ -2189,12 +2942,17 @@ function buildStrategyRecord(){
             state.answers[index] || [];
 
 
-        if(!answers.length)return;
+        if(answers.length===0){
+
+            return;
+
+        }
 
 
         const selected=
             answers.map(
-                i=>step.options[i][0]
+                answerIndex =>
+                    step.options[answerIndex][0]
             );
 
 
@@ -2228,8 +2986,7 @@ function buildStrategyRecord(){
     );
 
 
-    const finalIndex=
-        steps.length-1;
+    const finalIndex=steps.length-1;
 
     const finalAnswers=
         state.answers[finalIndex] || [];
@@ -2237,10 +2994,13 @@ function buildStrategyRecord(){
 
     if(finalAnswers.length){
 
-        lines.push(
+        const finalLabels=
             finalAnswers.map(
                 i=>steps[finalIndex].options[i][0]
-            ).join(" + ")
+            );
+
+        lines.push(
+            finalLabels.join(" + ")
         );
 
     }else{
@@ -2250,41 +3010,76 @@ function buildStrategyRecord(){
     }
 
 
+    lines.push("");
+
+    lines.push(
+        "DISCIPLINE STATUS: "+
+        (
+            state.disciplinePassed
+            ? "PASSED"
+            : "NOT COMPLETED"
+        )
+    );
+
+
+    lines.push(
+        "EXECUTION STATUS: "+
+        (
+            state.executionAuthorized
+            ? "AUTHORIZED"
+            : "NOT AUTHORIZED"
+        )
+    );
+
+
     return lines.join("\n");
 
 }
 
 
 /* =========================================================
-NEXT
+   FINAL ENTRY
 ========================================================= */
 
 function nextStep(){
 
-    const steps=
-        currentSteps();
+    const steps=currentSteps();
 
-    const s=
-        steps[state.step];
+    const s=steps[state.step];
 
-    const selected=
+    const selectedIndexes=
         getSelectedAnswers();
 
 
-    if(!selected.length)return;
+    if(selectedIndexes.length===0){
+
+        return;
+
+    }
 
 
-    const labels=
-        selected.map(
+    const selectedLabels=
+        selectedIndexes.map(
             i=>s.options[i][0]
         );
 
 
-    if(labels.some(isHardStop)){
+    if(
+        selectedLabels.some(
+            label=>isHardStop(label)
+        )
+    ){
+
+        const stopLabel=
+            selectedLabels.find(
+                label=>isHardStop(label)
+            );
+
 
         showFinalState(
             "🔴 NO TRADE",
-            "شرط انتخاب‌شده Setup را invalid کرده است."
+            "شرط انتخاب‌شده Setup را invalid کرده است: "+
+            stopLabel
         );
 
         return;
@@ -2292,22 +3087,32 @@ function nextStep(){
     }
 
 
-    if(labels.some(isWaitCondition)){
+    if(
+        selectedLabels.some(
+            label=>isWaitCondition(label)
+        )
+    ){
 
-        showFinalState(
-            "🟡 WAIT — SETUP DEVELOPING",
-            labels.join(" + ")
-        );
+        if(selectedLabels.length===1){
 
-        return;
+            showFinalState(
+                "🟡 WAIT — SETUP DEVELOPING",
+                selectedLabels[0]
+            );
+
+            return;
+
+        }
 
     }
 
 
-    if(state.step===steps.length-1){
+    if(
+        state.step===steps.length-1
+    ){
 
         const finalLabel=
-            labels[0];
+            selectedLabels[0];
 
 
         if(
@@ -2315,21 +3120,36 @@ function nextStep(){
             finalLabel==="V5 ENTRY READY"
         ){
 
+            showFinalState(
+
+                state.mode==="DAY"
+                ? "🟢 V3.6.9 ENTRY READY"
+                : "🟢 V5 SUPER SCALP ENTRY READY",
+
+                "Strategy کامل شد. اما هنوز اجازه ورود نداری. Discipline Gate باید تکمیل شود."
+
+            );
+
+
             openDisciplineGate();
 
             return;
 
+        }else{
+
+            showFinalState(
+
+                finalLabel.includes("WAIT")
+                ? "🟡 WAIT — SETUP DEVELOPING"
+                : "🔴 NO TRADE",
+
+                finalLabel
+
+            );
+
+            return;
+
         }
-
-
-        showFinalState(
-            finalLabel.includes("WAIT")
-            ? "🟡 WAIT — SETUP DEVELOPING"
-            : "🔴 NO TRADE",
-            finalLabel
-        );
-
-        return;
 
     }
 
@@ -2342,12 +3162,17 @@ function nextStep(){
 
 
 /* =========================================================
-BACK
+   BACK
 ========================================================= */
 
 function previousStep(){
 
-    if(state.step===0)return;
+    if(state.step===0){
+
+        return;
+
+    }
+
 
     state.step--;
 
@@ -2357,7 +3182,7 @@ function previousStep(){
 
 
 /* =========================================================
-FINAL STATE
+   FINAL STATE
 ========================================================= */
 
 function showFinalState(title,text){
@@ -2365,34 +3190,62 @@ function showFinalState(title,text){
     let type="danger";
 
 
-    if(title.includes("ENTRY"))
+    if(title.includes("ENTRY")){
+
         type="success";
 
-    if(title.includes("WAIT"))
+    }else if(title.includes("WAIT")){
+
         type="warning";
+
+    }
 
 
     document.getElementById("questionArea")
         .innerHTML=`
 
-<div class="alert ${type}"
-style="font-size:18px;font-weight:900">
+        <div
+            class="alert ${type}"
+            style="font-size:18px;font-weight:900">
 
-${title}
+            ${title}
 
-</div>
+        </div>
 
-<div class="description">
+        <div class="description">
 
-${text}
+            ${text}
 
-</div>
+        </div>
 
-`;
+        `;
 
 
     document.getElementById("decisionArea")
-        .innerHTML="";
+        .innerHTML=`
+
+        <div class="alert info">
+
+            Engine:
+            ${
+                state.mode==="DAY"
+                ? "V3.6.9 STRUCTURAL SNIPER"
+                : "V5 SUPER SCALP"
+            }
+
+            <br>
+
+            Session:
+            ${state.session}
+
+            <br>
+
+            Daily Trades:
+            ${dailyTrades().length}/3
+
+        </div>
+
+        `;
 
 
     document.getElementById("nextBtn")
@@ -2402,306 +3255,105 @@ ${text}
 
 
 /* =========================================================
-DISCIPLINE GATE
+   DISCIPLINE GATE
 ========================================================= */
 
 function openDisciplineGate(){
 
     document.getElementById("assistantSection")
-        .classList.add("hidden");
+        .classList.remove("hidden");
 
     document.getElementById("disciplineSection")
         .classList.remove("hidden");
 
+    document.getElementById("pauseSection")
+        .classList.add("hidden");
 
-    renderDisciplineGate();
+    document.getElementById("authorizationSection")
+        .classList.add("hidden");
 
-}
-
-
-function renderDisciplineGate(){
-
-    document.getElementById("disciplineContent")
-        .innerHTML=`
-
-<div class="alert success">
-
-🟢 STRATEGY SETUP VALID
-
-<br><br>
-
-اما این هنوز به معنی «ورود» نیست.
-
-<br>
-
-حالا باید مشخص کنیم آیا خودت هم آماده اجرای همین Setup هستی یا نه.
-
-</div>
+    document.getElementById("journalSection")
+        .classList.add("hidden");
 
 
-<div class="intentBox">
+    document.getElementById("disciplineMessage")
+        .className="alert warning";
 
-<h3>1️⃣ INTENT CHECK</h3>
-
-<div class="description">
-
-چرا می‌خواهی این معامله را باز کنی؟
-
-</div>
-
-<div class="options">
-
-<div class="option"
-onclick="selectDiscipline('reason','PLAN',this)">
-<strong>📋 PLAN</strong>
-<small>
-چون Setup طبق قوانین سیستم کامل شده است.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('reason','FOMO',this)">
-<strong>⚠️ FOMO</strong>
-<small>
-می‌ترسم حرکت را از دست بدهم.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('reason','REVENGE',this)">
-<strong>🔴 REVENGE</strong>
-<small>
-می‌خواهم ضرر قبلی را پس بگیرم.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('reason','BOREDOM',this)">
-<strong>🟡 BOREDOM</strong>
-<small>
-فقط می‌خواهم معامله داشته باشم.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('reason','RECOVERY',this)">
-<strong>💰 LOSS RECOVERY</strong>
-<small>
-هدف اصلی جبران ضرر است.
-</small>
-</div>
-
-</div>
-
-</div>
+    document.getElementById("disciplineMessage")
+        .innerHTML=
+        "🔒 تمام ۷ مورد را با صداقت بررسی کن.";
 
 
-<div class="intentBox">
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: CHECKING";
 
-<h3>2️⃣ IMPULSE CHECK</h3>
-
-<div class="description">
-
-الان چقدر احساس می‌کنی «باید همین الان» وارد شوی؟
-
-</div>
-
-<div class="options">
-
-<div class="option"
-onclick="selectDiscipline('impulse','LOW',this)">
-<strong>🟢 LOW</strong>
-<small>
-آرام هستم و اگر معامله را از دست بدهم مشکلی ندارم.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('impulse','MEDIUM',this)">
-<strong>🟡 MEDIUM</strong>
-<small>
-کمی عجله دارم ولی هنوز کنترل دارم.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('impulse','HIGH',this)">
-<strong>🔴 HIGH</strong>
-<small>
-احساس می‌کنم باید همین الان وارد شوم.
-</small>
-</div>
-
-</div>
-
-</div>
+    document.getElementById("disciplineBadge")
+        .classList.add("active");
 
 
-<div class="intentBox">
-
-<h3>3️⃣ PLAN VIOLATION CHECK</h3>
-
-<div class="description">
-
-آیا برای ورود باید یکی از قوانین سیستم را نادیده بگیری؟
-
-</div>
-
-<div class="options">
-
-<div class="option"
-onclick="selectDiscipline('violation','NO',this)">
-<strong>🟢 NO</strong>
-<small>
-همه چیز طبق قوانین سیستم است.
-</small>
-</div>
-
-<div class="option"
-onclick="selectDiscipline('violation','YES',this)">
-<strong>🔴 YES</strong>
-<small>
-می‌دانم یکی از قوانین را نقض می‌کنم ولی می‌خواهم وارد شوم.
-</small>
-</div>
-
-</div>
-
-</div>
-
-
-<div id="disciplineDecision"></div>
-
-<div id="pauseArea"></div>
-
-`;
+    document.getElementById("disciplineSection")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
 
 }
 
 
 /* =========================================================
-DISCIPLINE SELECTION
+   DISCIPLINE PASS
 ========================================================= */
 
-function selectDiscipline(type,value,element){
+function passDiscipline(){
 
-    state.disciplineAnswers[type]=value;
+    const checks=[
+
+        "disciplinePlan",
+        "disciplineNoFomo",
+        "disciplineNoRevenge",
+        "disciplineNoRush",
+        "disciplineReason",
+        "disciplineAcceptLoss",
+        "disciplineCanSkip"
+
+    ];
 
 
-    const parent=
-        element.parentElement;
-
-
-    parent.querySelectorAll(".option")
-        .forEach(
-            x=>x.classList.remove("selected")
+    const allPassed=
+        checks.every(
+            id=>document.getElementById(id).checked
         );
 
 
-    element.classList.add("selected");
+    if(!allPassed){
 
+        document.getElementById("disciplineMessage")
+            .className="alert danger";
 
-    evaluateDiscipline();
+        document.getElementById("disciplineMessage")
+            .innerHTML=`
 
-}
+            🔴 DISCIPLINE FAILED
 
+            <br><br>
 
-/* =========================================================
-DISCIPLINE EVALUATION
-========================================================= */
+            حداقل یکی از شروط انضباطی تأیید نشده است.
 
-function evaluateDiscipline(){
+            <br>
 
-    const a=
-        state.disciplineAnswers;
+            <strong>
+            این Setup لغو شد. روز معاملاتی همچنان فعال است.
+            </strong>
 
+            `;
 
-    if(
-        !a.reason ||
-        !a.impulse ||
-        !a.violation
-    ){
+        document.getElementById("disciplineBadge")
+            .textContent=
+            "DISCIPLINE: FAILED";
 
-        document.getElementById(
-            "disciplineDecision"
-        ).innerHTML=`
-
-<div class="alert info">
-
-⏳ Discipline Gate incomplete.
-همه سه بررسی را تکمیل کن.
-
-</div>
-
-`;
-
-        return;
-
-    }
-
-
-    if(
-        a.reason!=="PLAN" ||
-        a.impulse==="HIGH" ||
-        a.violation==="YES"
-    ){
-
-        state.disciplinePassed=false;
-
-
-        let reason="";
-
-
-        if(a.reason!=="PLAN")
-            reason+="Intent خارج از Plan است. ";
-
-
-        if(a.impulse==="HIGH")
-            reason+="Impulse Level بالاست. ";
-
-
-        if(a.violation==="YES")
-            reason+="خودت تأیید کردی که قصد نقض قانون را داری. ";
-
-
-        document.getElementById(
-            "disciplineDecision"
-        ).innerHTML=`
-
-<div class="alert danger">
-
-<div class="bigWarning">
-
-🔴 DISCIPLINE LOCK
-
-</div>
-
-<br>
-
-${reason}
-
-<br><br>
-
-<strong>
-این معامله برای تو ممنوع است.
-</strong>
-
-<br><br>
-
-ممکن است Setup بازار معتبر باشد،
-اما Trader State معتبر نیست.
-
-</div>
-
-<button
-class="btn danger"
-onclick="disciplineStop()">
-
-🔒 CANCEL TRADE
-
-</button>
-
-`;
+        document.getElementById("disciplineBadge")
+            .classList.add("red");
 
         return;
 
@@ -2711,110 +3363,246 @@ onclick="disciplineStop()">
     state.disciplinePassed=true;
 
 
-    document.getElementById(
-        "disciplineDecision"
-    ).innerHTML=`
+    document.getElementById("disciplineMessage")
+        .className="alert success";
 
-<div class="alert success">
-
-🟢 DISCIPLINE CHECK PASSED
-
-<br><br>
-
-Intent = PLAN<br>
-Impulse = Controlled<br>
-Plan Violation = NO
-
-</div>
-
-<div class="alert gold">
-
-⏸️ ONE-MINUTE PAUSE
-
-<br>
-
-قبل از Commit نهایی، یک دقیقه صبر کن.
-
-<br>
-
-اگر در این یک دقیقه احساس کردی باید سریع وارد شوی،
-برگرد و معامله را Cancel کن.
-
-</div>
-
-<div id="countdown"
-class="timer">
-60
-</div>
-
-<button
-id="commitButton"
-class="btn success"
-disabled
-onclick="finalCommit()">
-
-WAIT 60 SECONDS...
-
-</button>
-
-`;
+    document.getElementById("disciplineMessage")
+        .innerHTML=
+        "🟢 DISCIPLINE VERIFIED — حالا وارد 10-Second Pause می‌شویم.";
 
 
-    startPauseTimer();
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: PASSED";
+
+    document.getElementById("disciplineBadge")
+        .classList.remove("red");
+
+    document.getElementById("disciplineBadge")
+        .classList.add("green");
+
+
+    setTimeout(
+        startPause,
+        700
+    );
 
 }
 
 
 /* =========================================================
-PAUSE TIMER
+   CANCEL CURRENT SETUP
 ========================================================= */
 
-let pauseInterval=null;
+function failDiscipline(){
+
+    state.disciplinePassed=false;
+
+    state.executionAuthorized=false;
 
 
-function startPauseTimer(){
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: SETUP CANCELLED";
 
-    clearInterval(pauseInterval);
+    document.getElementById("disciplineBadge")
+        .classList.remove("active","green");
 
-
-    let seconds=60;
-
-
-    const counter=
-        document.getElementById("countdown");
-
-    const button=
-        document.getElementById("commitButton");
+    document.getElementById("disciplineBadge")
+        .classList.add("red");
 
 
-    counter.textContent=seconds;
+    document.getElementById("disciplineSection")
+        .innerHTML=`
 
-    button.disabled=true;
+        <h2>🔴 DISCIPLINE FAILED</h2>
 
-    button.textContent=
-        "WAIT "+seconds+" SECONDS...";
+        <div class="alert danger">
+
+            <strong>
+            CURRENT SETUP CANCELLED
+            </strong>
+
+            <br><br>
+
+            این معامله مجاز نیست.
+
+            <br><br>
+
+            مهم:
+
+            <br>
+
+            Trading Day همچنان ACTIVE است.
+
+            <br>
+
+            می‌توانی بعداً یک Setup جدید را
+            از ابتدا بررسی کنی.
+
+        </div>
+
+        <div class="btnrow">
+
+            <button
+                class="btn primary"
+                onclick="newSetupAfterDisciplineFail()">
+
+                🔄 WAIT FOR NEXT SETUP
+
+            </button>
+
+        </div>
+
+        `;
+
+}
 
 
-    pauseInterval=
+/* =========================================================
+   NEW SETUP AFTER DISCIPLINE FAIL
+========================================================= */
+
+function newSetupAfterDisciplineFail(){
+
+    const todayTrades=dailyTrades();
+
+
+    if(todayTrades.length>=3){
+
+        alert(
+            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
+        );
+
+        return;
+
+    }
+
+
+    if(consecutiveLosses()>=2){
+
+        alert(
+            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
+        );
+
+        return;
+
+    }
+
+
+    state.step=0;
+
+    state.answers={};
+
+    state.disciplinePassed=false;
+
+    state.executionAuthorized=false;
+
+
+    document.getElementById("disciplineSection")
+        .classList.add("hidden");
+
+    document.getElementById("pauseSection")
+        .classList.add("hidden");
+
+    document.getElementById("authorizationSection")
+        .classList.add("hidden");
+
+    document.getElementById("journalSection")
+        .classList.add("hidden");
+
+
+    document.getElementById("assistantSection")
+        .classList.remove("hidden");
+
+
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: READY";
+
+    document.getElementById("disciplineBadge")
+        .classList.remove("red","green","active");
+
+
+    renderStep();
+
+}
+
+
+/* =========================================================
+   10 SECOND PAUSE
+========================================================= */
+
+function startPause(){
+
+    document.getElementById("disciplineSection")
+        .classList.add("hidden");
+
+    document.getElementById("pauseSection")
+        .classList.remove("hidden");
+
+
+    const number=
+        document.getElementById("pauseNumber");
+
+    const message=
+        document.getElementById("pauseMessage");
+
+    const authBtn=
+        document.getElementById("authorizationBtn");
+
+
+    let remaining=10;
+
+    number.textContent=remaining;
+
+    authBtn.disabled=true;
+
+    authBtn.textContent=
+        "🔒 WAIT...";
+
+
+    if(state.pauseTimer){
+
+        clearInterval(
+            state.pauseTimer
+        );
+
+    }
+
+
+    state.pauseTimer=
         setInterval(()=>{
 
-            seconds--;
+            remaining--;
 
-            counter.textContent=
-                seconds;
-
-
-            button.textContent=
-                seconds>0
-                ? "WAIT "+seconds+" SECONDS..."
-                : "I WAITED — REVIEW & COMMIT";
+            number.textContent=
+                remaining;
 
 
-            if(seconds<=0){
+            if(remaining<=0){
 
-                clearInterval(pauseInterval);
+                clearInterval(
+                    state.pauseTimer
+                );
 
-                button.disabled=false;
+                state.pauseTimer=null;
+
+
+                number.textContent="✓";
+
+
+                message.className=
+                    "alert success";
+
+                message.innerHTML=
+                    "🟢 PAUSE COMPLETE — اکنون می‌توانی Execution Authorization را بررسی کنی.";
+
+
+                authBtn.disabled=false;
+
+                authBtn.textContent=
+                    "🟢 CONTINUE TO AUTHORIZATION";
 
             }
 
@@ -2824,10 +3612,160 @@ function startPauseTimer(){
 
 
 /* =========================================================
-FINAL COMMIT
+   CANCEL PAUSE
 ========================================================= */
 
-function finalCommit(){
+function cancelFromPause(){
+
+    if(state.pauseTimer){
+
+        clearInterval(
+            state.pauseTimer
+        );
+
+        state.pauseTimer=null;
+
+    }
+
+
+    state.disciplinePassed=false;
+
+    state.executionAuthorized=false;
+
+
+    document.getElementById("pauseSection")
+        .innerHTML=`
+
+        <h2>🔴 SETUP CANCELLED</h2>
+
+        <div class="alert danger">
+
+            تصمیم به عدم ورود ثبت شد.
+
+            <br><br>
+
+            <strong>
+            No Trade is also a valid decision.
+            </strong>
+
+            <br><br>
+
+            Trading Day همچنان ACTIVE است.
+
+        </div>
+
+        <div class="btnrow">
+
+            <button
+                class="btn primary"
+                onclick="newSetupAfterPauseCancel()">
+
+                🔄 WAIT FOR NEXT SETUP
+
+            </button>
+
+        </div>
+
+        `;
+
+
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: SETUP CANCELLED";
+
+}
+
+
+/* =========================================================
+   NEW SETUP AFTER PAUSE CANCEL
+========================================================= */
+
+function newSetupAfterPauseCancel(){
+
+    const todayTrades=dailyTrades();
+
+
+    if(todayTrades.length>=3){
+
+        alert(
+            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
+        );
+
+        return;
+
+    }
+
+
+    if(consecutiveLosses()>=2){
+
+        alert(
+            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
+        );
+
+        return;
+
+    }
+
+
+    state.step=0;
+
+    state.answers={};
+
+    state.disciplinePassed=false;
+
+    state.executionAuthorized=false;
+
+
+    document.getElementById("pauseSection")
+        .classList.add("hidden");
+
+    document.getElementById("assistantSection")
+        .classList.remove("hidden");
+
+
+    renderStep();
+
+}
+
+
+/* =========================================================
+   AUTHORIZATION
+========================================================= */
+
+function authorizeExecution(){
+
+    if(!state.disciplinePassed){
+
+        alert(
+            "🔴 Discipline Gate has not passed."
+        );
+
+        return;
+
+    }
+
+
+    document.getElementById("pauseSection")
+        .classList.add("hidden");
+
+    document.getElementById("authorizationSection")
+        .classList.remove("hidden");
+
+
+    document.getElementById("authorizationSection")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+}
+
+
+/* =========================================================
+   FINAL AUTHORIZATION
+========================================================= */
+
+function finalAuthorize(){
 
     if(!state.disciplinePassed){
 
@@ -2840,29 +3778,22 @@ function finalCommit(){
     }
 
 
-    const confirmText=
-        confirm(
-`FINAL COMMITMENT
-
-من می‌دانم:
-
-• این معامله اجباری نیست.
-• اگر Setup از بین برود، معامله نمی‌کنم.
-• SL محل Invalidation است.
-• نتیجه معامله را کنترل نمی‌کنم.
-• فقط اجرای Plan را کنترل می‌کنم.
-
-آیا واقعاً آماده اجرای همین Setup هستم؟`
-        );
+    state.executionAuthorized=true;
 
 
-    if(!confirmText){
+    document.getElementById("authorizationSection")
+        .classList.add("hidden");
 
-        disciplineStop();
 
-        return;
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: AUTHORIZED";
 
-    }
+    document.getElementById("disciplineBadge")
+        .classList.remove("red","active");
+
+    document.getElementById("disciplineBadge")
+        .classList.add("green");
 
 
     openTradeJournal();
@@ -2871,18 +3802,98 @@ function finalCommit(){
 
 
 /* =========================================================
-DISCIPLINE STOP
+   CANCEL AUTHORIZATION
 ========================================================= */
 
-function disciplineStop(){
+function cancelAuthorization(){
 
-    clearInterval(pauseInterval);
+    state.executionAuthorized=false;
 
+
+    document.getElementById("authorizationSection")
+        .innerHTML=`
+
+        <h2>🔴 EXECUTION CANCELLED</h2>
+
+        <div class="alert danger">
+
+            Execution Authorization رد شد.
+
+            <br><br>
+
+            <strong>
+            معامله انجام نشد.
+            </strong>
+
+            <br><br>
+
+            Trading Day همچنان ACTIVE است.
+
+        </div>
+
+        <div class="btnrow">
+
+            <button
+                class="btn primary"
+                onclick="newSetupAfterAuthorizationCancel()">
+
+                🔄 WAIT FOR NEXT SETUP
+
+            </button>
+
+        </div>
+
+        `;
+
+
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: SETUP CANCELLED";
+
+}
+
+
+/* =========================================================
+   NEW SETUP AFTER AUTH CANCEL
+========================================================= */
+
+function newSetupAfterAuthorizationCancel(){
+
+    const todayTrades=dailyTrades();
+
+
+    if(todayTrades.length>=3){
+
+        alert(
+            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
+        );
+
+        return;
+
+    }
+
+
+    if(consecutiveLosses()>=2){
+
+        alert(
+            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
+        );
+
+        return;
+
+    }
+
+
+    state.step=0;
+
+    state.answers={};
 
     state.disciplinePassed=false;
 
+    state.executionAuthorized=false;
 
-    document.getElementById("disciplineSection")
+
+    document.getElementById("authorizationSection")
         .classList.add("hidden");
 
 
@@ -2890,57 +3901,22 @@ function disciplineStop(){
         .classList.remove("hidden");
 
 
-    document.getElementById("questionArea")
-        .innerHTML=`
-
-<div class="alert danger"
-style="font-size:20px;font-weight:900">
-
-🔒 TRADE CANCELLED
-
-<br><br>
-
-تو معامله نکردی.
-
-این شکست نیست.
-
-<strong>
-این یک اجرای موفق Discipline است.
-</strong>
-
-</div>
-
-<div class="alert success">
-
-امروز یک کار مهم انجام دادی:
-
-<strong>
-قانون را به احساس ترجیح دادی.
-</strong>
-
-</div>
-
-`;
-
-
-    document.getElementById("decisionArea")
-        .innerHTML="";
-
-
-    document.getElementById("nextBtn")
-        .disabled=true;
+    renderStep();
 
 }
 
 
 /* =========================================================
-OPEN JOURNAL
+   JOURNAL OPEN
 ========================================================= */
 
 function openTradeJournal(){
 
-    document.getElementById("disciplineSection")
-        .classList.add("hidden");
+    if(!state.executionAuthorized){
+
+        return;
+
+    }
 
 
     const record=
@@ -2953,25 +3929,31 @@ function openTradeJournal(){
 
 
     document.getElementById(
-        "journalSection"
-    ).classList.remove("hidden");
+        "journalReadyMessage"
+    ).className="alert success";
 
 
     document.getElementById(
         "journalReadyMessage"
-    ).innerHTML=`
+    ).innerHTML=
+        `
 
-🟢 ENTRY COMMITMENT ACCEPTED
+        🟢 EXECUTION AUTHORIZED
 
-<br><br>
+        <br>
 
-Strategy + Discipline Gate completed.
+        Strategy + Discipline + Pause + Authorization completed.
 
-<br>
+        <br>
 
-فقط اطلاعات واقعی اجرای معامله را وارد کن.
+        حالا اطلاعات واقعی معامله را وارد کن.
 
-`;
+        `;
+
+
+    document.getElementById(
+        "journalSection"
+    ).classList.remove("hidden");
 
 
     setTimeout(()=>{
@@ -2989,7 +3971,38 @@ Strategy + Discipline Gate completed.
 
 
 /* =========================================================
-JOURNAL
+   RULE FOLLOWED
+========================================================= */
+
+function selectRuleFollowed(value){
+
+    state.ruleFollowed=value;
+
+
+    document.getElementById("ruleYes")
+        .classList.remove("selected");
+
+    document.getElementById("ruleNo")
+        .classList.remove("selected");
+
+
+    if(value==="YES"){
+
+        document.getElementById("ruleYes")
+            .classList.add("selected");
+
+    }else{
+
+        document.getElementById("ruleNo")
+            .classList.add("selected");
+
+    }
+
+}
+
+
+/* =========================================================
+   ADD TRADE
 ========================================================= */
 
 function addTrade(){
@@ -3000,7 +4013,11 @@ function addTrade(){
         .slice(0,10);
 
 
-    if(dailyTrades().length>=3){
+    const tradesToday=
+        dailyTrades();
+
+
+    if(tradesToday.length>=3){
 
         alert(
             "🔴 Maximum Daily Trades = 3"
@@ -3022,10 +4039,10 @@ function addTrade(){
     }
 
 
-    if(!state.disciplinePassed){
+    if(!state.executionAuthorized){
 
         alert(
-            "🔴 Discipline Gate must be completed before saving a trade."
+            "🔴 Execution Authorization is required before saving a trade."
         );
 
         return;
@@ -3037,6 +4054,74 @@ function addTrade(){
         document.getElementById(
             "jStrategyRecord"
         ).value.trim();
+
+
+    if(!strategyRecord){
+
+        alert(
+            "🔴 Strategy Decision Record is missing."
+        );
+
+        return;
+
+    }
+
+
+    const direction=
+        document.getElementById(
+            "jDirection"
+        ).value.trim();
+
+
+    const entry=
+        document.getElementById(
+            "jEntry"
+        ).value;
+
+
+    const sl=
+        document.getElementById(
+            "jSL"
+        ).value;
+
+
+    const tp=
+        document.getElementById(
+            "jTP"
+        ).value;
+
+
+    const result=
+        document.getElementById(
+            "jResult"
+        ).value.trim();
+
+
+    if(
+        !direction ||
+        !entry ||
+        !sl ||
+        !tp
+    ){
+
+        alert(
+            "Direction, Entry, SL and TP are required."
+        );
+
+        return;
+
+    }
+
+
+    if(state.ruleFollowed===null){
+
+        alert(
+            "🔴 RULE FOLLOWED? را انتخاب کن."
+        );
+
+        return;
+
+    }
 
 
     const trade={
@@ -3056,42 +4141,29 @@ function addTrade(){
             ? "V3.6.9"
             : "V5",
 
-        direction:
-            document.getElementById(
-                "jDirection"
-            ).value,
+        direction:direction,
 
-        entry:
-            document.getElementById(
-                "jEntry"
-            ).value,
+        entry:entry,
 
-        sl:
-            document.getElementById(
-                "jSL"
-            ).value,
+        sl:sl,
 
-        tp:
-            document.getElementById(
-                "jTP"
-            ).value,
+        tp:tp,
 
-        result:
-            document.getElementById(
-                "jResult"
-            ).value,
+        result:result,
+
+        ruleFollowed:
+            state.ruleFollowed,
+
+        discipline:
+            state.disciplinePassed
+            ? "PASSED"
+            : "FAILED",
+
+        executionAuthorized:
+            state.executionAuthorized,
 
         strategyRecord:
             strategyRecord,
-
-        intent:
-            state.disciplineAnswers.reason || "",
-
-        impulse:
-            state.disciplineAnswers.impulse || "",
-
-        planViolation:
-            state.disciplineAnswers.violation || "",
 
         notes:
             document.getElementById(
@@ -3099,22 +4171,6 @@ function addTrade(){
             ).value
 
     };
-
-
-    if(
-        !trade.direction ||
-        !trade.entry ||
-        !trade.sl ||
-        !trade.tp
-    ){
-
-        alert(
-            "Direction, Entry, SL and TP are required."
-        );
-
-        return;
-
-    }
 
 
     state.trades.push(trade);
@@ -3128,17 +4184,38 @@ function addTrade(){
     );
 
 
+    clearJournalInputs();
+
+    state.ruleFollowed=null;
+
+    state.executionAuthorized=false;
+
     state.disciplinePassed=false;
 
-
-    clearJournalInputs();
 
     renderJournal();
 
     updateTradeBadge();
 
 
-    if(dailyTrades().length>=3){
+    document.getElementById("ruleYes")
+        .classList.remove("selected");
+
+    document.getElementById("ruleNo")
+        .classList.remove("selected");
+
+
+    document.getElementById("disciplineBadge")
+        .textContent=
+        "DISCIPLINE: READY";
+
+    document.getElementById("disciplineBadge")
+        .classList.remove("green","red");
+
+
+    if(
+        dailyTrades().length>=3
+    ){
 
         alert(
             "🔴 3 TRADES COMPLETED — TRADING DAY CLOSED"
@@ -3147,7 +4224,9 @@ function addTrade(){
     }
 
 
-    if(consecutiveLosses()>=2){
+    if(
+        consecutiveLosses()>=2
+    ){
 
         alert(
             "🔴 2 CONSECUTIVE LOSSES — STOP FOR THE DAY"
@@ -3159,53 +4238,61 @@ function addTrade(){
 
 
 /* =========================================================
-CLEAR JOURNAL INPUTS
+   CLEAR JOURNAL INPUTS
 ========================================================= */
 
 function clearJournalInputs(){
 
-    document.getElementById("jDirection")
-        .value="";
+    document.getElementById(
+        "jDirection"
+    ).value="";
 
-    document.getElementById("jEntry")
-        .value="";
+    document.getElementById(
+        "jEntry"
+    ).value="";
 
-    document.getElementById("jSL")
-        .value="";
+    document.getElementById(
+        "jSL"
+    ).value="";
 
-    document.getElementById("jTP")
-        .value="";
+    document.getElementById(
+        "jTP"
+    ).value="";
 
-    document.getElementById("jResult")
-        .value="";
+    document.getElementById(
+        "jResult"
+    ).value="";
 
-    document.getElementById("jNotes")
-        .value="";
+    document.getElementById(
+        "jNotes"
+    ).value="";
 
 }
 
 
 /* =========================================================
-RENDER JOURNAL
+   RENDER JOURNAL
 ========================================================= */
 
 function renderJournal(){
 
-    const data=
-        state.trades;
+    const data=state.trades;
 
 
-    if(!data.length){
+    if(data.length===0){
 
         document.getElementById(
             "journalTable"
-        ).innerHTML=`
+        ).innerHTML=
+        `
 
-<div class="alert info">
-No trades recorded yet.
-</div>
+        <div class="alert info">
 
-`;
+            No trades recorded yet.
+
+        </div>
+
+        `;
 
         return;
 
@@ -3214,102 +4301,143 @@ No trades recorded yet.
 
     let html=`
 
-<table>
+    <table>
 
-<thead>
+        <thead>
 
-<tr>
+            <tr>
 
-<th>Date</th>
-<th>Time</th>
-<th>Engine</th>
-<th>Session</th>
-<th>Direction</th>
-<th>Entry</th>
-<th>SL</th>
-<th>TP</th>
-<th>Result</th>
-<th>Intent</th>
-<th>Impulse</th>
-<th>Plan Violation</th>
-<th>Strategy</th>
-<th>Notes</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Engine</th>
+                <th>Session</th>
+                <th>Direction</th>
+                <th>Entry</th>
+                <th>SL</th>
+                <th>TP</th>
+                <th>Result</th>
+                <th>RULE</th>
+                <th>DISCIPLINE</th>
+                <th>AUTH</th>
+                <th>Strategy Record</th>
+                <th>Notes</th>
 
-</tr>
+            </tr>
 
-</thead>
+        </thead>
 
-<tbody>
+        <tbody>
 
-`;
+    `;
 
 
-    data.slice()
-        .reverse()
-        .forEach(t=>{
+    data
+    .slice()
+    .reverse()
+    .forEach(t=>{
 
-            html+=`
+        html+=`
 
-<tr>
+        <tr>
 
-<td>${escapeHtml(t.date)}</td>
+            <td>
+                ${escapeHtml(t.date)}
+            </td>
 
-<td>${escapeHtml(t.time)}</td>
+            <td>
+                ${escapeHtml(t.time)}
+            </td>
 
-<td>${escapeHtml(t.engine)}</td>
+            <td>
+                ${escapeHtml(t.engine)}
+            </td>
 
-<td>${escapeHtml(t.session)}</td>
+            <td>
+                ${escapeHtml(t.session)}
+            </td>
 
-<td>${escapeHtml(t.direction)}</td>
+            <td>
+                ${escapeHtml(t.direction)}
+            </td>
 
-<td>${escapeHtml(t.entry)}</td>
+            <td>
+                ${escapeHtml(t.entry)}
+            </td>
 
-<td>${escapeHtml(t.sl)}</td>
+            <td>
+                ${escapeHtml(t.sl)}
+            </td>
 
-<td>${escapeHtml(t.tp)}</td>
+            <td>
+                ${escapeHtml(t.tp)}
+            </td>
 
-<td>${escapeHtml(t.result)}</td>
+            <td>
+                ${escapeHtml(t.result)}
+            </td>
 
-<td>${escapeHtml(t.intent)}</td>
+            <td>
+                ${
+                    t.ruleFollowed==="YES"
+                    ? "✅ YES"
+                    : "❌ NO"
+                }
+            </td>
 
-<td>${escapeHtml(t.impulse)}</td>
+            <td>
+                ${
+                    t.discipline==="PASSED"
+                    ? "🟢 PASSED"
+                    : "🔴 FAILED"
+                }
+            </td>
 
-<td>${escapeHtml(t.planViolation)}</td>
+            <td>
+                ${
+                    t.executionAuthorized
+                    ? "🟢 AUTH"
+                    : "🔴 NO"
+                }
+            </td>
 
-<td>
+            <td>
 
-<details>
+                <details>
 
-<summary>VIEW</summary>
+                    <summary>
+                        VIEW DECISION
+                    </summary>
 
-<div class="detailbody">
+                    <div class="detailbody">
 
-${escapeHtml(
-t.strategyRecord || ""
-).replace(/\n/g,"<br>")}
+                        ${escapeHtml(
+                            t.strategyRecord || ""
+                        ).replace(/\n/g,"<br>")}
 
-</div>
+                    </div>
 
-</details>
+                </details>
 
-</td>
+            </td>
 
-<td>${escapeHtml(t.notes)}</td>
+            <td>
+                ${escapeHtml(t.notes)}
+            </td>
 
-</tr>
+        </tr>
 
-`;
+        `;
 
-        });
+    });
 
 
     html+=`
 
-</tbody>
+        </tbody>
 
-</table>
+    </table>
 
-`;
+    `;
 
 
     document.getElementById(
@@ -3320,7 +4448,7 @@ t.strategyRecord || ""
 
 
 /* =========================================================
-CLEAR JOURNAL
+   CLEAR JOURNAL
 ========================================================= */
 
 function clearJournal(){
@@ -3329,7 +4457,11 @@ function clearJournal(){
         !confirm(
             "Delete the entire trade journal?"
         )
-    )return;
+    ){
+
+        return;
+
+    }
 
 
     state.trades=[];
@@ -3347,28 +4479,43 @@ function clearJournal(){
 
 
 /* =========================================================
-ESCAPE
+   ESCAPE HTML
 ========================================================= */
 
 function escapeHtml(value){
 
     return String(value ?? "")
 
-        .replace(/&/g,"&amp;")
+        .replace(
+            /&/g,
+            "&amp;"
+        )
 
-        .replace(/</g,"&lt;")
+        .replace(
+            /</g,
+            "&lt;"
+        )
 
-        .replace(/>/g,"&gt;")
+        .replace(
+            />/g,
+            "&gt;"
+        )
 
-        .replace(/"/g,"&quot;")
+        .replace(
+            /"/g,
+            "&quot;"
+        )
 
-        .replace(/'/g,"&#039;");
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 
 }
 
 
 /* =========================================================
-TRADE BADGE
+   TRADE BADGE
 ========================================================= */
 
 function updateTradeBadge(){
@@ -3395,11 +4542,15 @@ function updateTradeBadge(){
 
     if(count>=3){
 
-        badge.classList.add("red");
+        badge.classList.add(
+            "red"
+        );
 
     }else{
 
-        badge.classList.add("green");
+        badge.classList.add(
+            "green"
+        );
 
     }
 
@@ -3410,19 +4561,25 @@ function updateTradeBadge(){
         );
 
 
-    if(consecutiveLosses()>=2){
+    if(
+        consecutiveLosses()>=2
+    ){
 
         riskBadge.textContent=
             "RISK: STOP FOR DAY";
 
-        riskBadge.classList.add("red");
+        riskBadge.classList.add(
+            "red"
+        );
 
     }else{
 
         riskBadge.textContent=
             "RISK: ACTIVE";
 
-        riskBadge.classList.remove("red");
+        riskBadge.classList.remove(
+            "red"
+        );
 
     }
 
@@ -3430,7 +4587,7 @@ function updateTradeBadge(){
 
 
 /* =========================================================
-RESET
+   RESET
 ========================================================= */
 
 function resetPlan(){
@@ -3439,10 +4596,22 @@ function resetPlan(){
         !confirm(
             "Reset the current plan and return to the beginning?"
         )
-    )return;
+    ){
+
+        return;
+
+    }
 
 
-    clearInterval(pauseInterval);
+    if(state.pauseTimer){
+
+        clearInterval(
+            state.pauseTimer
+        );
+
+        state.pauseTimer=null;
+
+    }
 
 
     state.preparation=false;
@@ -3455,18 +4624,26 @@ function resetPlan(){
 
     state.answers={};
 
-    state.disciplineAnswers={};
-
     state.disciplinePassed=false;
+
+    state.executionAuthorized=false;
+
+    state.ruleFollowed=null;
 
 
     document.getElementById("assistantSection")
         .classList.add("hidden");
 
+    document.getElementById("journalSection")
+        .classList.add("hidden");
+
     document.getElementById("disciplineSection")
         .classList.add("hidden");
 
-    document.getElementById("journalSection")
+    document.getElementById("pauseSection")
+        .classList.add("hidden");
+
+    document.getElementById("authorizationSection")
         .classList.add("hidden");
 
     document.getElementById("playbookSection")
@@ -3495,6 +4672,13 @@ function resetPlan(){
         .checked=false;
 
 
+    document.querySelectorAll(
+        "#disciplineSection input[type=checkbox]"
+    ).forEach(
+        x=>x.checked=false
+    );
+
+
     document.getElementById("sessionContinue")
         .disabled=true;
 
@@ -3504,16 +4688,14 @@ function resetPlan(){
 
     document.querySelectorAll(".option")
         .forEach(
-            x=>x.classList.remove(
-                "selected",
-                "dangerSelected"
-            )
+            x=>x.classList.remove("selected")
         );
 
 
     document.getElementById("modeBadge")
         .textContent=
         "MODE: NOT SELECTED";
+
 
     document.getElementById("modeBadge")
         .classList.remove("active");
@@ -3523,25 +4705,32 @@ function resetPlan(){
         .textContent=
         "SESSION: NOT SELECTED";
 
+
     document.getElementById("sessionBadge")
         .classList.remove("active");
 
 
     document.getElementById("disciplineBadge")
         .textContent=
-        "DISCIPLINE: LOCKED";
+        "DISCIPLINE: READY";
 
     document.getElementById("disciplineBadge")
-        .classList.remove("green");
+        .classList.remove(
+            "active",
+            "green",
+            "red"
+        );
 
-    document.getElementById("disciplineBadge")
-        .classList.add("gold");
+
+    document.getElementById(
+        "jStrategyRecord"
+    ).value="";
 
 }
 
 
 /* =========================================================
-INITIALIZATION
+   INITIALIZATION
 ========================================================= */
 
 renderJournal();
