@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>SNIPER GOD'S PLAN V3.6.9</title>
+<title>SNIPER GOD'S PLAN — DISCIPLINE V1</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -40,7 +41,6 @@ body{
 .logo{
     font-size:27px;
     font-weight:900;
-    letter-spacing:.5px;
 }
 
 .subtitle{
@@ -55,7 +55,7 @@ body{
     border-left:3px solid #f2c94c;
     background:rgba(242,201,76,.06);
     color:#f5dc87;
-    line-height:1.65;
+    line-height:1.7;
     font-size:13px;
     border-radius:8px;
 }
@@ -92,6 +92,11 @@ body{
     border-color:#9c3434;
 }
 
+.badge.yellow{
+    color:#f2d777;
+    border-color:#806724;
+}
+
 .card{
     background:linear-gradient(145deg,#101725,#0b1019);
     border:1px solid #263247;
@@ -114,7 +119,7 @@ body{
 .description{
     color:#8995a9;
     font-size:13px;
-    line-height:1.65;
+    line-height:1.7;
     margin-bottom:18px;
 }
 
@@ -127,7 +132,7 @@ body{
 
 .multiHint{
     display:inline-block;
-    margin-top:7px;
+    margin-top:8px;
     padding:6px 10px;
     border-radius:7px;
     background:#10213a;
@@ -165,6 +170,11 @@ body{
     box-shadow:0 0 0 1px rgba(77,145,255,.15);
 }
 
+.option.firewall-danger{
+    border-color:#8c3438;
+    background:#241316;
+}
+
 .option strong{
     display:block;
     margin-bottom:5px;
@@ -172,7 +182,7 @@ body{
 
 .option small{
     color:#8793a7;
-    line-height:1.5;
+    line-height:1.55;
 }
 
 .checklist{
@@ -198,13 +208,7 @@ body{
 }
 
 .check span{
-    line-height:1.5;
-}
-
-button{
-    border:none;
-    cursor:pointer;
-    font-weight:800;
+    line-height:1.55;
 }
 
 .btnrow{
@@ -221,6 +225,8 @@ button{
     background:#172235;
     border:1px solid #30405a;
     color:#e9eef7;
+    cursor:pointer;
+    font-weight:800;
 }
 
 .btn:hover{
@@ -271,7 +277,7 @@ button{
     padding:14px;
     border-radius:10px;
     margin:12px 0;
-    line-height:1.7;
+    line-height:1.75;
     font-size:13px;
 }
 
@@ -323,6 +329,62 @@ button{
     margin-top:6px;
 }
 
+.firewall{
+    border:1px solid #684d18;
+    background:
+        linear-gradient(145deg,#17140b,#0d1017);
+}
+
+.firewallTitle{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.lockbox{
+    padding:18px;
+    border-radius:12px;
+    background:#211417;
+    border:1px solid #7b3439;
+    color:#ffaaaa;
+    text-align:center;
+    font-size:18px;
+    font-weight:900;
+    line-height:1.7;
+}
+
+.pauseBox{
+    text-align:center;
+    padding:25px;
+    background:#111927;
+    border:1px solid #30405a;
+    border-radius:14px;
+    margin-top:15px;
+}
+
+.timer{
+    font-size:48px;
+    font-weight:900;
+    margin:15px 0;
+}
+
+.authBox{
+    padding:20px;
+    border-radius:12px;
+    background:#102b1d;
+    border:1px solid #276c46;
+    text-align:center;
+}
+
+.authCode{
+    font-size:24px;
+    font-weight:900;
+    margin:10px 0;
+}
+
 textarea,
 input[type=text],
 input[type=number]{
@@ -353,7 +415,7 @@ textarea[readonly]{
 table{
     width:100%;
     border-collapse:collapse;
-    min-width:1000px;
+    min-width:900px;
 }
 
 th,td{
@@ -404,62 +466,6 @@ summary{
     text-align:left;
 }
 
-.disciplineBox{
-    border:1px solid #806724;
-    background:linear-gradient(145deg,#2a2410,#17140a);
-    border-radius:14px;
-    padding:20px;
-    margin-top:15px;
-}
-
-.disciplineTitle{
-    font-size:22px;
-    font-weight:900;
-    color:#f5dc87;
-    margin-bottom:8px;
-}
-
-.disciplineQuestion{
-    font-size:15px;
-    line-height:1.7;
-    color:#e9edf5;
-}
-
-.pauseBox{
-    text-align:center;
-    padding:25px 15px;
-    border:1px solid #28558d;
-    background:#0b1524;
-    border-radius:14px;
-    margin-top:15px;
-}
-
-.pauseNumber{
-    font-size:58px;
-    font-weight:900;
-    color:#9fc5ff;
-    margin:12px 0;
-}
-
-.pauseText{
-    color:#aab5c8;
-    line-height:1.7;
-}
-
-.authBox{
-    border:1px solid #276c46;
-    background:#102b1d;
-    padding:20px;
-    border-radius:14px;
-    text-align:center;
-}
-
-.authTitle{
-    color:#8de2ae;
-    font-size:22px;
-    font-weight:900;
-}
-
 .footer{
     text-align:center;
     color:#56637a;
@@ -472,6 +478,7 @@ summary{
 }
 
 @media(max-width:600px){
+
     .app{
         padding:10px;
     }
@@ -484,10 +491,11 @@ summary{
         font-size:17px;
     }
 
-    .pauseNumber{
-        font-size:48px;
+    .timer{
+        font-size:40px;
     }
 }
+
 </style>
 </head>
 
@@ -497,16 +505,25 @@ summary{
 
 <header class="header">
 
-    <div class="logo">🦅 SNIPER GOD'S PLAN</div>
+    <div class="logo">
+        🦅 SNIPER GOD'S PLAN
+    </div>
 
     <div class="subtitle">
-        V3.6.9 — STRUCTURAL SNIPER + V5 SUPER SCALP
+        DISCIPLINE V1 — V3.6.9 STRUCTURAL SNIPER + V5 SUPER SCALP
     </div>
 
     <div class="motto">
+
         Trust the process. It's all just part of the journey and God's plan
-        to make you a better and stronger person. Be patient, follow God's plan,
-        and don't be scared.
+        to make you a better and stronger person.
+
+        <br><br>
+
+        <strong>
+            The system protects you from yourself.
+        </strong>
+
     </div>
 
     <div class="statusbar">
@@ -523,12 +540,12 @@ summary{
             TRADES: 0 / 3
         </div>
 
-        <div id="riskBadge" class="badge">
+        <div id="riskBadge" class="badge green">
             RISK: ACTIVE
         </div>
 
-        <div id="disciplineBadge" class="badge">
-            DISCIPLINE: READY
+        <div id="firewallBadge" class="badge">
+            FIREWALL: STANDBY
         </div>
 
     </div>
@@ -542,22 +559,40 @@ summary{
 
 <section id="dailyPreparation" class="card">
 
-    <h2>🔒 DAILY PREPARATION</h2>
+    <h2>
+        🔒 DAILY PREPARATION
+    </h2>
 
     <div class="description">
-        قبل از شروع سیستم، هر سه مرحله Daily Preparation باید انجام شده باشد.
-        اگر حتی یکی از مراحل کامل نشده باشد، سیستم اجازه ورود به مرحله بعد را نمی‌دهد.
+
+        این مرحله فقط یک‌بار در ابتدای روز انجام می‌شود
+        و برای هر دو موتور V3.6.9 و V5 مشترک است.
+
+        <br>
+
+        Daily Preparation خودش Entry Signal نیست؛
+        هدف آن آماده‌سازی ذهن برای اجرای قوانین سیستم است.
+
     </div>
 
     <div class="checklist">
 
         <label class="check">
 
-            <input type="checkbox" id="gratitude">
+            <input
+                type="checkbox"
+                id="gratitude">
 
             <span>
-                <strong>🙏 Daily Gratitude</strong><br>
+
+                <strong>
+                    🙏 Daily Gratitude
+                </strong>
+
+                <br>
+
                 شکرگزاری روزانه را انجام داده‌ام.
+
             </span>
 
         </label>
@@ -565,11 +600,20 @@ summary{
 
         <label class="check">
 
-            <input type="checkbox" id="focus333">
+            <input
+                type="checkbox"
+                id="focus333">
 
             <span>
-                <strong>🧠 3:33 Focus Exercise</strong><br>
+
+                <strong>
+                    🧠 3:33 Focus Exercise
+                </strong>
+
+                <br>
+
                 تمرین تمرکز 3:33 را انجام داده‌ام.
+
             </span>
 
         </label>
@@ -577,23 +621,41 @@ summary{
 
         <label class="check">
 
-            <input type="checkbox" id="meditation">
+            <input
+                type="checkbox"
+                id="meditation">
 
             <span>
-                <strong>🧘 Meditation</strong><br>
+
+                <strong>
+                    🧘 Meditation
+                </strong>
+
+                <br>
+
                 مدیتیشن روزانه را انجام داده‌ام.
+
             </span>
 
         </label>
 
     </div>
 
-    <div id="prepMessage" class="alert warning">
-        🔒 Complete all three preparation steps to unlock the system.
+    <div
+        id="prepMessage"
+        class="alert warning">
+
+        🔒 Complete all three preparation steps
+        to unlock the trading system.
+
     </div>
 
-    <button class="btn primary" onclick="completePreparation()">
+    <button
+        class="btn primary"
+        onclick="completePreparation()">
+
         CONTINUE →
+
     </button>
 
 </section>
@@ -603,31 +665,63 @@ summary{
      SESSION
 ===================================================== -->
 
-<section id="sessionSection" class="card hidden">
+<section
+    id="sessionSection"
+    class="card hidden">
 
-    <h2>🌍 SESSION SELECTION</h2>
+    <h2>
+        🌍 SESSION SELECTION
+    </h2>
 
     <div class="description">
+
         Session فقط Trading Hours و Liquidity Context را مشخص می‌کند.
+
+        <br>
+
         Session به‌تنهایی Direction Filter یا Entry Signal نیست.
+
     </div>
 
     <div class="options">
 
-        <div class="option" onclick="selectSession('London',this)">
-            <strong>🇬🇧 LONDON</strong>
-            <small>London Trading Hours</small>
+        <div
+            class="option"
+            onclick="selectSession('London',this)">
+
+            <strong>
+                🇬🇧 LONDON
+            </strong>
+
+            <small>
+                London Trading Hours
+            </small>
+
         </div>
 
-        <div class="option" onclick="selectSession('New York',this)">
-            <strong>🇺🇸 NEW YORK</strong>
-            <small>New York Trading Hours</small>
+
+        <div
+            class="option"
+            onclick="selectSession('New York',this)">
+
+            <strong>
+                🇺🇸 NEW YORK
+            </strong>
+
+            <small>
+                New York Trading Hours
+            </small>
+
         </div>
 
     </div>
 
-    <div id="sessionMessage" class="alert info">
+    <div
+        id="sessionMessage"
+        class="alert info">
+
         Session فعلی را انتخاب کن.
+
     </div>
 
     <button
@@ -647,36 +741,69 @@ summary{
      MODE
 ===================================================== -->
 
-<section id="modeSection" class="card hidden">
+<section
+    id="modeSection"
+    class="card hidden">
 
-    <h2>⚔️ SELECT TRADING MODE</h2>
+    <h2>
+        ⚔️ SELECT TRADING MODE
+    </h2>
 
     <div class="description">
-        موتور معاملاتی موردنظر را انتخاب کن.
-        V3.6.9 برای Structural Sniper و V5 برای Super Scalp است.
+
+        دو موتور مستقل وجود دارد.
+
+        <br><br>
+
+        V3.6.9 برای Structural Sniper است.
+
+        <br>
+
+        V5 برای Super Scalp سریع است.
+
     </div>
 
     <div class="options">
 
-        <div class="option" onclick="selectMode('DAY',this)">
+        <div
+            class="option"
+            onclick="selectMode('DAY',this)">
 
-            <strong>🦅 DAY TRADE — V3.6.9</strong>
+            <strong>
+                🦅 DAY TRADE — V3.6.9
+            </strong>
 
             <small>
-                Context → Structure → Liquidity → Location →
-                Confirmation → Execution → Management
+
+                Context → Structure → Liquidity →
+                HTF Reaction → Location →
+                M15 → M5 → M1 →
+                Risk → Discipline → Entry
+
             </small>
 
         </div>
 
 
-        <div class="option" onclick="selectMode('SCALP',this)">
+        <div
+            class="option"
+            onclick="selectMode('SCALP',this)">
 
-            <strong>⚡ SUPER SCALP — V5</strong>
+            <strong>
+                ⚡ SUPER SCALP — V5
+            </strong>
 
             <small>
-                Immediate Liquidity → Event → M1 Structure →
-                Trigger → Tight SL → Nearby Target
+
+                Immediate Location →
+                Liquidity Event →
+                M1 Structure →
+                Trigger →
+                SL →
+                Target →
+                Fast Discipline →
+                Entry
+
             </small>
 
         </div>
@@ -700,17 +827,24 @@ summary{
      ASSISTANT
 ===================================================== -->
 
-<section id="assistantSection" class="card hidden">
+<section
+    id="assistantSection"
+    class="card hidden">
 
     <h2 id="assistantTitle">
         TRADING ASSISTANT
     </h2>
 
     <div class="progress">
+
         <div id="progressBar"></div>
+
     </div>
 
-    <div id="stepCounter" class="description"></div>
+    <div
+        id="stepCounter"
+        class="description">
+    </div>
 
     <div id="questionArea"></div>
 
@@ -754,174 +888,60 @@ summary{
 
 
 <!-- =====================================================
-     DISCIPLINE GATE
+     DISCIPLINE FIREWALL
 ===================================================== -->
 
-<section id="disciplineSection" class="card hidden">
+<section
+    id="firewallSection"
+    class="card firewall hidden">
 
-    <h2>🔒 DISCIPLINE GATE</h2>
+    <div class="firewallTitle">
+
+        🔒 DISCIPLINE FIREWALL
+
+    </div>
 
     <div class="description">
 
-        ENTRY READY به‌تنهایی اجازه ورود نیست.
-        قبل از اجرای هر معامله باید وضعیت ذهنی و انضباطی معامله بررسی شود.
+        Setup از نظر تکنیکی آماده شده است.
+        اما قبل از اجرای معامله باید مشخص شود
+        که تصمیم تو حاصل سیستم است، نه هیجان.
 
         <br><br>
 
         <strong>
-            اگر Setup معتبر است ولی Discipline معتبر نیست،
-            معامله انجام نمی‌شود.
+            این مرحله Entry Signal نیست.
+            این مرحله اجازه اجرای Signal است.
         </strong>
 
     </div>
 
-
-    <div class="disciplineBox">
-
-        <div class="disciplineTitle">
-            🛑 STOP — CHECK YOURSELF
-        </div>
-
-        <div class="disciplineQuestion">
-
-            قبل از ادامه، بدون دروغ به خودت جواب بده.
-            هدف این بخش پیدا کردن Setup نیست؛
-            هدف جلوگیری از تصمیم هیجانی است.
-
-        </div>
-
+    <div
+        id="firewallQuestionArea">
     </div>
 
-
-    <div class="checklist" style="margin-top:15px">
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplinePlan">
-
-            <span>
-                <strong>1️⃣ SETUP طبق PLAN است</strong><br>
-                این معامله دقیقاً بر اساس قوانین سیستم شکل گرفته
-                و من چیزی به آن اضافه یا کم نکرده‌ام.
-            </span>
-
-        </label>
-
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplineNoFomo">
-
-            <span>
-                <strong>2️⃣ FOMO ندارم</strong><br>
-                اگر همین الان وارد نشوم، احساس نمی‌کنم که باید به زور معامله کنم.
-            </span>
-
-        </label>
-
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplineNoRevenge">
-
-            <span>
-                <strong>3️⃣ REVENGE TRADE نیست</strong><br>
-                قصد جبران ضرر قبلی یا پس گرفتن پول از بازار را ندارم.
-            </span>
-
-        </label>
-
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplineNoRush">
-
-            <span>
-                <strong>4️⃣ عجله ندارم</strong><br>
-                برای گرفتن این حرکت تحت فشار زمانی یا هیجانی نیستم.
-            </span>
-
-        </label>
-
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplineReason">
-
-            <span>
-                <strong>5️⃣ دلیل ورودم واضح است</strong><br>
-                می‌توانم دلیل این معامله را در یک جمله مشخص توضیح بدهم.
-            </span>
-
-        </label>
-
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplineAcceptLoss">
-
-            <span>
-                <strong>6️⃣ Loss را می‌پذیرم</strong><br>
-                اگر SL زده شود، بدون تغییر قانون و بدون Revenge Trade
-                نتیجه را می‌پذیرم.
-            </span>
-
-        </label>
-
-
-        <label class="check">
-
-            <input
-                type="checkbox"
-                id="disciplineCanSkip">
-
-            <span>
-                <strong>7️⃣ آماده‌ام معامله را از دست بدهم</strong><br>
-                اگر Setup کامل نباشد، ترجیح می‌دهم هیچ معامله‌ای نکنم.
-            </span>
-
-        </label>
-
+    <div
+        id="firewallDecisionArea">
     </div>
-
-
-    <div id="disciplineMessage"
-         class="alert warning">
-
-        🔒 تمام موارد را با صداقت بررسی کن.
-
-    </div>
-
 
     <div class="btnrow">
 
         <button
-            class="btn danger"
-            onclick="failDiscipline()">
+            id="firewallBackBtn"
+            class="btn"
+            onclick="firewallBack()">
 
-            ❌ CANCEL THIS SETUP
+            ← BACK
 
         </button>
 
-
         <button
-            id="disciplineContinue"
-            class="btn success"
-            onclick="passDiscipline()">
+            id="firewallNextBtn"
+            class="btn primary"
+            onclick="nextFirewallStep()"
+            disabled>
 
-            VERIFY DISCIPLINE →
+            NEXT →
 
         </button>
 
@@ -931,84 +951,55 @@ summary{
 
 
 <!-- =====================================================
-     10 SECOND PAUSE
+     PAUSE
 ===================================================== -->
 
-<section id="pauseSection" class="card hidden">
+<section
+    id="pauseSection"
+    class="card hidden">
 
-    <h2>⏸️ 10-SECOND PAUSE</h2>
+    <h2>
+        ⏸️ 10-SECOND PAUSE
+    </h2>
 
     <div class="description">
 
-        هنوز اجازه ورود نداری.
+        Setup تأیید شده است.
+
+        <br>
+
+        الان هیچ کاری نکن.
 
         <br><br>
 
-        این ۱۰ ثانیه برای جلوگیری از ورود لحظه‌ای،
-        FOMO و تصمیم ناگهانی طراحی شده است.
+        فقط بررسی کن:
+
+        <strong>
+            آیا واقعاً طبق پلن می‌خواهم وارد شوم؟
+        </strong>
 
     </div>
 
-
     <div class="pauseBox">
 
-        <div class="pauseText">
-
-            STOP.
-
-            <br><br>
-
-            اگر این معامله را انجام ندهم،
-            آیا هنوز طبق Plan عمل کرده‌ام؟
-
+        <div>
+            DO NOT CLICK ENTRY
         </div>
 
-
         <div
-            id="pauseNumber"
-            class="pauseNumber">
+            id="pauseTimer"
+            class="timer">
 
             10
 
         </div>
 
-
-        <div class="pauseText">
-
-            عجله نکن.
-            بازار بعدی هم وجود دارد.
-
-        </div>
-
-    </div>
-
-
-    <div id="pauseMessage"
-         class="alert warning">
-
-        ⏳ PAUSE ACTIVE — WAIT...
-
-    </div>
-
-
-    <div class="btnrow">
-
         <button
-            class="btn danger"
-            onclick="cancelFromPause()">
+            id="pauseStartBtn"
+            class="btn warning"
+            onclick="startPause()">
 
-            ❌ CANCEL SETUP
-
-        </button>
-
-
-        <button
-            id="authorizationBtn"
-            class="btn success"
-            onclick="authorizeExecution()"
-            disabled>
-
-            🔒 WAIT...
+            START 10-SECOND PAUSE
 
         </button>
 
@@ -1018,68 +1009,42 @@ summary{
 
 
 <!-- =====================================================
-     EXECUTION AUTHORIZATION
+     AUTHORIZATION
 ===================================================== -->
 
-<section id="authorizationSection" class="card hidden">
+<section
+    id="authorizationSection"
+    class="card hidden">
 
-    <h2>🟢 EXECUTION AUTHORIZATION</h2>
+    <h2>
+        🟢 EXECUTION AUTHORIZATION
+    </h2>
 
     <div class="authBox">
 
-        <div class="authTitle">
-            DISCIPLINE VERIFIED
-        </div>
-
-        <br>
-
         <div>
-            Strategy valid.
-            <br>
-            Risk Gate passed.
-            <br>
-            Discipline Gate passed.
-            <br>
-            10-second pause completed.
+            Discipline Firewall PASSED
         </div>
 
-        <br>
+        <div
+            id="authCode"
+            class="authCode">
 
-        <strong>
-            فقط با فشردن دکمه زیر Execution مجاز می‌شود.
-        </strong>
+            AUTHORIZED
 
-    </div>
+        </div>
 
+        <div class="description">
 
-    <div class="alert warning">
+            فقط در این مرحله اجازه ثبت اجرای معامله وجود دارد.
 
-        ⚠️ آخرین سؤال:
-
-        <br><br>
-
-        آیا هنوز می‌خواهی این معامله را طبق همان
-        Entry / SL / TP که در Plan تعیین شده اجرا کنی؟
-
-    </div>
-
-
-    <div class="btnrow">
-
-        <button
-            class="btn danger"
-            onclick="cancelAuthorization()">
-
-            ❌ NO — CANCEL
-
-        </button>
-
+        </div>
 
         <button
             class="btn success"
-            onclick="finalAuthorize()">
+            onclick="openTradeJournal()">
 
-            🟢 YES — AUTHORIZE EXECUTION
+            OPEN TRADE JOURNAL →
 
         </button>
 
@@ -1092,30 +1057,21 @@ summary{
      JOURNAL
 ===================================================== -->
 
-<section id="journalSection" class="card hidden">
+<section
+    id="journalSection"
+    class="card hidden">
 
-    <h2>📓 TRADE JOURNAL</h2>
+    <h2>
+        📓 TRADE JOURNAL
+    </h2>
 
-    <div class="description">
+    <div
+        id="journalReadyMessage"
+        class="alert success">
 
-        این بخش فقط بعد از تکمیل کامل Strategy Assistant،
-        Discipline Gate و Execution Authorization باز می‌شود.
-
-        <br><br>
-
-        اطلاعات Strategy به‌صورت خودکار ثبت شده‌اند.
-        فقط اطلاعات واقعی اجرای معامله را وارد کن.
-
-    </div>
-
-
-    <div id="journalReadyMessage"
-         class="alert success">
-
-        🟢 Execution Authorized.
+        Strategy Decision ثبت شده است.
 
     </div>
-
 
     <div class="grid">
 
@@ -1188,73 +1144,33 @@ summary{
 
         </div>
 
-
-        <div>
-
-            <label class="description">
-                RULE FOLLOWED?
-            </label>
-
-            <div class="options">
-
-                <div
-                    id="ruleYes"
-                    class="option"
-                    onclick="selectRuleFollowed('YES')">
-
-                    <strong>✅ YES</strong>
-
-                    <small>
-                        معامله کاملاً طبق Plan اجرا شد.
-                    </small>
-
-                </div>
-
-
-                <div
-                    id="ruleNo"
-                    class="option"
-                    onclick="selectRuleFollowed('NO')">
-
-                    <strong>❌ NO</strong>
-
-                    <small>
-                        حداقل یک قانون در Execution شکسته شد.
-                    </small>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
-
 
     <br>
 
-
     <label class="description">
-        AUTO STRATEGY RECORD
+
+        AUTO STRATEGY + DISCIPLINE RECORD
+
     </label>
 
     <textarea
         id="jStrategyRecord"
-        readonly
-        placeholder="Strategy decision record will appear here..."></textarea>
-
+        readonly>
+    </textarea>
 
     <br>
 
-
     <label class="description">
+
         Setup / Reason / Notes
+
     </label>
 
     <textarea
         id="jNotes"
-        placeholder="Reason for trade..."></textarea>
-
+        placeholder="Reason for trade...">
+    </textarea>
 
     <div class="btnrow">
 
@@ -1277,12 +1193,10 @@ summary{
 
     </div>
 
-
     <div
         id="journalTable"
         class="tablewrap"
         style="margin-top:20px">
-
     </div>
 
 </section>
@@ -1292,39 +1206,54 @@ summary{
      PLAYBOOK
 ===================================================== -->
 
-<section id="playbookSection" class="card hidden">
+<section
+    id="playbookSection"
+    class="card hidden">
 
-    <h2>📖 FULL PLAYBOOK</h2>
+    <h2>
+        📖 FULL PLAYBOOK
+    </h2>
 
     <div class="description">
+
         مرجع داخلی SNIPER GOD'S PLAN.
+
     </div>
 
 
     <details>
 
         <summary>
-            🔒 PART 0 — MASTER LAW
+            🔒 MASTER LAW
         </summary>
 
         <div class="detailbody">
 
-            SNIPER GOD'S PLAN از دو موتور مستقل تشکیل شده است:
+            دو موتور مستقل:
 
             <br><br>
 
-            V3.6.9 Structural Sniper<br>
+            V3.6.9 Structural Sniper
+
+            <br>
+
             V5 Super Scalp
 
             <br><br>
 
-            Maximum Daily Trades = 3<br>
+            Maximum Daily Trades = 3
+
+            <br>
+
             2 Consecutive Losses → STOP FOR THE DAY
 
             <br><br>
 
-            Discipline Gate Fail →
-            Current Setup Cancelled Only.
+            No valid setup → No Trade
+
+            <br>
+
+            No discipline authorization → No Entry
 
         </div>
 
@@ -1334,15 +1263,107 @@ summary{
     <details>
 
         <summary>
-            🧠 V3.6.9 — MASTER ARCHITECTURE
+            🦅 V3.6.9 ARCHITECTURE
         </summary>
 
         <div class="detailbody">
 
-            Context → Structure → Liquidity →
-            HTF Liquidity Reaction → Location →
-            Setup → Confirmation → Execution →
-            Management → Exit
+            Context
+
+            →
+
+            Structure
+
+            →
+
+            Liquidity
+
+            →
+
+            HTF Liquidity Reaction
+
+            →
+
+            Location
+
+            →
+
+            Setup
+
+            →
+
+            M15 Confirmation
+
+            →
+
+            M5 Structure
+
+            →
+
+            M1 Trigger
+
+            →
+
+            Risk
+
+            →
+
+            Discipline Firewall
+
+            →
+
+            Entry
+
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            ⚡ V5 SUPER SCALP ARCHITECTURE
+        </summary>
+
+        <div class="detailbody">
+
+            Session
+
+            →
+
+            Immediate Location
+
+            →
+
+            Liquidity Event
+
+            →
+
+            M1 Structure
+
+            →
+
+            M1 Trigger
+
+            →
+
+            SL
+
+            →
+
+            Nearby Target
+
+            →
+
+            Fast Discipline Firewall
+
+            →
+
+            Entry
+
+            <br><br>
+
+            V5 نباید مسیر V3.6.9 را طی کند.
 
         </div>
 
@@ -1361,12 +1382,19 @@ summary{
 
             <br><br>
 
-            H4 Bullish = HH → HL → HH<br>
-            H4 Bearish = LL → LH → LL<br>
-            H4 Range = Valid Range Structure<br>
+            H4 Bullish = HH → HL → HH
 
-            H4 Transition =
-            Previous Structure Broken +
+            <br>
+
+            H4 Bearish = LL → LH → LL
+
+            <br>
+
+            H4 Range = Valid Range
+
+            <br>
+
+            H4 Transition = Previous Structure Broken +
             New Structure Not Confirmed
 
             <br><br>
@@ -1386,12 +1414,15 @@ summary{
 
         <div class="detailbody">
 
-            اگر H4 و H1 هم‌جهت باشند → Alignment.
+            H4 و H1 هم‌جهت →
+
+            Alignment
 
             <br><br>
 
-            اگر H4 Bullish و H1 Bearish باشد →
-            H1 Correction فعال است.
+            H4 Bullish + H1 Bearish →
+
+            H1 Correction
 
             <br><br>
 
@@ -1399,8 +1430,14 @@ summary{
 
             <br><br>
 
-            Touch #1 = Context Only<br>
-            Touch #2 = Critical Event<br>
+            Touch #1 = Context
+
+            <br>
+
+            Touch #2 = Critical Event
+
+            <br>
+
             Touch #3 = Quality Enhancement
 
             <br><br>
@@ -1420,21 +1457,58 @@ summary{
 
         <div class="detailbody">
 
-            Monthly High / Low<br>
-            Weekly High / Low<br>
-            Daily High / Low<br>
-            Previous Day High / Low<br>
-            H4 Major Swing High / Low<br>
-            H1 Major Swing High / Low<br>
-            Daily Swing High / Low<br>
-            Asia High / Low<br>
-            London High / Low<br>
-            New York High / Low<br>
-            M15 Liquidity<br>
-            M5 Liquidity<br>
-            M1 Micro Liquidity<br>
-            Internal Liquidity<br>
-            EQ<br>
+            Monthly High / Low
+
+            <br>
+
+            Weekly High / Low
+
+            <br>
+
+            Daily High / Low
+
+            <br>
+
+            Previous Day High / Low
+
+            <br>
+
+            H4 Major Swing
+
+            <br>
+
+            H1 Major Swing
+
+            <br>
+
+            Daily Swing
+
+            <br>
+
+            Asia High / Low
+
+            <br>
+
+            London High / Low
+
+            <br>
+
+            New York High / Low
+
+            <br>
+
+            M15 / M5 / M1 Liquidity
+
+            <br>
+
+            Internal Liquidity
+
+            <br>
+
+            EQ
+
+            <br>
+
             Range High / Low
 
         </div>
@@ -1450,48 +1524,23 @@ summary{
 
         <div class="detailbody">
 
-            وقتی قیمت وارد HTF Liquidity Pool می‌شود،
-            تا مشخص شدن واکنش Entry ممنوع است.
+            Model A:
 
-            <br><br>
+            <br>
 
-            MODEL A:<br>
             Break → Close Beyond → Hold → Acceptance
 
             <br><br>
 
-            MODEL B:<br>
-            Sweep → Rejection → Reclaim →
-            Reversal Confirmation
+            Model B:
+
+            <br>
+
+            Sweep → Rejection → Reclaim → Reversal Confirmation
 
             <br><br>
 
             Reaction Pending = WAIT
-
-        </div>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            🔄 RECLAIM
-        </summary>
-
-        <div class="detailbody">
-
-            Break / Sweep<br>
-            ↓<br>
-            Return<br>
-            ↓<br>
-            Valid Close<br>
-            ↓<br>
-            Hold / Reaction
-
-            <br><br>
-
-            Wick ≠ Reclaim
 
         </div>
 
@@ -1506,16 +1555,46 @@ summary{
 
         <div class="detailbody">
 
-            HTF Extreme<br>
-            Daily Swing<br>
-            Previous Day High / Low<br>
-            Session Liquidity<br>
-            Range High / Low<br>
-            Supply / Demand<br>
-            Major Swing<br>
-            Reversal Zone<br>
-            Reclaimed Level<br>
-            Breakout Retest<br>
+            HTF Extreme
+
+            <br>
+
+            Daily Swing
+
+            <br>
+
+            Previous Day High / Low
+
+            <br>
+
+            Session Liquidity
+
+            <br>
+
+            Range High / Low
+
+            <br>
+
+            Supply / Demand
+
+            <br>
+
+            Major Swing
+
+            <br>
+
+            Reversal Zone
+
+            <br>
+
+            Reclaimed Level
+
+            <br>
+
+            Breakout Retest
+
+            <br>
+
             Structural Edge
 
             <br><br>
@@ -1530,119 +1609,60 @@ summary{
     <details>
 
         <summary>
-            🦅 V3.6.9 M15 CONFIRMATION
+            🎯 V3.6.9 CONFIRMATION
         </summary>
 
         <div class="detailbody">
 
-            MODEL 1:<br>
-            Liquidity Sweep → Rejection → MSS
+            M15:
+
+            <br>
+
+            Sweep → Rejection → MSS
 
             <br><br>
 
-            MODEL 2:<br>
-            Sweep → Strong Displacement →
-            Close → Structure Shift
+            Sweep → Displacement → Structure Shift
 
             <br><br>
 
-            MODEL 3:<br>
-            Breakout → Close Beyond → Retest → Hold
+            Breakout → Close → Retest → Hold
 
             <br><br>
 
-            MODEL 4:<br>
-            Fake Breakout → Failure → Return →
-            Reclaim → Structure Confirmation
-
-        </div>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            🟦 V3.6.9 M5
-        </summary>
-
-        <div class="detailbody">
-
-            M5 وظیفه دارد Confirmation را
-            به ساختار قابل معامله تبدیل کند.
+            Fake Breakout → Failure → Reclaim → Structure
 
             <br><br>
 
-            MSS<br>
-            Displacement<br>
-            BOS<br>
-            Retest<br>
-            Hold
+            M5:
+
+            <br>
+
+            MSS → Displacement → BOS → Retest → Hold
 
             <br><br>
 
-            Sequence ایده‌آل:
+            M1:
 
-            <br><br>
+            <br>
 
-            M15 Confirmation →
-            M5 MSS →
-            M5 Displacement →
-            Retest / Hold →
-            M1 Trigger
+            Break → Retest → Trigger
 
-        </div>
+            <br>
 
-    </details>
+            Engulfing
 
+            <br>
 
-    <details>
+            MSS
 
-        <summary>
-            🎯 V3.6.9 M1
-        </summary>
+            <br>
 
-        <div class="detailbody">
+            Displacement
 
-            M1 فقط Execution Trigger است.
+            <br>
 
-            <br><br>
-
-            Break → Retest → Trigger<br>
-            Engulfing Trigger<br>
-            M1 MSS<br>
-            M1 Displacement<br>
-            Micro Sweep → Reclaim → Trigger
-
-        </div>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            ⚡ V5 SUPER SCALP
-        </summary>
-
-        <div class="detailbody">
-
-            V5 برای حرکات کوتاه و سریع طراحی شده است.
-
-            <br><br>
-
-            HTF Hard Filter فعال نیست.<br>
-            M5 اجباری نیست.
-
-            <br><br>
-
-            Session →
-            Immediate Location →
-            Liquidity Event →
-            M1 Structure →
-            M1 Trigger →
-            Tight SL →
-            Nearby Target
+            Micro Sweep → Reclaim
 
         </div>
 
@@ -1657,30 +1677,63 @@ summary{
 
         <div class="detailbody">
 
-            Context نامشخص<br>
-            H4 Transition<br>
-            H1 Structure نامشخص<br>
-            Range Middle<br>
-            Liquidity نامشخص<br>
-            HTF Reaction Pending<br>
-            Location ضعیف<br>
-            Confirmation ناقص<br>
-            M5 Structure ناقص در V3.6.9<br>
-            M1 Trigger ناقص<br>
-            Reclaim ناقص<br>
-            Target Space ناکافی<br>
-            Risk نامناسب<br>
-            Setup Invalid<br>
-            3 Trades Completed<br>
+            Context نامشخص
+
+            <br>
+
+            H4 Transition
+
+            <br>
+
+            H1 Structure نامشخص
+
+            <br>
+
+            Range Middle / EQ
+
+            <br>
+
+            Liquidity نامشخص
+
+            <br>
+
+            HTF Reaction Pending
+
+            <br>
+
+            Location ضعیف
+
+            <br>
+
+            Confirmation ناقص
+
+            <br>
+
+            M5 Structure ناقص در V3.6.9
+
+            <br>
+
+            M1 Trigger ناقص
+
+            <br>
+
+            Target Space ناکافی
+
+            <br>
+
+            Risk نامناسب
+
+            <br>
+
+            Discipline Firewall Failed
+
+            <br>
+
+            3 Trades Completed
+
+            <br>
+
             2 Consecutive Losses
-
-            <br><br>
-
-            Discipline Gate Failed<br>
-            FOMO<br>
-            Revenge Trade<br>
-            Emotional Entry<br>
-            Rule Break
 
         </div>
 
@@ -1693,9 +1746,13 @@ summary{
      DECISION TREE
 ===================================================== -->
 
-<section id="treeSection" class="card hidden">
+<section
+    id="treeSection"
+    class="card hidden">
 
-    <h2>🧭 DECISION TREE</h2>
+    <h2>
+        🧭 DECISION TREE
+    </h2>
 
     <div class="tree">
 
@@ -1708,89 +1765,79 @@ DAILY PREPARATION
        │
        ▼
 SESSION
-London / New York
        │
        ▼
 MODE
        │
-       ├───────────────┐
-       ▼               ▼
- V3.6.9 DAY       V5 SUPER SCALP
-       │               │
-       ▼               ▼
-DAILY LIMIT       DAILY LIMIT
-       │               │
-       ▼               ▼
-MONTHLY           SESSION
-       │               │
-WEEKLY             LOCATION
-       │               │
-DAILY              LIQUIDITY EVENT
-       │               │
-H4 STATE           M1 STRUCTURE
-       │               │
-H1 STATE           M1 TRIGGER
-       │               │
-COUNTER-TREND       SL
-       │               │
-LIQUIDITY           TARGET
-       │               │
-HTF REACTION       ENTRY
-       │
-LOCATION
-       │
-M15 CONFIRMATION
-       │
-M5 STRUCTURE
-       │
-M1 TRIGGER
-       │
-RISK + SL + TP
-       │
-TARGET SPACE
-       │
-ENTRY READY
-       │
-DISCIPLINE GATE
-       │
-       ├── FAIL → CANCEL CURRENT SETUP
-       │
-       ▼
-10 SECOND PAUSE
-       │
-       ├── CANCEL → WAIT
-       │
-       ▼
-EXECUTION AUTHORIZATION
-       │
-       ▼
-TRADE JOURNAL
-       │
-       ▼
-MANAGEMENT
-       │
-       ▼
-EXIT
+       ├──────────────────────────────┐
+       ▼                              ▼
+V3.6.9 STRUCTURAL                 V5 SUPER SCALP
+       │                              │
+       ▼                              ▼
+DAILY LIMIT                     IMMEDIATE LOCATION
+       │                              │
+       ▼                              ▼
+MONTHLY                         LIQUIDITY EVENT
+       │                              │
+WEEKLY                           M1 STRUCTURE
+       │                              │
+DAILY                            M1 TRIGGER
+       │                              │
+H4 STATE                          SL
+       │                              │
+H1 STATE                         TARGET
+       │                              │
+COUNTER-TREND                       │
+       │                              │
+LIQUIDITY                           │
+       │                              │
+HTF REACTION                        │
+       │                              │
+LOCATION                            │
+       │                              │
+M15 CONFIRMATION                    │
+       │                              │
+M5 STRUCTURE                        │
+       │                              │
+M1 TRIGGER                          │
+       │                              │
+RISK                                │
+       │                              │
+       └──────────────┬───────────────┘
+                      │
+                      ▼
+              DISCIPLINE FIREWALL
+                      │
+             ┌────────┴────────┐
+             ▼                 ▼
+           FAIL              PASS
+             │                 │
+             ▼                 ▼
+        HARD LOCK        10 SECOND PAUSE
+                               │
+                               ▼
+                         AUTHORIZATION
+                               │
+                               ▼
+                             ENTRY
+                               │
+                               ▼
+                            JOURNAL
 
 MASTER:
 
-No Context → No Trade
-No Location → No Trade
-No Required Confirmation → No Trade
-No Target Space → No Trade
-Invalid Risk → No Trade
-
-FOMO → NO TRADE
-REVENGE → NO TRADE
-EMOTIONAL ENTRY → NO TRADE
-RULE BREAK → NO TRADE
-
-3 Trades → STOP
-2 Consecutive Losses → STOP
-
-Discipline Fail:
-CURRENT SETUP CANCELLED
-TRADING DAY REMAINS ACTIVE
+NO CONTEXT → NO TRADE
+NO LOCATION → NO TRADE
+NO CONFIRMATION → NO TRADE
+NO TARGET → NO TRADE
+INVALID SL → NO TRADE
+FOMO → NO ENTRY
+REVENGE → NO ENTRY
+IMPULSIVE → NO ENTRY
+RULE BREAK → NO ENTRY
+FIREWALL FAIL → HARD LOCK
+3 TRADES → STOP
+2 CONSECUTIVE LOSSES → STOP
 
     </div>
 
@@ -1799,11 +1846,15 @@ TRADING DAY REMAINS ACTIVE
 
 <footer class="footer">
 
-    SNIPER GOD'S PLAN — V3.6.9 + V5 SUPER SCALP
+    SNIPER GOD'S PLAN — DISCIPLINE V1
+
+    <br><br>
+
+    Market gives the setup → SNIPER executes.
 
     <br>
 
-    Market gives the setup → SNIPER executes.
+    Emotion does not execute.
 
 </footer>
 
@@ -1828,13 +1879,19 @@ const state = {
 
     answers:{},
 
-    disciplinePassed:false,
+    firewallStep:0,
 
-    executionAuthorized:false,
+    firewallAnswers:{},
 
-    ruleFollowed:null,
+    firewallPassed:false,
 
-    pauseTimer:null,
+    authorized:false,
+
+    pauseComplete:false,
+
+    hardLocked:false,
+
+    currentSetupId:null,
 
     trades:JSON.parse(
         localStorage.getItem("sniperTrades") || "[]"
@@ -1844,20 +1901,25 @@ const state = {
 
 
 /* =========================================================
-   DAILY TRADE FUNCTIONS
+   DATE / DAILY ENGINE
 ========================================================= */
 
-const dailyTrades = () => {
+function todayString(){
 
-    const today = new Date()
+    return new Date()
         .toISOString()
         .slice(0,10);
 
+}
+
+
+function dailyTrades(){
+
     return state.trades.filter(
-        t => t.date === today
+        t => t.date === todayString()
     );
 
-};
+}
 
 
 function consecutiveLosses(){
@@ -1868,13 +1930,14 @@ function consecutiveLosses(){
 
     for(let i=today.length-1;i>=0;i--){
 
-        const result=(today[i].result || "")
+        const result=
+            String(today[i].result || "")
             .toUpperCase()
             .trim();
 
         if(
             result.includes("LOSS") ||
-            result.includes("-")
+            result.startsWith("-")
         ){
 
             count++;
@@ -1892,33 +1955,52 @@ function consecutiveLosses(){
 }
 
 
+function tradingLocked(){
+
+    return(
+        dailyTrades().length>=3 ||
+        consecutiveLosses()>=2
+    );
+
+}
+
+
 /* =========================================================
    DAILY PREPARATION
 ========================================================= */
 
 function completePreparation(){
 
-    const a=document
-        .getElementById("gratitude")
-        .checked;
+    const a=
+        document.getElementById("gratitude").checked;
 
-    const b=document
-        .getElementById("focus333")
-        .checked;
+    const b=
+        document.getElementById("focus333").checked;
 
-    const c=document
-        .getElementById("meditation")
-        .checked;
+    const c=
+        document.getElementById("meditation").checked;
 
 
     if(!a || !b || !c){
 
-        document.getElementById("prepMessage")
-            .className="alert danger";
+        const msg=
+            document.getElementById("prepMessage");
 
-        document.getElementById("prepMessage")
-            .innerHTML=
+        msg.className="alert danger";
+
+        msg.innerHTML=
             "🔴 SYSTEM LOCKED — هر سه مرحله Daily Preparation باید کامل شوند.";
+
+        return;
+
+    }
+
+
+    if(tradingLocked()){
+
+        alert(
+            "🔴 TRADING DAY IS ALREADY CLOSED."
+        );
 
         return;
 
@@ -1927,11 +2009,15 @@ function completePreparation(){
 
     state.preparation=true;
 
-    document.getElementById("dailyPreparation")
-        .classList.add("hidden");
 
-    document.getElementById("sessionSection")
-        .classList.remove("hidden");
+    document.getElementById(
+        "dailyPreparation"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "sessionSection"
+    ).classList.remove("hidden");
 
 }
 
@@ -1944,11 +2030,13 @@ function selectSession(session,element){
 
     state.session=session;
 
+
     document.querySelectorAll(
         "#sessionSection .option"
-    ).forEach(x =>
-        x.classList.remove("selected")
+    ).forEach(
+        x=>x.classList.remove("selected")
     );
+
 
     element.classList.add("selected");
 
@@ -1962,17 +2050,19 @@ function selectSession(session,element){
     badge.classList.add("active");
 
 
-    document.getElementById("sessionMessage")
-        .className="alert success";
+    const msg=
+        document.getElementById("sessionMessage");
 
-    document.getElementById("sessionMessage")
-        .innerHTML=
+    msg.className="alert success";
+
+    msg.innerHTML=
         "🟢 "+session+
         " selected. Session فقط Trading Hours و Liquidity Context است.";
 
 
-    document.getElementById("sessionContinue")
-        .disabled=false;
+    document.getElementById(
+        "sessionContinue"
+    ).disabled=false;
 
 }
 
@@ -1981,11 +2071,15 @@ function goToMode(){
 
     if(!state.session)return;
 
-    document.getElementById("sessionSection")
-        .classList.add("hidden");
 
-    document.getElementById("modeSection")
-        .classList.remove("hidden");
+    document.getElementById(
+        "sessionSection"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "modeSection"
+    ).classList.remove("hidden");
 
 }
 
@@ -1998,11 +2092,13 @@ function selectMode(mode,element){
 
     state.mode=mode;
 
+
     document.querySelectorAll(
         "#modeSection .option"
-    ).forEach(x =>
-        x.classList.remove("selected")
+    ).forEach(
+        x=>x.classList.remove("selected")
     );
+
 
     element.classList.add("selected");
 
@@ -2010,22 +2106,25 @@ function selectMode(mode,element){
     const badge=
         document.getElementById("modeBadge");
 
+
     badge.textContent=
         mode==="DAY"
         ? "MODE: V3.6.9 DAY TRADE"
         : "MODE: V5 SUPER SCALP";
 
+
     badge.classList.add("active");
 
 
-    document.getElementById("modeContinue")
-        .disabled=false;
+    document.getElementById(
+        "modeContinue"
+    ).disabled=false;
 
 }
 
 
 /* =========================================================
-   START
+   START SYSTEM
 ========================================================= */
 
 function startSystem(){
@@ -2033,115 +2132,86 @@ function startSystem(){
     if(!state.mode)return;
 
 
-    const todayTrades=dailyTrades();
-
-
-    if(todayTrades.length>=3){
+    if(tradingLocked()){
 
         alert(
-            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
+            "🔴 TRADING DAY CLOSED — Maximum 3 trades or 2 consecutive losses."
         );
 
         return;
 
     }
-
-
-    if(consecutiveLosses()>=2){
-
-        alert(
-            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
-        );
-
-        return;
-
-    }
-
-
-    document.getElementById("modeSection")
-        .classList.add("hidden");
-
-    document.getElementById("assistantSection")
-        .classList.remove("hidden");
-
-
-    document.getElementById("journalSection")
-        .classList.add("hidden");
-
-    document.getElementById("disciplineSection")
-        .classList.add("hidden");
-
-    document.getElementById("pauseSection")
-        .classList.add("hidden");
-
-    document.getElementById("authorizationSection")
-        .classList.add("hidden");
-
-
-    document.getElementById("playbookSection")
-        .classList.remove("hidden");
-
-    document.getElementById("treeSection")
-        .classList.remove("hidden");
 
 
     state.step=0;
 
     state.answers={};
 
-    state.disciplinePassed=false;
+    state.firewallStep=0;
 
-    state.executionAuthorized=false;
+    state.firewallAnswers={};
 
-    state.ruleFollowed=null;
+    state.firewallPassed=false;
 
+    state.authorized=false;
 
-    document.getElementById("jStrategyRecord")
-        .value="";
+    state.pauseComplete=false;
 
-    document.getElementById("jDirection")
-        .value="";
-
-    document.getElementById("jEntry")
-        .value="";
-
-    document.getElementById("jSL")
-        .value="";
-
-    document.getElementById("jTP")
-        .value="";
-
-    document.getElementById("jResult")
-        .value="";
-
-    document.getElementById("jNotes")
-        .value="";
+    state.hardLocked=false;
 
 
-    document.getElementById("disciplineBadge")
-        .textContent="DISCIPLINE: READY";
-
-    document.getElementById("disciplineBadge")
-        .classList.remove("red","green");
+    document.getElementById(
+        "modeSection"
+    ).classList.add("hidden");
 
 
-    document.querySelectorAll(
-        "#disciplineSection input[type=checkbox]"
-    ).forEach(
-        x=>x.checked=false
-    );
+    document.getElementById(
+        "assistantSection"
+    ).classList.remove("hidden");
 
 
-    document.getElementById("ruleYes")
-        .classList.remove("selected");
+    document.getElementById(
+        "firewallSection"
+    ).classList.add("hidden");
 
-    document.getElementById("ruleNo")
-        .classList.remove("selected");
+
+    document.getElementById(
+        "pauseSection"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "authorizationSection"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "journalSection"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "playbookSection"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "treeSection"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).textContent=
+        "FIREWALL: STANDBY";
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).className="badge";
 
 
     renderStep();
-
-    renderJournal();
 
     updateTradeBadge();
 
@@ -2149,7 +2219,7 @@ function startSystem(){
 
 
 /* =========================================================
-   STEP DATA
+   V3.6.9 STEPS
 ========================================================= */
 
 const daySteps=[
@@ -2252,7 +2322,7 @@ const daySteps=[
 
 {
     title:"STEP 9 — LIQUIDITY MAP",
-    question:"در حال حاضر کدام Liquidity Levelها در قیمت فعال یا نزدیک هستند؟",
+    question:"در حال حاضر کدام Liquidity Levelها فعال یا نزدیک هستند؟",
     multi:true,
     options:[
         ["MONTHLY / WEEKLY LIQUIDITY","Monthly یا Weekly High/Low."],
@@ -2269,7 +2339,7 @@ const daySteps=[
 
 {
     title:"STEP 10 — HTF LIQUIDITY REACTION",
-    question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی در تایم‌فریم مربوطه ایجاد شده است؟",
+    question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی ایجاد شده است؟",
     multi:false,
     options:[
         ["BREAK & ACCEPTANCE","Break → Close Beyond → Hold → Acceptance."],
@@ -2300,16 +2370,16 @@ const daySteps=[
 
 {
     title:"STEP 12 — LIQUIDITY EVENT",
-    question:"در کدام تایم‌فریم‌ها و با چه نوعی Liquidity Event ایجاد شده است؟",
+    question:"در کدام تایم‌فریم‌ها و با چه نوع Liquidity Event ایجاد شده است؟",
     multi:true,
     options:[
-        ["M15 SWEEP","در M15 Sweep + Reaction ایجاد شده."],
-        ["M15 FAKE BREAKOUT","در M15 Fake Breakout + Failure ایجاد شده."],
-        ["M15 RECLAIM","در M15 Break/Sweep → Return → Valid Close → Hold."],
-        ["M15 BREAKOUT","در M15 Break + Close Beyond ایجاد شده."],
-        ["M5 LIQUIDITY EVENT","در M5 Liquidity Event ایجاد شده."],
-        ["M1 MICRO SWEEP","در M1 Micro Liquidity Sweep ایجاد شده."],
-        ["M1 RECLAIM","در M1 Micro Level Reclaim ایجاد شده."],
+        ["M15 SWEEP","M15 Sweep + Reaction."],
+        ["M15 FAKE BREAKOUT","M15 Fake Breakout + Failure."],
+        ["M15 RECLAIM","Break/Sweep → Return → Valid Close → Hold."],
+        ["M15 BREAKOUT","M15 Break + Close Beyond."],
+        ["M5 LIQUIDITY EVENT","M5 Liquidity Event."],
+        ["M1 MICRO SWEEP","M1 Micro Liquidity Sweep."],
+        ["M1 RECLAIM","M1 Micro Level Reclaim."],
         ["NONE","Liquidity Event معتبر وجود ندارد."]
     ]
 },
@@ -2356,7 +2426,7 @@ const daySteps=[
 
 {
     title:"STEP 16 — TARGET SPACE",
-    question:"آیا بین Entry و Target، فضای کافی و قابل معامله وجود دارد؟",
+    question:"آیا بین Entry و Target فضای کافی وجود دارد؟",
     multi:false,
     options:[
         ["YES","Target Space کافی است."],
@@ -2367,7 +2437,7 @@ const daySteps=[
 
 {
     title:"STEP 17 — FINAL RISK GATE",
-    question:"آیا Entry، SL، TP و Risk به‌صورت کامل مشخص و معتبر هستند؟",
+    question:"آیا Entry، SL، TP و Risk کامل و معتبر هستند؟",
     multi:false,
     options:[
         ["VALID","SL پشت Invalidation Point و Target مشخص است."],
@@ -2390,6 +2460,10 @@ const daySteps=[
 ];
 
 
+/* =========================================================
+   V5 FAST SUPER SCALP
+========================================================= */
+
 const scalpSteps=[
 
 {
@@ -2404,7 +2478,7 @@ const scalpSteps=[
 },
 
 {
-    title:"V5 — STEP 2: SESSION",
+    title:"V5 — STEP 2: MARKET ACTIVITY",
     question:"در Session انتخاب‌شده، آیا بازار از نظر حرکت و Liquidity قابل معامله است؟",
     multi:false,
     options:[
@@ -2415,7 +2489,7 @@ const scalpSteps=[
 
 {
     title:"V5 — STEP 3: IMMEDIATE LOCATION",
-    question:"در تایم‌فریم‌های نزدیک به قیمت، قیمت اکنون در کدام Locationها قرار دارد؟",
+    question:"در تایم‌فریم‌های نزدیک، قیمت اکنون کجا قرار دارد؟",
     multi:true,
     options:[
         ["SESSION LIQUIDITY","Asia / London / New York High/Low."],
@@ -2426,14 +2500,14 @@ const scalpSteps=[
         ["RECENT SWING","Recent Micro / Local Swing."],
         ["RECLAIMED LEVEL","Level تازه Reclaim شده."],
         ["BREAKOUT RETEST","Breakout Retest نزدیک."],
-        ["RANGE MIDDLE","قیمت در Middle Range قرار دارد؛ Location ضعیف."],
+        ["RANGE MIDDLE","قیمت در Middle Range است."],
         ["UNCLEAR","Location مشخص نیست."]
     ]
 },
 
 {
     title:"V5 — STEP 4: LIQUIDITY EVENT",
-    question:"در تایم‌فریم M1/M5، چه Liquidity Eventهایی همین حالا ایجاد شده‌اند؟",
+    question:"در تایم‌فریم M1/M5 چه Liquidity Eventی همین حالا ایجاد شده؟",
     multi:true,
     options:[
         ["M1 MICRO SWEEP","M1 Liquidity Sweep."],
@@ -2476,21 +2550,21 @@ const scalpSteps=[
 
 {
     title:"V5 — STEP 7: SL LOCATION",
-    question:"در تایم‌فریم M1، نقطه Invalidation کجاست و SL باید کجا قرار بگیرد؟",
+    question:"نقطه Invalidation کجاست و SL باید کجا قرار بگیرد؟",
     multi:false,
     options:[
-        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر قرار می‌گیرد."],
-        ["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep قرار می‌گیرد."],
-        ["BEHIND RECLAIM INVALIDATION","SL پشت Level/Structureای قرار می‌گیرد که با شکست آن Setup باطل می‌شود."],
-        ["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation قرار می‌گیرد."],
-        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است؛ NO TRADE."],
-        ["UNCLEAR","Invalidation Point مشخص نیست؛ WAIT."]
+        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر."],
+        ["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep."],
+        ["BEHIND RECLAIM INVALIDATION","SL پشت Invalidation Setup."],
+        ["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation."],
+        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است."],
+        ["UNCLEAR","Invalidation Point مشخص نیست."]
     ]
 },
 
 {
     title:"V5 — STEP 8: TARGET",
-    question:"در مسیر Entry در تایم‌فریم‌های نزدیک، Target اصلی کدام است؟",
+    question:"در مسیر Entry نزدیک‌ترین Target معتبر کدام است؟",
     multi:true,
     options:[
         ["NEARBY LIQUIDITY","اولین Liquidity نزدیک."],
@@ -2498,7 +2572,7 @@ const scalpSteps=[
         ["LOCAL SWING","Nearby Local Swing."],
         ["RECENT HIGH / LOW","Recent High/Low."],
         ["RANGE EDGE","لبه Range."],
-        ["NO CLEAR TARGET","Target مشخص نیست؛ NO TRADE."]
+        ["NO CLEAR TARGET","Target مشخص نیست."]
     ]
 },
 
@@ -2543,309 +2617,9 @@ function getSelectedAnswers(){
 }
 
 
-function isExclusiveOption(label){
-
-    const text=label.toUpperCase();
-
-    return(
-        text==="NONE" ||
-        text==="NO" ||
-        text.includes("NO TRADE") ||
-        text.includes("NO CLEAR TARGET") ||
-        text.includes("INVALID") ||
-        text==="UNCLEAR" ||
-        text.includes("TOO WIDE")
-    );
-
-}
-
-
-/* =========================================================
-   RENDER STEP
-========================================================= */
-
-function renderStep(){
-
-    const steps=currentSteps();
-
-    const s=steps[state.step];
-
-    if(!s)return;
-
-
-    const selected=getSelectedAnswers();
-
-
-    document.getElementById("assistantTitle")
-        .textContent=
-        state.mode==="DAY"
-        ? "🦅 V3.6.9 DAY TRADE ASSISTANT"
-        : "⚡ V5 SUPER SCALP ASSISTANT";
-
-
-    document.getElementById("stepCounter")
-        .textContent=
-        `Step ${state.step+1} of ${steps.length}`;
-
-
-    document.getElementById("progressBar")
-        .style.width=
-        ((state.step+1)/steps.length*100)+"%";
-
-
-    let html=`
-
-        <div class="question">
-
-            ${s.title}
-
-            <br>
-
-            ${s.question}
-
-            ${
-                s.multi
-                ?
-                `<div class="multiHint">
-                    ☑ MULTI-SELECTION — می‌توانی چند گزینه را هم‌زمان انتخاب کنی.
-                </div>`
-                :
-                ``
-            }
-
-        </div>
-
-        <div class="options">
-
-    `;
-
-
-    s.options.forEach((opt,i)=>{
-
-        const active=selected.includes(i);
-
-        html+=`
-
-            <div
-                class="option ${active?"selected":""}"
-                onclick="chooseAnswer(${i},this)"
-            >
-
-                <strong>${opt[0]}</strong>
-
-                <small>${opt[1]}</small>
-
-            </div>
-
-        `;
-
-    });
-
-
-    html+=`</div>`;
-
-
-    document.getElementById("questionArea")
-        .innerHTML=html;
-
-
-    updateDecisionMessage();
-
-
-    document.getElementById("backBtn")
-        .disabled=state.step===0;
-
-
-    document.getElementById("nextBtn")
-        .disabled=selected.length===0;
-
-
-    document.getElementById("nextBtn")
-        .textContent=
-        state.step===steps.length-1
-        ? "FINISH"
-        : "NEXT →";
-
-}
-
-
-/* =========================================================
-   CHOOSE ANSWER
-========================================================= */
-
-function chooseAnswer(index){
-
-    const s=getCurrentStep();
-
-    const label=s.options[index][0];
-
-    let selected=[
-        ...getSelectedAnswers()
-    ];
-
-
-    if(!s.multi){
-
-        selected=[index];
-
-    }else{
-
-        const exclusive=isExclusiveOption(label);
-
-
-        if(exclusive){
-
-            selected=[index];
-
-        }else{
-
-            selected=selected.filter(i =>
-                !isExclusiveOption(
-                    s.options[i][0]
-                )
-            );
-
-
-            if(selected.includes(index)){
-
-                selected=selected.filter(
-                    i=>i!==index
-                );
-
-            }else{
-
-                selected.push(index);
-
-            }
-
-        }
-
-    }
-
-
-    state.answers[state.step]=selected;
-
-    renderStep();
-
-}
-
-
-/* =========================================================
-   DECISION MESSAGE
-========================================================= */
-
-function updateDecisionMessage(){
-
-    const selectedIndexes=getSelectedAnswers();
-
-
-    if(selectedIndexes.length===0){
-
-        document.getElementById("decisionArea")
-            .innerHTML="";
-
-        return;
-
-    }
-
-
-    const s=getCurrentStep();
-
-
-    const selectedLabels=
-        selectedIndexes.map(
-            i=>s.options[i][0]
-        );
-
-
-    const hasHardStop=
-        selectedLabels.some(
-            label=>isHardStop(label)
-        );
-
-
-    const hasWait=
-        selectedLabels.some(
-            label=>isWaitCondition(label)
-        );
-
-
-    if(hasHardStop){
-
-        document.getElementById("decisionArea")
-            .innerHTML=`
-
-            <div class="alert danger">
-
-                🔴 NO TRADE / STOP CONDITION
-
-                <br>
-
-                <small>
-                    ${selectedLabels.join(" + ")}
-                </small>
-
-            </div>
-
-            `;
-
-        return;
-
-    }
-
-
-    if(hasWait){
-
-        document.getElementById("decisionArea")
-            .innerHTML=`
-
-            <div class="alert warning">
-
-                🟡 WAIT — SETUP DEVELOPING
-
-                <br>
-
-                <small>
-                    ${selectedLabels.join(" + ")}
-                </small>
-
-            </div>
-
-            `;
-
-        return;
-
-    }
-
-
-    document.getElementById("decisionArea")
-        .innerHTML=`
-
-        <div class="alert success">
-
-            🟢 CONDITION ACCEPTED
-
-            <br>
-
-            <small>
-                ${selectedLabels.join(" + ")}
-            </small>
-
-        </div>
-
-        `;
-
-}
-
-
-/* =========================================================
-   HARD STOP
-========================================================= */
-
 function isHardStop(label){
 
-    const text=label.toUpperCase();
-
+    const text=String(label).toUpperCase();
 
     return(
 
@@ -2878,8 +2652,7 @@ function isHardStop(label){
 
 function isWaitCondition(label){
 
-    const text=label.toUpperCase();
-
+    const text=String(label).toUpperCase();
 
     return(
 
@@ -2887,9 +2660,32 @@ function isWaitCondition(label){
 
         text==="WAIT" ||
 
-        text.includes("UNCLEAR") ||
+        text.includes("UNCLEAR")
 
-        text.includes("MSS ONLY")
+    );
+
+}
+
+
+function isExclusiveOption(label){
+
+    const text=String(label).toUpperCase();
+
+    return(
+
+        text==="NONE" ||
+
+        text==="NO" ||
+
+        text.includes("NO TRADE") ||
+
+        text.includes("NO CLEAR TARGET") ||
+
+        text.includes("INVALID") ||
+
+        text==="UNCLEAR" ||
+
+        text.includes("TOO WIDE")
 
     );
 
@@ -2897,155 +2693,205 @@ function isWaitCondition(label){
 
 
 /* =========================================================
-   STRATEGY RECORD
+   RENDER STEP
 ========================================================= */
 
-function buildStrategyRecord(){
+function renderStep(){
 
-    const steps=currentSteps();
+    if(state.hardLocked)return;
 
-    let lines=[];
-
-
-    lines.push(
-        "=============================="
-    );
-
-    lines.push(
-        "SNIPER GOD'S PLAN — STRATEGY RECORD"
-    );
-
-    lines.push(
-        "=============================="
-    );
-
-    lines.push(
-        "Engine: "+
-        (
-            state.mode==="DAY"
-            ? "V3.6.9 STRUCTURAL SNIPER"
-            : "V5 SUPER SCALP"
-        )
-    );
-
-    lines.push(
-        "Session: "+
-        (state.session || "Not selected")
-    );
-
-    lines.push("");
-
-
-    steps.forEach((step,index)=>{
-
-        const answers=
-            state.answers[index] || [];
-
-
-        if(answers.length===0){
-
-            return;
-
-        }
-
-
-        const selected=
-            answers.map(
-                answerIndex =>
-                    step.options[answerIndex][0]
-            );
-
-
-        lines.push(
-            `${index+1}. ${step.title}`
-        );
-
-        lines.push(
-            "   Question: "+step.question
-        );
-
-        lines.push(
-            "   Selected: "+selected.join(" + ")
-        );
-
-        lines.push("");
-
-    });
-
-
-    lines.push(
-        "=============================="
-    );
-
-    lines.push(
-        "FINAL STRATEGY DECISION"
-    );
-
-    lines.push(
-        "=============================="
-    );
-
-
-    const finalIndex=steps.length-1;
-
-    const finalAnswers=
-        state.answers[finalIndex] || [];
-
-
-    if(finalAnswers.length){
-
-        const finalLabels=
-            finalAnswers.map(
-                i=>steps[finalIndex].options[i][0]
-            );
-
-        lines.push(
-            finalLabels.join(" + ")
-        );
-
-    }else{
-
-        lines.push("Not completed");
-
-    }
-
-
-    lines.push("");
-
-    lines.push(
-        "DISCIPLINE STATUS: "+
-        (
-            state.disciplinePassed
-            ? "PASSED"
-            : "NOT COMPLETED"
-        )
-    );
-
-
-    lines.push(
-        "EXECUTION STATUS: "+
-        (
-            state.executionAuthorized
-            ? "AUTHORIZED"
-            : "NOT AUTHORIZED"
-        )
-    );
-
-
-    return lines.join("\n");
-
-}
-
-
-/* =========================================================
-   FINAL ENTRY
-========================================================= */
-
-function nextStep(){
 
     const steps=currentSteps();
 
     const s=steps[state.step];
+
+    if(!s)return;
+
+
+    const selected=
+        getSelectedAnswers();
+
+
+    document.getElementById(
+        "assistantTitle"
+    ).textContent=
+        state.mode==="DAY"
+        ? "🦅 V3.6.9 DAY TRADE ASSISTANT"
+        : "⚡ V5 SUPER SCALP ASSISTANT";
+
+
+    document.getElementById(
+        "stepCounter"
+    ).textContent=
+        `Step ${state.step+1} of ${steps.length}`;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width=
+        ((state.step+1)/steps.length*100)+"%";
+
+
+    let html=`
+
+        <div class="question">
+
+            ${s.title}
+
+            <br>
+
+            ${s.question}
+
+            ${
+                s.multi
+                ?
+                `<div class="multiHint">
+                    ☑ MULTI-SELECTION
+                </div>`
+                :
+                ``
+            }
+
+        </div>
+
+        <div class="options">
+
+    `;
+
+
+    s.options.forEach((opt,i)=>{
+
+        const active=
+            selected.includes(i);
+
+
+        html+=`
+
+            <div
+                class="option ${active?"selected":""}"
+                onclick="chooseAnswer(${i})">
+
+                <strong>
+                    ${opt[0]}
+                </strong>
+
+                <small>
+                    ${opt[1]}
+                </small>
+
+            </div>
+
+        `;
+
+    });
+
+
+    html+=`</div>`;
+
+
+    document.getElementById(
+        "questionArea"
+    ).innerHTML=html;
+
+
+    updateDecisionMessage();
+
+
+    document.getElementById(
+        "backBtn"
+    ).disabled=
+        state.step===0;
+
+
+    document.getElementById(
+        "nextBtn"
+    ).disabled=
+        selected.length===0;
+
+
+    document.getElementById(
+        "nextBtn"
+    ).textContent=
+        state.step===steps.length-1
+        ? "CONTINUE TO FIREWALL"
+        : "NEXT →";
+
+}
+
+
+/* =========================================================
+   CHOOSE ANSWER
+========================================================= */
+
+function chooseAnswer(index){
+
+    if(state.hardLocked)return;
+
+
+    const s=getCurrentStep();
+
+    const label=s.options[index][0];
+
+    let selected=[
+        ...getSelectedAnswers()
+    ];
+
+
+    if(!s.multi){
+
+        selected=[index];
+
+    }else{
+
+        const exclusive=
+            isExclusiveOption(label);
+
+
+        if(exclusive){
+
+            selected=[index];
+
+        }else{
+
+            selected=
+                selected.filter(
+                    i =>
+                        !isExclusiveOption(
+                            s.options[i][0]
+                        )
+                );
+
+
+            if(selected.includes(index)){
+
+                selected=
+                    selected.filter(
+                        i=>i!==index
+                    );
+
+            }else{
+
+                selected.push(index);
+
+            }
+
+        }
+
+    }
+
+
+    state.answers[state.step]=selected;
+
+    renderStep();
+
+}
+
+
+/* =========================================================
+   DECISION MESSAGE
+========================================================= */
+
+function updateDecisionMessage(){
 
     const selectedIndexes=
         getSelectedAnswers();
@@ -3053,33 +2899,137 @@ function nextStep(){
 
     if(selectedIndexes.length===0){
 
+        document.getElementById(
+            "decisionArea"
+        ).innerHTML="";
+
         return;
 
     }
 
 
-    const selectedLabels=
+    const s=getCurrentStep();
+
+
+    const labels=
         selectedIndexes.map(
             i=>s.options[i][0]
         );
 
 
+    const hard=
+        labels.some(
+            label=>isHardStop(label)
+        );
+
+
+    const wait=
+        labels.some(
+            label=>isWaitCondition(label)
+        );
+
+
+    if(hard){
+
+        document.getElementById(
+            "decisionArea"
+        ).innerHTML=`
+
+            <div class="alert danger">
+
+                🔴 NO TRADE / STOP CONDITION
+
+                <br>
+
+                ${labels.join(" + ")}
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    if(wait){
+
+        document.getElementById(
+            "decisionArea"
+        ).innerHTML=`
+
+            <div class="alert warning">
+
+                🟡 WAIT — SETUP DEVELOPING
+
+                <br>
+
+                ${labels.join(" + ")}
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "decisionArea"
+    ).innerHTML=`
+
+        <div class="alert success">
+
+            🟢 CONDITION ACCEPTED
+
+            <br>
+
+            ${labels.join(" + ")}
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   NEXT STEP
+========================================================= */
+
+function nextStep(){
+
+    if(state.hardLocked)return;
+
+
+    const steps=currentSteps();
+
+    const s=steps[state.step];
+
+
+    const indexes=
+        getSelectedAnswers();
+
+
+    if(indexes.length===0)return;
+
+
+    const labels=
+        indexes.map(
+            i=>s.options[i][0]
+        );
+
+
     if(
-        selectedLabels.some(
+        labels.some(
             label=>isHardStop(label)
         )
     ){
 
-        const stopLabel=
-            selectedLabels.find(
-                label=>isHardStop(label)
-            );
-
-
-        showFinalState(
+        hardLock(
             "🔴 NO TRADE",
-            "شرط انتخاب‌شده Setup را invalid کرده است: "+
-            stopLabel
+            "شرط انتخاب‌شده Setup را invalid کرده است."
         );
 
         return;
@@ -3088,21 +3038,30 @@ function nextStep(){
 
 
     if(
-        selectedLabels.some(
+        labels.some(
             label=>isWaitCondition(label)
         )
     ){
 
-        if(selectedLabels.length===1){
+        showWaitState(
+            labels.join(" + ")
+        );
 
-            showFinalState(
-                "🟡 WAIT — SETUP DEVELOPING",
-                selectedLabels[0]
-            );
+        return;
 
-            return;
+    }
 
-        }
+
+    if(
+        state.mode==="DAY" &&
+        labels.includes("REACTION PENDING")
+    ){
+
+        showWaitState(
+            "HTF LIQUIDITY REACTION PENDING"
+        );
+
+        return;
 
     }
 
@@ -3111,8 +3070,7 @@ function nextStep(){
         state.step===steps.length-1
     ){
 
-        const finalLabel=
-            selectedLabels[0];
+        const finalLabel=labels[0];
 
 
         if(
@@ -3120,36 +3078,32 @@ function nextStep(){
             finalLabel==="V5 ENTRY READY"
         ){
 
-            showFinalState(
-
-                state.mode==="DAY"
-                ? "🟢 V3.6.9 ENTRY READY"
-                : "🟢 V5 SUPER SCALP ENTRY READY",
-
-                "Strategy کامل شد. اما هنوز اجازه ورود نداری. Discipline Gate باید تکمیل شود."
-
-            );
+            document.getElementById(
+                "assistantSection"
+            ).classList.add("hidden");
 
 
-            openDisciplineGate();
-
-            return;
-
-        }else{
-
-            showFinalState(
-
-                finalLabel.includes("WAIT")
-                ? "🟡 WAIT — SETUP DEVELOPING"
-                : "🔴 NO TRADE",
-
-                finalLabel
-
-            );
+            openFirewall();
 
             return;
 
         }
+
+
+        if(finalLabel.includes("WAIT")){
+
+            showWaitState(finalLabel);
+
+        }else{
+
+            hardLock(
+                "🔴 NO TRADE",
+                finalLabel
+            );
+
+        }
+
+        return;
 
     }
 
@@ -3167,11 +3121,10 @@ function nextStep(){
 
 function previousStep(){
 
-    if(state.step===0){
+    if(state.hardLocked)return;
 
-        return;
 
-    }
+    if(state.step===0)return;
 
 
     state.step--;
@@ -3182,33 +3135,20 @@ function previousStep(){
 
 
 /* =========================================================
-   FINAL STATE
+   WAIT STATE
 ========================================================= */
 
-function showFinalState(title,text){
+function showWaitState(text){
 
-    let type="danger";
-
-
-    if(title.includes("ENTRY")){
-
-        type="success";
-
-    }else if(title.includes("WAIT")){
-
-        type="warning";
-
-    }
-
-
-    document.getElementById("questionArea")
-        .innerHTML=`
+    document.getElementById(
+        "questionArea"
+    ).innerHTML=`
 
         <div
-            class="alert ${type}"
+            class="alert warning"
             style="font-size:18px;font-weight:900">
 
-            ${title}
+            🟡 WAIT — SETUP DEVELOPING
 
         </div>
 
@@ -3216,262 +3156,659 @@ function showFinalState(title,text){
 
             ${text}
 
-        </div>
+            <br><br>
 
-        `;
-
-
-    document.getElementById("decisionArea")
-        .innerHTML=`
-
-        <div class="alert info">
-
-            Engine:
-            ${
-                state.mode==="DAY"
-                ? "V3.6.9 STRUCTURAL SNIPER"
-                : "V5 SUPER SCALP"
-            }
-
-            <br>
-
-            Session:
-            ${state.session}
-
-            <br>
-
-            Daily Trades:
-            ${dailyTrades().length}/3
+            تا زمانی که شرط کامل نشود،
+            Entry مجاز نیست.
 
         </div>
 
-        `;
+    `;
 
 
-    document.getElementById("nextBtn")
-        .disabled=true;
+    document.getElementById(
+        "decisionArea"
+    ).innerHTML=`
+
+        <div class="alert warning">
+
+            SYSTEM STATUS: WAIT
+
+        </div>
+
+    `;
+
+
+    document.getElementById(
+        "nextBtn"
+    ).disabled=true;
 
 }
 
 
 /* =========================================================
-   DISCIPLINE GATE
+   HARD LOCK
 ========================================================= */
 
-function openDisciplineGate(){
+function hardLock(title,text){
 
-    document.getElementById("assistantSection")
-        .classList.remove("hidden");
+    state.hardLocked=true;
 
-    document.getElementById("disciplineSection")
-        .classList.remove("hidden");
+    document.getElementById(
+        "firewallBadge"
+    ).textContent=
+        "FIREWALL: HARD LOCK";
 
-    document.getElementById("pauseSection")
-        .classList.add("hidden");
-
-    document.getElementById("authorizationSection")
-        .classList.add("hidden");
-
-    document.getElementById("journalSection")
-        .classList.add("hidden");
+    document.getElementById(
+        "firewallBadge"
+    ).className=
+        "badge red";
 
 
-    document.getElementById("disciplineMessage")
-        .className="alert warning";
+    document.getElementById(
+        "questionArea"
+    ).innerHTML=`
 
-    document.getElementById("disciplineMessage")
-        .innerHTML=
-        "🔒 تمام ۷ مورد را با صداقت بررسی کن.";
+        <div class="lockbox">
+
+            ${title}
+
+            <br>
+
+            ${text}
+
+            <br><br>
+
+            این Setup قابل اجرا نیست.
+
+            <br>
+
+            برای بررسی فرصت بعدی باید
+            Setup را Reset کنی.
+
+        </div>
+
+    `;
 
 
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: CHECKING";
+    document.getElementById(
+        "decisionArea"
+    ).innerHTML=`
 
-    document.getElementById("disciplineBadge")
-        .classList.add("active");
+        <div class="alert danger">
+
+            🔒 HARD LOCK
+
+            <br>
+
+            Back و تغییر پاسخ‌ها برای عبور از
+            این Lock مجاز نیست.
+
+        </div>
+
+    `;
 
 
-    document.getElementById("disciplineSection")
-        .scrollIntoView({
+    document.getElementById(
+        "nextBtn"
+    ).disabled=true;
+
+
+    document.getElementById(
+        "backBtn"
+    ).disabled=true;
+
+}
+
+
+/* =========================================================
+   DISCIPLINE FIREWALL QUESTIONS
+========================================================= */
+
+const fullFirewall=[
+
+{
+    title:"FIREWALL 1 — FOMO",
+    question:"آیا این ورود به دلیل ترس از دست دادن حرکت بازار است؟",
+    options:[
+        ["NO","اگر Setup نباشد وارد نمی‌شوم."],
+        ["YES","FOMO detected → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 2 — REVENGE",
+    question:"آیا این معامله برای جبران ضرر قبلی است؟",
+    options:[
+        ["NO","هدف من اجرای سیستم است، نه جبران ضرر."],
+        ["YES","Revenge Trading → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 3 — IMPULSE",
+    question:"آیا قبل از دیدن Setup تصمیم ورود گرفته‌ام و حالا دنبال دلیل می‌گردم؟",
+    options:[
+        ["NO","تصمیم بر اساس Setup است."],
+        ["YES","Impulsive Decision → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 4 — RULE BREAK",
+    question:"آیا برای این معامله یکی از قوانین سیستم را عمداً نادیده گرفته‌ام؟",
+    options:[
+        ["NO","تمام قوانین رعایت شده‌اند."],
+        ["YES","Rule Break → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 5 — INVALIDATION",
+    question:"آیا دقیقاً می‌دانم چه چیزی Setup را باطل می‌کند؟",
+    options:[
+        ["YES","Invalidation Point مشخص است."],
+        ["NO","Invalidation نامشخص → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 6 — RISK",
+    question:"آیا Risk و SL قبل از Entry مشخص و قابل قبول هستند؟",
+    options:[
+        ["YES","Risk کنترل شده است."],
+        ["NO","Risk Undefined → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 7 — ACCEPT LOSS",
+    question:"اگر این معامله SL شود، آیا بدون تغییر قانون آن را می‌پذیرم؟",
+    options:[
+        ["YES","Loss بخشی از سیستم است."],
+        ["NO","Emotional Risk → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 8 — MISSED TRADE",
+    question:"اگر این معامله را از دست بدهم، آیا باز هم حاضر هستم طبق پلن بمانم؟",
+    options:[
+        ["YES","No Chase."],
+        ["NO","Chasing Behavior → NO ENTRY."]
+    ]
+},
+
+{
+    title:"FIREWALL 9 — JOURNAL TEST",
+    question:"آیا حاضر هستم همین تصمیم را بدون خجالت در Journal ثبت کنم؟",
+    options:[
+        ["YES","Decision قابل ثبت است."],
+        ["NO","اگر نمی‌توانم ثبتش کنم، اجرا نمی‌کنم."]
+    ]
+},
+
+{
+    title:"FIREWALL 10 — FINAL HONESTY",
+    question:"اگر الان احساساتم را حذف کنیم، آیا هنوز طبق قوانین سیستم وارد می‌شوم؟",
+    options:[
+        ["YES","Decision is System-Based."],
+        ["NO","Emotion detected → NO ENTRY."]
+    ]
+}
+
+];
+
+
+const fastFirewall=[
+
+{
+    title:"V5 FIREWALL 1 — FOMO",
+    question:"آیا فقط به خاطر سرعت حرکت بازار می‌خواهم وارد شوم؟",
+    options:[
+        ["NO","Setup اولویت دارد."],
+        ["YES","FOMO → NO ENTRY."]
+    ]
+},
+
+{
+    title:"V5 FIREWALL 2 — IMPULSE",
+    question:"آیا Trigger واقعی دارم یا فقط احساس می‌کنم قیمت باید حرکت کند؟",
+    options:[
+        ["REAL TRIGGER","Trigger واقعی وجود دارد."],
+        ["IMPULSE","Impulse → NO ENTRY."]
+    ]
+},
+
+{
+    title:"V5 FIREWALL 3 — SL",
+    question:"آیا SL دقیقاً پشت Invalidation قرار دارد؟",
+    options:[
+        ["YES","SL valid."],
+        ["NO","Invalid SL → NO ENTRY."]
+    ]
+},
+
+{
+    title:"V5 FIREWALL 4 — TARGET",
+    question:"آیا Target نزدیک و مشخص است؟",
+    options:[
+        ["YES","Target valid."],
+        ["NO","No Target → NO ENTRY."]
+    ]
+},
+
+{
+    title:"V5 FIREWALL 5 — CHASE",
+    question:"آیا قیمت بدون من حرکت کرده و الان دارم آن را Chase می‌کنم؟",
+    options:[
+        ["NO","No Chase."],
+        ["YES","Chasing → NO ENTRY."]
+    ]
+},
+
+{
+    title:"V5 FIREWALL 6 — FINAL",
+    question:"اگر این فرصت را از دست بدهم، آیا حاضر هستم معامله نکنم؟",
+    options:[
+        ["YES","Discipline Passed."],
+        ["NO","Emotional Attachment → NO ENTRY."]
+    ]
+}
+
+];
+
+
+/* =========================================================
+   FIREWALL ENGINE
+========================================================= */
+
+function firewallSteps(){
+
+    return state.mode==="DAY"
+        ? fullFirewall
+        : fastFirewall;
+
+}
+
+
+function openFirewall(){
+
+    state.firewallStep=0;
+
+    state.firewallAnswers={};
+
+    state.firewallPassed=false;
+
+    state.authorized=false;
+
+    state.pauseComplete=false;
+
+    state.hardLocked=false;
+
+
+    document.getElementById(
+        "firewallSection"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).textContent=
+        state.mode==="DAY"
+        ? "FIREWALL: FULL"
+        : "FIREWALL: FAST";
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).className=
+        "badge yellow";
+
+
+    renderFirewall();
+
+
+    setTimeout(()=>{
+
+        document.getElementById(
+            "firewallSection"
+        ).scrollIntoView({
             behavior:"smooth",
             block:"start"
         });
 
+    },100);
+
 }
 
 
-/* =========================================================
-   DISCIPLINE PASS
-========================================================= */
+function getFirewallAnswer(){
 
-function passDiscipline(){
-
-    const checks=[
-
-        "disciplinePlan",
-        "disciplineNoFomo",
-        "disciplineNoRevenge",
-        "disciplineNoRush",
-        "disciplineReason",
-        "disciplineAcceptLoss",
-        "disciplineCanSkip"
-
+    return state.firewallAnswers[
+        state.firewallStep
     ];
 
-
-    const allPassed=
-        checks.every(
-            id=>document.getElementById(id).checked
-        );
+}
 
 
-    if(!allPassed){
+function renderFirewall(){
 
-        document.getElementById("disciplineMessage")
-            .className="alert danger";
+    const steps=
+        firewallSteps();
 
-        document.getElementById("disciplineMessage")
-            .innerHTML=`
+    const s=
+        steps[state.firewallStep];
 
-            🔴 DISCIPLINE FAILED
 
-            <br><br>
+    if(!s)return;
 
-            حداقل یکی از شروط انضباطی تأیید نشده است.
+
+    const selected=
+        getFirewallAnswer();
+
+
+    let html=`
+
+        <div class="question">
+
+            ${s.title}
 
             <br>
 
-            <strong>
-            این Setup لغو شد. روز معاملاتی همچنان فعال است.
-            </strong>
+            ${s.question}
 
-            `;
+        </div>
 
-        document.getElementById("disciplineBadge")
-            .textContent=
-            "DISCIPLINE: FAILED";
+        <div class="options">
 
-        document.getElementById("disciplineBadge")
-            .classList.add("red");
+    `;
 
-        return;
+
+    s.options.forEach((opt,i)=>{
+
+        const active=
+            selected===i;
+
+
+        html+=`
+
+            <div
+                class="option ${
+                    active
+                    ? "selected"
+                    : ""
+                }"
+                onclick="chooseFirewallAnswer(${i})">
+
+                <strong>
+                    ${opt[0]}
+                </strong>
+
+                <small>
+                    ${opt[1]}
+                </small>
+
+            </div>
+
+        `;
+
+    });
+
+
+    html+=`</div>`;
+
+
+    document.getElementById(
+        "firewallQuestionArea"
+    ).innerHTML=html;
+
+
+    updateFirewallDecision();
+
+
+    document.getElementById(
+        "firewallBackBtn"
+    ).disabled=
+        state.firewallStep===0;
+
+
+    document.getElementById(
+        "firewallNextBtn"
+    ).disabled=
+        selected===undefined;
+
+
+    document.getElementById(
+        "firewallNextBtn"
+    ).textContent=
+        state.firewallStep===steps.length-1
+        ? "FINAL FIREWALL CHECK"
+        : "NEXT →";
+
+}
+
+
+function chooseFirewallAnswer(index){
+
+    if(state.hardLocked)return;
+
+
+    state.firewallAnswers[
+        state.firewallStep
+    ]=index;
+
+
+    renderFirewall();
+
+}
+
+
+function firewallAnswerIsDangerous(){
+
+    const steps=
+        firewallSteps();
+
+    const s=
+        steps[state.firewallStep];
+
+    const selected=
+        getFirewallAnswer();
+
+
+    if(selected===undefined)return false;
+
+
+    const label=
+        s.options[selected][0]
+        .toUpperCase();
+
+
+    if(state.mode==="DAY"){
+
+        return label==="YES" ||
+               label==="NO";
 
     }
 
 
-    state.disciplinePassed=true;
-
-
-    document.getElementById("disciplineMessage")
-        .className="alert success";
-
-    document.getElementById("disciplineMessage")
-        .innerHTML=
-        "🟢 DISCIPLINE VERIFIED — حالا وارد 10-Second Pause می‌شویم.";
-
-
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: PASSED";
-
-    document.getElementById("disciplineBadge")
-        .classList.remove("red");
-
-    document.getElementById("disciplineBadge")
-        .classList.add("green");
-
-
-    setTimeout(
-        startPause,
-        700
+    return(
+        label==="YES" ||
+        label==="IMPULSE" ||
+        label==="NO"
     );
 
 }
 
 
-/* =========================================================
-   CANCEL CURRENT SETUP
-========================================================= */
+function updateFirewallDecision(){
 
-function failDiscipline(){
-
-    state.disciplinePassed=false;
-
-    state.executionAuthorized=false;
+    const selected=
+        getFirewallAnswer();
 
 
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: SETUP CANCELLED";
+    if(selected===undefined){
 
-    document.getElementById("disciplineBadge")
-        .classList.remove("active","green");
+        document.getElementById(
+            "firewallDecisionArea"
+        ).innerHTML="";
 
-    document.getElementById("disciplineBadge")
-        .classList.add("red");
+        return;
+
+    }
 
 
-    document.getElementById("disciplineSection")
-        .innerHTML=`
+    const danger=
+        firewallAnswerIsDangerous();
 
-        <h2>🔴 DISCIPLINE FAILED</h2>
 
-        <div class="alert danger">
+    const steps=
+        firewallSteps();
 
-            <strong>
-            CURRENT SETUP CANCELLED
-            </strong>
+    const s=
+        steps[state.firewallStep];
 
-            <br><br>
 
-            این معامله مجاز نیست.
+    const label=
+        s.options[selected][0];
 
-            <br><br>
 
-            مهم:
+    if(danger){
 
-            <br>
+        document.getElementById(
+            "firewallDecisionArea"
+        ).innerHTML=`
 
-            Trading Day همچنان ACTIVE است.
+            <div class="alert danger">
 
-            <br>
+                🔴 FIREWALL FAILURE RISK
 
-            می‌توانی بعداً یک Setup جدید را
-            از ابتدا بررسی کنی.
+                <br>
 
-        </div>
+                ${label}
 
-        <div class="btnrow">
-
-            <button
-                class="btn primary"
-                onclick="newSetupAfterDisciplineFail()">
-
-                🔄 WAIT FOR NEXT SETUP
-
-            </button>
-
-        </div>
+            </div>
 
         `;
+
+    }else{
+
+        document.getElementById(
+            "firewallDecisionArea"
+        ).innerHTML=`
+
+            <div class="alert success">
+
+                🟢 DISCIPLINE CONDITION ACCEPTED
+
+                <br>
+
+                ${label}
+
+            </div>
+
+        `;
+
+    }
 
 }
 
 
 /* =========================================================
-   NEW SETUP AFTER DISCIPLINE FAIL
+   FIREWALL NEXT
 ========================================================= */
 
-function newSetupAfterDisciplineFail(){
+function nextFirewallStep(){
 
-    const todayTrades=dailyTrades();
+    const steps=
+        firewallSteps();
+
+    const selected=
+        getFirewallAnswer();
 
 
-    if(todayTrades.length>=3){
+    if(selected===undefined)return;
 
-        alert(
-            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
+
+    const s=
+        steps[state.firewallStep];
+
+
+    const label=
+        s.options[selected][0]
+        .toUpperCase();
+
+
+    /*
+        HARD FAIL DEFINITIONS
+    */
+
+    const fail=
+        label==="YES" ||
+        label==="IMPULSE" ||
+        label==="NO";
+
+
+    /*
+        Special cases:
+        Questions where YES is the correct answer.
+    */
+
+    const questionTitle=
+        s.title;
+
+
+    let actualFail=false;
+
+
+    if(state.mode==="DAY"){
+
+        if(
+            questionTitle.includes("FOMO") ||
+            questionTitle.includes("REVENGE") ||
+            questionTitle.includes("IMPULSE") ||
+            questionTitle.includes("RULE BREAK")
+        ){
+
+            actualFail=
+                label==="YES";
+
+        }
+
+        else{
+
+            actualFail=
+                label==="NO";
+
+        }
+
+    }else{
+
+        if(
+            questionTitle.includes("FOMO") ||
+            questionTitle.includes("IMPULSE") ||
+            questionTitle.includes("CHASE")
+        ){
+
+            actualFail=
+                label==="YES" ||
+                label==="IMPULSE";
+
+        }else{
+
+            actualFail=
+                label==="NO";
+
+        }
+
+    }
+
+
+    if(actualFail){
+
+        firewallHardLock(
+            "🔴 DISCIPLINE FIREWALL FAILED",
+            label
         );
 
         return;
@@ -3479,52 +3816,180 @@ function newSetupAfterDisciplineFail(){
     }
 
 
-    if(consecutiveLosses()>=2){
+    if(
+        state.firewallStep===
+        steps.length-1
+    ){
 
-        alert(
-            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
-        );
+        passFirewall();
 
         return;
 
     }
 
 
-    state.step=0;
+    state.firewallStep++;
 
-    state.answers={};
+    renderFirewall();
 
-    state.disciplinePassed=false;
-
-    state.executionAuthorized=false;
+}
 
 
-    document.getElementById("disciplineSection")
-        .classList.add("hidden");
+/* =========================================================
+   FIREWALL BACK
+========================================================= */
 
-    document.getElementById("pauseSection")
-        .classList.add("hidden");
+function firewallBack(){
 
-    document.getElementById("authorizationSection")
-        .classList.add("hidden");
-
-    document.getElementById("journalSection")
-        .classList.add("hidden");
+    if(
+        state.firewallStep===0
+    )return;
 
 
-    document.getElementById("assistantSection")
-        .classList.remove("hidden");
+    state.firewallStep--;
+
+    renderFirewall();
+
+}
 
 
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: READY";
+/* =========================================================
+   FIREWALL HARD LOCK
+========================================================= */
 
-    document.getElementById("disciplineBadge")
-        .classList.remove("red","green","active");
+function firewallHardLock(title,text){
+
+    state.hardLocked=true;
+
+    state.firewallPassed=false;
+
+    state.authorized=false;
 
 
-    renderStep();
+    document.getElementById(
+        "firewallBadge"
+    ).textContent=
+        "FIREWALL: FAILED";
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).className=
+        "badge red";
+
+
+    document.getElementById(
+        "firewallQuestionArea"
+    ).innerHTML=`
+
+        <div class="lockbox">
+
+            ${title}
+
+            <br><br>
+
+            ${text}
+
+            <br><br>
+
+            معامله مجاز نیست.
+
+        </div>
+
+    `;
+
+
+    document.getElementById(
+        "firewallDecisionArea"
+    ).innerHTML=`
+
+        <div class="alert danger">
+
+            🔒 HARD LOCK
+
+            <br>
+
+            سیستم اجازه Entry نمی‌دهد.
+
+            <br><br>
+
+            برای فرصت بعدی باید
+            Reset Plan انجام شود.
+
+        </div>
+
+    `;
+
+
+    document.getElementById(
+        "firewallNextBtn"
+    ).disabled=true;
+
+
+    document.getElementById(
+        "firewallBackBtn"
+    ).disabled=true;
+
+}
+
+
+/* =========================================================
+   FIREWALL PASS
+========================================================= */
+
+function passFirewall(){
+
+    state.firewallPassed=true;
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).textContent=
+        "FIREWALL: PASSED";
+
+
+    document.getElementById(
+        "firewallBadge"
+    ).className=
+        "badge green";
+
+
+    document.getElementById(
+        "firewallSection"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "pauseSection"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "pauseTimer"
+    ).textContent="10";
+
+
+    document.getElementById(
+        "pauseStartBtn"
+    ).disabled=false;
+
+
+    document.getElementById(
+        "pauseStartBtn"
+    ).textContent=
+        "START 10-SECOND PAUSE";
+
+
+    setTimeout(()=>{
+
+        document.getElementById(
+            "pauseSection"
+        ).scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    },100);
 
 }
 
@@ -3533,76 +3998,47 @@ function newSetupAfterDisciplineFail(){
    10 SECOND PAUSE
 ========================================================= */
 
+let pauseInterval=null;
+
+
 function startPause(){
 
-    document.getElementById("disciplineSection")
-        .classList.add("hidden");
-
-    document.getElementById("pauseSection")
-        .classList.remove("hidden");
+    if(!state.firewallPassed)return;
 
 
-    const number=
-        document.getElementById("pauseNumber");
-
-    const message=
-        document.getElementById("pauseMessage");
-
-    const authBtn=
-        document.getElementById("authorizationBtn");
-
-
-    let remaining=10;
-
-    number.textContent=remaining;
-
-    authBtn.disabled=true;
-
-    authBtn.textContent=
-        "🔒 WAIT...";
-
-
-    if(state.pauseTimer){
-
-        clearInterval(
-            state.pauseTimer
+    const btn=
+        document.getElementById(
+            "pauseStartBtn"
         );
 
-    }
+
+    btn.disabled=true;
+
+    let seconds=10;
 
 
-    state.pauseTimer=
+    document.getElementById(
+        "pauseTimer"
+    ).textContent=seconds;
+
+
+    pauseInterval=
         setInterval(()=>{
 
-            remaining--;
+            seconds--;
 
-            number.textContent=
-                remaining;
+            document.getElementById(
+                "pauseTimer"
+            ).textContent=seconds;
 
 
-            if(remaining<=0){
+            if(seconds<=0){
 
                 clearInterval(
-                    state.pauseTimer
+                    pauseInterval
                 );
 
-                state.pauseTimer=null;
-
-
-                number.textContent="✓";
-
-
-                message.className=
-                    "alert success";
-
-                message.innerHTML=
-                    "🟢 PAUSE COMPLETE — اکنون می‌توانی Execution Authorization را بررسی کنی.";
-
-
-                authBtn.disabled=false;
-
-                authBtn.textContent=
-                    "🟢 CONTINUE TO AUTHORIZATION";
+                completePause();
 
             }
 
@@ -3611,344 +4047,238 @@ function startPause(){
 }
 
 
-/* =========================================================
-   CANCEL PAUSE
-========================================================= */
+function completePause(){
 
-function cancelFromPause(){
+    state.pauseComplete=true;
 
-    if(state.pauseTimer){
 
-        clearInterval(
-            state.pauseTimer
-        );
+    document.getElementById(
+        "pauseTimer"
+    ).textContent=
+        "✓";
 
-        state.pauseTimer=null;
 
-    }
+    document.getElementById(
+        "pauseStartBtn"
+    ).textContent=
+        "PAUSE COMPLETE";
 
 
-    state.disciplinePassed=false;
+    document.getElementById(
+        "authorizationSection"
+    ).classList.remove("hidden");
 
-    state.executionAuthorized=false;
 
+    document.getElementById(
+        "authCode"
+    ).textContent=
+        "🟢 EXECUTION AUTHORIZED";
 
-    document.getElementById("pauseSection")
-        .innerHTML=`
 
-        <h2>🔴 SETUP CANCELLED</h2>
+    setTimeout(()=>{
 
-        <div class="alert danger">
-
-            تصمیم به عدم ورود ثبت شد.
-
-            <br><br>
-
-            <strong>
-            No Trade is also a valid decision.
-            </strong>
-
-            <br><br>
-
-            Trading Day همچنان ACTIVE است.
-
-        </div>
-
-        <div class="btnrow">
-
-            <button
-                class="btn primary"
-                onclick="newSetupAfterPauseCancel()">
-
-                🔄 WAIT FOR NEXT SETUP
-
-            </button>
-
-        </div>
-
-        `;
-
-
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: SETUP CANCELLED";
-
-}
-
-
-/* =========================================================
-   NEW SETUP AFTER PAUSE CANCEL
-========================================================= */
-
-function newSetupAfterPauseCancel(){
-
-    const todayTrades=dailyTrades();
-
-
-    if(todayTrades.length>=3){
-
-        alert(
-            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
-        );
-
-        return;
-
-    }
-
-
-    if(consecutiveLosses()>=2){
-
-        alert(
-            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
-        );
-
-        return;
-
-    }
-
-
-    state.step=0;
-
-    state.answers={};
-
-    state.disciplinePassed=false;
-
-    state.executionAuthorized=false;
-
-
-    document.getElementById("pauseSection")
-        .classList.add("hidden");
-
-    document.getElementById("assistantSection")
-        .classList.remove("hidden");
-
-
-    renderStep();
-
-}
-
-
-/* =========================================================
-   AUTHORIZATION
-========================================================= */
-
-function authorizeExecution(){
-
-    if(!state.disciplinePassed){
-
-        alert(
-            "🔴 Discipline Gate has not passed."
-        );
-
-        return;
-
-    }
-
-
-    document.getElementById("pauseSection")
-        .classList.add("hidden");
-
-    document.getElementById("authorizationSection")
-        .classList.remove("hidden");
-
-
-    document.getElementById("authorizationSection")
-        .scrollIntoView({
+        document.getElementById(
+            "authorizationSection"
+        ).scrollIntoView({
             behavior:"smooth",
             block:"start"
         });
 
+    },100);
+
 }
 
 
 /* =========================================================
-   FINAL AUTHORIZATION
+   STRATEGY RECORD
 ========================================================= */
 
-function finalAuthorize(){
+function buildStrategyRecord(){
 
-    if(!state.disciplinePassed){
+    const steps=
+        currentSteps();
 
-        alert(
-            "🔴 Discipline Gate failed."
+    let lines=[];
+
+
+    lines.push(
+        "================================"
+    );
+
+    lines.push(
+        "SNIPER GOD'S PLAN — DECISION RECORD"
+    );
+
+    lines.push(
+        "================================"
+    );
+
+
+    lines.push(
+        "Engine: "+
+        (
+            state.mode==="DAY"
+            ? "V3.6.9 STRUCTURAL SNIPER"
+            : "V5 SUPER SCALP"
+        )
+    );
+
+
+    lines.push(
+        "Session: "+
+        (state.session || "Unknown")
+    );
+
+
+    lines.push(
+        "Date: "+
+        todayString()
+    );
+
+
+    lines.push("");
+
+
+    steps.forEach((step,index)=>{
+
+        const answers=
+            state.answers[index] || [];
+
+
+        if(!answers.length)return;
+
+
+        const labels=
+            answers.map(
+                i=>step.options[i][0]
+            );
+
+
+        lines.push(
+            `${index+1}. ${step.title}`
         );
 
-        return;
 
-    }
-
-
-    state.executionAuthorized=true;
-
-
-    document.getElementById("authorizationSection")
-        .classList.add("hidden");
+        lines.push(
+            "Selected: "+
+            labels.join(" + ")
+        );
 
 
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: AUTHORIZED";
+        lines.push("");
 
-    document.getElementById("disciplineBadge")
-        .classList.remove("red","active");
-
-    document.getElementById("disciplineBadge")
-        .classList.add("green");
+    });
 
 
-    openTradeJournal();
+    lines.push(
+        "================================"
+    );
+
+    lines.push(
+        "DISCIPLINE FIREWALL"
+    );
+
+    lines.push(
+        "================================"
+    );
+
+
+    const fw=
+        firewallSteps();
+
+
+    fw.forEach((step,index)=>{
+
+        const answer=
+            state.firewallAnswers[index];
+
+
+        if(answer===undefined)return;
+
+
+        lines.push(
+            `${index+1}. ${step.title}`
+        );
+
+
+        lines.push(
+            "Selected: "+
+            step.options[answer][0]
+        );
+
+
+        lines.push("");
+
+    });
+
+
+    lines.push(
+        "================================"
+    );
+
+    lines.push(
+        "FINAL STATUS: "+
+        (
+            state.authorized
+            ? "EXECUTION AUTHORIZED"
+            : "NOT AUTHORIZED"
+        )
+    );
+
+    lines.push(
+        "================================"
+    );
+
+
+    return lines.join("\n");
 
 }
 
 
 /* =========================================================
-   CANCEL AUTHORIZATION
-========================================================= */
-
-function cancelAuthorization(){
-
-    state.executionAuthorized=false;
-
-
-    document.getElementById("authorizationSection")
-        .innerHTML=`
-
-        <h2>🔴 EXECUTION CANCELLED</h2>
-
-        <div class="alert danger">
-
-            Execution Authorization رد شد.
-
-            <br><br>
-
-            <strong>
-            معامله انجام نشد.
-            </strong>
-
-            <br><br>
-
-            Trading Day همچنان ACTIVE است.
-
-        </div>
-
-        <div class="btnrow">
-
-            <button
-                class="btn primary"
-                onclick="newSetupAfterAuthorizationCancel()">
-
-                🔄 WAIT FOR NEXT SETUP
-
-            </button>
-
-        </div>
-
-        `;
-
-
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: SETUP CANCELLED";
-
-}
-
-
-/* =========================================================
-   NEW SETUP AFTER AUTH CANCEL
-========================================================= */
-
-function newSetupAfterAuthorizationCancel(){
-
-    const todayTrades=dailyTrades();
-
-
-    if(todayTrades.length>=3){
-
-        alert(
-            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
-        );
-
-        return;
-
-    }
-
-
-    if(consecutiveLosses()>=2){
-
-        alert(
-            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
-        );
-
-        return;
-
-    }
-
-
-    state.step=0;
-
-    state.answers={};
-
-    state.disciplinePassed=false;
-
-    state.executionAuthorized=false;
-
-
-    document.getElementById("authorizationSection")
-        .classList.add("hidden");
-
-
-    document.getElementById("assistantSection")
-        .classList.remove("hidden");
-
-
-    renderStep();
-
-}
-
-
-/* =========================================================
-   JOURNAL OPEN
+   JOURNAL
 ========================================================= */
 
 function openTradeJournal(){
 
-    if(!state.executionAuthorized){
+    if(
+        !state.firewallPassed ||
+        !state.pauseComplete
+    ){
+
+        alert(
+            "🔴 Execution Authorization is not complete."
+        );
 
         return;
 
     }
 
 
-    const record=
-        buildStrategyRecord();
+    state.authorized=true;
 
 
     document.getElementById(
         "jStrategyRecord"
-    ).value=record;
+    ).value=
+        buildStrategyRecord();
 
 
     document.getElementById(
         "journalReadyMessage"
-    ).className="alert success";
-
-
-    document.getElementById(
-        "journalReadyMessage"
-    ).innerHTML=
-        `
+    ).innerHTML=`
 
         🟢 EXECUTION AUTHORIZED
 
         <br>
 
-        Strategy + Discipline + Pause + Authorization completed.
+        Strategy + Discipline Firewall ثبت شد.
 
         <br>
 
-        حالا اطلاعات واقعی معامله را وارد کن.
+        فقط اطلاعات واقعی معامله را وارد کن.
 
-        `;
+    `;
 
 
     document.getElementById(
@@ -3971,56 +4301,15 @@ function openTradeJournal(){
 
 
 /* =========================================================
-   RULE FOLLOWED
-========================================================= */
-
-function selectRuleFollowed(value){
-
-    state.ruleFollowed=value;
-
-
-    document.getElementById("ruleYes")
-        .classList.remove("selected");
-
-    document.getElementById("ruleNo")
-        .classList.remove("selected");
-
-
-    if(value==="YES"){
-
-        document.getElementById("ruleYes")
-            .classList.add("selected");
-
-    }else{
-
-        document.getElementById("ruleNo")
-            .classList.add("selected");
-
-    }
-
-}
-
-
-/* =========================================================
    ADD TRADE
 ========================================================= */
 
 function addTrade(){
 
-    const today=
-        new Date()
-        .toISOString()
-        .slice(0,10);
-
-
-    const tradesToday=
-        dailyTrades();
-
-
-    if(tradesToday.length>=3){
+    if(!state.authorized){
 
         alert(
-            "🔴 Maximum Daily Trades = 3"
+            "🔴 Trade is not authorized by Discipline Firewall."
         );
 
         return;
@@ -4028,21 +4317,10 @@ function addTrade(){
     }
 
 
-    if(consecutiveLosses()>=2){
+    if(tradingLocked()){
 
         alert(
-            "🔴 2 Consecutive Losses — STOP FOR THE DAY"
-        );
-
-        return;
-
-    }
-
-
-    if(!state.executionAuthorized){
-
-        alert(
-            "🔴 Execution Authorization is required before saving a trade."
+            "🔴 Trading Day Closed."
         );
 
         return;
@@ -4059,64 +4337,7 @@ function addTrade(){
     if(!strategyRecord){
 
         alert(
-            "🔴 Strategy Decision Record is missing."
-        );
-
-        return;
-
-    }
-
-
-    const direction=
-        document.getElementById(
-            "jDirection"
-        ).value.trim();
-
-
-    const entry=
-        document.getElementById(
-            "jEntry"
-        ).value;
-
-
-    const sl=
-        document.getElementById(
-            "jSL"
-        ).value;
-
-
-    const tp=
-        document.getElementById(
-            "jTP"
-        ).value;
-
-
-    const result=
-        document.getElementById(
-            "jResult"
-        ).value.trim();
-
-
-    if(
-        !direction ||
-        !entry ||
-        !sl ||
-        !tp
-    ){
-
-        alert(
-            "Direction, Entry, SL and TP are required."
-        );
-
-        return;
-
-    }
-
-
-    if(state.ruleFollowed===null){
-
-        alert(
-            "🔴 RULE FOLLOWED? را انتخاب کن."
+            "🔴 Strategy Record missing."
         );
 
         return;
@@ -4128,7 +4349,7 @@ function addTrade(){
 
         id:Date.now(),
 
-        date:today,
+        date:todayString(),
 
         time:new Date()
             .toLocaleTimeString(),
@@ -4141,26 +4362,30 @@ function addTrade(){
             ? "V3.6.9"
             : "V5",
 
-        direction:direction,
+        direction:
+            document.getElementById(
+                "jDirection"
+            ).value.trim(),
 
-        entry:entry,
+        entry:
+            document.getElementById(
+                "jEntry"
+            ).value,
 
-        sl:sl,
+        sl:
+            document.getElementById(
+                "jSL"
+            ).value,
 
-        tp:tp,
+        tp:
+            document.getElementById(
+                "jTP"
+            ).value,
 
-        result:result,
-
-        ruleFollowed:
-            state.ruleFollowed,
-
-        discipline:
-            state.disciplinePassed
-            ? "PASSED"
-            : "FAILED",
-
-        executionAuthorized:
-            state.executionAuthorized,
+        result:
+            document.getElementById(
+                "jResult"
+            ).value.trim(),
 
         strategyRecord:
             strategyRecord,
@@ -4171,6 +4396,22 @@ function addTrade(){
             ).value
 
     };
+
+
+    if(
+        !trade.direction ||
+        trade.entry==="" ||
+        trade.sl==="" ||
+        trade.tp===""
+    ){
+
+        alert(
+            "Direction, Entry, SL and TP are required."
+        );
+
+        return;
+
+    }
 
 
     state.trades.push(trade);
@@ -4184,33 +4425,15 @@ function addTrade(){
     );
 
 
-    clearJournalInputs();
-
-    state.ruleFollowed=null;
-
-    state.executionAuthorized=false;
-
-    state.disciplinePassed=false;
-
-
     renderJournal();
 
     updateTradeBadge();
 
 
-    document.getElementById("ruleYes")
-        .classList.remove("selected");
-
-    document.getElementById("ruleNo")
-        .classList.remove("selected");
+    clearJournalInputs();
 
 
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: READY";
-
-    document.getElementById("disciplineBadge")
-        .classList.remove("green","red");
+    state.authorized=false;
 
 
     if(
@@ -4233,6 +4456,16 @@ function addTrade(){
         );
 
     }
+
+
+    /*
+       IMPORTANT:
+       After a trade is saved, the authorization
+       is consumed.
+
+       A new trade requires a completely new setup
+       and a new Discipline Firewall.
+    */
 
 }
 
@@ -4271,26 +4504,26 @@ function clearJournalInputs(){
 
 
 /* =========================================================
-   RENDER JOURNAL
+   JOURNAL TABLE
 ========================================================= */
 
 function renderJournal(){
 
-    const data=state.trades;
+    const data=
+        state.trades;
 
 
-    if(data.length===0){
+    if(!data.length){
 
         document.getElementById(
             "journalTable"
-        ).innerHTML=
-        `
+        ).innerHTML=`
 
-        <div class="alert info">
+            <div class="alert info">
 
-            No trades recorded yet.
+                No trades recorded yet.
 
-        </div>
+            </div>
 
         `;
 
@@ -4301,32 +4534,29 @@ function renderJournal(){
 
     let html=`
 
-    <table>
+        <table>
 
-        <thead>
+            <thead>
 
-            <tr>
+                <tr>
 
-                <th>Date</th>
-                <th>Time</th>
-                <th>Engine</th>
-                <th>Session</th>
-                <th>Direction</th>
-                <th>Entry</th>
-                <th>SL</th>
-                <th>TP</th>
-                <th>Result</th>
-                <th>RULE</th>
-                <th>DISCIPLINE</th>
-                <th>AUTH</th>
-                <th>Strategy Record</th>
-                <th>Notes</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Engine</th>
+                    <th>Session</th>
+                    <th>Direction</th>
+                    <th>Entry</th>
+                    <th>SL</th>
+                    <th>TP</th>
+                    <th>Result</th>
+                    <th>Decision</th>
+                    <th>Notes</th>
 
-            </tr>
+                </tr>
 
-        </thead>
+            </thead>
 
-        <tbody>
+            <tbody>
 
     `;
 
@@ -4338,93 +4568,74 @@ function renderJournal(){
 
         html+=`
 
-        <tr>
+            <tr>
 
-            <td>
-                ${escapeHtml(t.date)}
-            </td>
+                <td>
+                    ${escapeHtml(t.date)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.time)}
-            </td>
+                <td>
+                    ${escapeHtml(t.time)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.engine)}
-            </td>
+                <td>
+                    ${escapeHtml(t.engine)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.session)}
-            </td>
+                <td>
+                    ${escapeHtml(t.session)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.direction)}
-            </td>
+                <td>
+                    ${escapeHtml(t.direction)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.entry)}
-            </td>
+                <td>
+                    ${escapeHtml(t.entry)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.sl)}
-            </td>
+                <td>
+                    ${escapeHtml(t.sl)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.tp)}
-            </td>
+                <td>
+                    ${escapeHtml(t.tp)}
+                </td>
 
-            <td>
-                ${escapeHtml(t.result)}
-            </td>
+                <td>
+                    ${escapeHtml(t.result)}
+                </td>
 
-            <td>
-                ${
-                    t.ruleFollowed==="YES"
-                    ? "✅ YES"
-                    : "❌ NO"
-                }
-            </td>
+                <td>
 
-            <td>
-                ${
-                    t.discipline==="PASSED"
-                    ? "🟢 PASSED"
-                    : "🔴 FAILED"
-                }
-            </td>
+                    <details>
 
-            <td>
-                ${
-                    t.executionAuthorized
-                    ? "🟢 AUTH"
-                    : "🔴 NO"
-                }
-            </td>
+                        <summary>
+                            VIEW
+                        </summary>
 
-            <td>
+                        <div class="detailbody">
 
-                <details>
+                            ${
+                                escapeHtml(
+                                    t.strategyRecord || ""
+                                ).replace(
+                                    /\n/g,
+                                    "<br>"
+                                )
+                            }
 
-                    <summary>
-                        VIEW DECISION
-                    </summary>
+                        </div>
 
-                    <div class="detailbody">
+                    </details>
 
-                        ${escapeHtml(
-                            t.strategyRecord || ""
-                        ).replace(/\n/g,"<br>")}
+                </td>
 
-                    </div>
+                <td>
+                    ${escapeHtml(t.notes)}
+                </td>
 
-                </details>
-
-            </td>
-
-            <td>
-                ${escapeHtml(t.notes)}
-            </td>
-
-        </tr>
+            </tr>
 
         `;
 
@@ -4433,9 +4644,9 @@ function renderJournal(){
 
     html+=`
 
-        </tbody>
+            </tbody>
 
-    </table>
+        </table>
 
     `;
 
@@ -4465,6 +4676,7 @@ function clearJournal(){
 
 
     state.trades=[];
+
 
     localStorage.removeItem(
         "sniperTrades"
@@ -4542,15 +4754,11 @@ function updateTradeBadge(){
 
     if(count>=3){
 
-        badge.classList.add(
-            "red"
-        );
+        badge.classList.add("red");
 
     }else{
 
-        badge.classList.add(
-            "green"
-        );
+        badge.classList.add("green");
 
     }
 
@@ -4559,6 +4767,12 @@ function updateTradeBadge(){
         document.getElementById(
             "riskBadge"
         );
+
+
+    riskBadge.classList.remove(
+        "green",
+        "red"
+    );
 
 
     if(
@@ -4577,8 +4791,8 @@ function updateTradeBadge(){
         riskBadge.textContent=
             "RISK: ACTIVE";
 
-        riskBadge.classList.remove(
-            "red"
+        riskBadge.classList.add(
+            "green"
         );
 
     }
@@ -4587,14 +4801,14 @@ function updateTradeBadge(){
 
 
 /* =========================================================
-   RESET
+   RESET PLAN
 ========================================================= */
 
 function resetPlan(){
 
     if(
         !confirm(
-            "Reset the current plan and return to the beginning?"
+            "Reset current setup and return to Daily Preparation?"
         )
     ){
 
@@ -4603,13 +4817,13 @@ function resetPlan(){
     }
 
 
-    if(state.pauseTimer){
+    if(
+        pauseInterval
+    ){
 
         clearInterval(
-            state.pauseTimer
+            pauseInterval
         );
-
-        state.pauseTimer=null;
 
     }
 
@@ -4624,106 +4838,139 @@ function resetPlan(){
 
     state.answers={};
 
-    state.disciplinePassed=false;
+    state.firewallStep=0;
 
-    state.executionAuthorized=false;
+    state.firewallAnswers={};
 
-    state.ruleFollowed=null;
+    state.firewallPassed=false;
 
+    state.authorized=false;
 
-    document.getElementById("assistantSection")
-        .classList.add("hidden");
+    state.pauseComplete=false;
 
-    document.getElementById("journalSection")
-        .classList.add("hidden");
-
-    document.getElementById("disciplineSection")
-        .classList.add("hidden");
-
-    document.getElementById("pauseSection")
-        .classList.add("hidden");
-
-    document.getElementById("authorizationSection")
-        .classList.add("hidden");
-
-    document.getElementById("playbookSection")
-        .classList.add("hidden");
-
-    document.getElementById("treeSection")
-        .classList.add("hidden");
-
-    document.getElementById("sessionSection")
-        .classList.add("hidden");
-
-    document.getElementById("modeSection")
-        .classList.add("hidden");
-
-    document.getElementById("dailyPreparation")
-        .classList.remove("hidden");
+    state.hardLocked=false;
 
 
-    document.getElementById("gratitude")
-        .checked=false;
+    [
+        "assistantSection",
+        "journalSection",
+        "playbookSection",
+        "treeSection",
+        "sessionSection",
+        "modeSection",
+        "firewallSection",
+        "pauseSection",
+        "authorizationSection"
+    ].forEach(id=>{
 
-    document.getElementById("focus333")
-        .checked=false;
+        document.getElementById(id)
+            .classList.add("hidden");
 
-    document.getElementById("meditation")
-        .checked=false;
+    });
+
+
+    document.getElementById(
+        "dailyPreparation"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "gratitude"
+    ).checked=false;
+
+
+    document.getElementById(
+        "focus333"
+    ).checked=false;
+
+
+    document.getElementById(
+        "meditation"
+    ).checked=false;
+
+
+    document.getElementById(
+        "sessionContinue"
+    ).disabled=true;
+
+
+    document.getElementById(
+        "modeContinue"
+    ).disabled=true;
 
 
     document.querySelectorAll(
-        "#disciplineSection input[type=checkbox]"
+        ".option"
     ).forEach(
-        x=>x.checked=false
+        x=>x.classList.remove("selected")
     );
 
 
-    document.getElementById("sessionContinue")
-        .disabled=true;
-
-    document.getElementById("modeContinue")
-        .disabled=true;
-
-
-    document.querySelectorAll(".option")
-        .forEach(
-            x=>x.classList.remove("selected")
-        );
-
-
-    document.getElementById("modeBadge")
-        .textContent=
+    document.getElementById(
+        "modeBadge"
+    ).textContent=
         "MODE: NOT SELECTED";
 
 
-    document.getElementById("modeBadge")
-        .classList.remove("active");
+    document.getElementById(
+        "modeBadge"
+    ).classList.remove("active");
 
 
-    document.getElementById("sessionBadge")
-        .textContent=
+    document.getElementById(
+        "sessionBadge"
+    ).textContent=
         "SESSION: NOT SELECTED";
 
 
-    document.getElementById("sessionBadge")
-        .classList.remove("active");
+    document.getElementById(
+        "sessionBadge"
+    ).classList.remove("active");
 
 
-    document.getElementById("disciplineBadge")
-        .textContent=
-        "DISCIPLINE: READY";
+    document.getElementById(
+        "firewallBadge"
+    ).textContent=
+        "FIREWALL: STANDBY";
 
-    document.getElementById("disciplineBadge")
-        .classList.remove(
-            "active",
-            "green",
-            "red"
-        );
+
+    document.getElementById(
+        "firewallBadge"
+    ).className="badge";
 
 
     document.getElementById(
         "jStrategyRecord"
+    ).value="";
+
+
+    document.getElementById(
+        "jDirection"
+    ).value="";
+
+
+    document.getElementById(
+        "jEntry"
+    ).value="";
+
+
+    document.getElementById(
+        "jSL"
+    ).value="";
+
+
+    document.getElementById(
+        "jTP"
+    ).value="";
+
+
+    document.getElementById(
+        "jResult"
+    ).value="";
+
+
+    document.getElementById(
+        "jNotes"
     ).value="";
 
 }
