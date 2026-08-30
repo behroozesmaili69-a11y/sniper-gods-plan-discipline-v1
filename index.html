@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>SNIPER GOD'S PLAN — DISCIPLINE V1</title>
+<title>SNIPER GOD'S PLAN V3.6.9</title>
 
 <style>
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -41,6 +39,7 @@ body{
 .logo{
     font-size:27px;
     font-weight:900;
+    letter-spacing:.5px;
 }
 
 .subtitle{
@@ -55,7 +54,7 @@ body{
     border-left:3px solid #f2c94c;
     background:rgba(242,201,76,.06);
     color:#f5dc87;
-    line-height:1.7;
+    line-height:1.65;
     font-size:13px;
     border-radius:8px;
 }
@@ -92,11 +91,6 @@ body{
     border-color:#9c3434;
 }
 
-.badge.yellow{
-    color:#f2d777;
-    border-color:#806724;
-}
-
 .card{
     background:linear-gradient(145deg,#101725,#0b1019);
     border:1px solid #263247;
@@ -119,7 +113,7 @@ body{
 .description{
     color:#8995a9;
     font-size:13px;
-    line-height:1.7;
+    line-height:1.65;
     margin-bottom:18px;
 }
 
@@ -132,7 +126,7 @@ body{
 
 .multiHint{
     display:inline-block;
-    margin-top:8px;
+    margin-top:7px;
     padding:6px 10px;
     border-radius:7px;
     background:#10213a;
@@ -170,11 +164,6 @@ body{
     box-shadow:0 0 0 1px rgba(77,145,255,.15);
 }
 
-.option.firewall-danger{
-    border-color:#8c3438;
-    background:#241316;
-}
-
 .option strong{
     display:block;
     margin-bottom:5px;
@@ -182,7 +171,7 @@ body{
 
 .option small{
     color:#8793a7;
-    line-height:1.55;
+    line-height:1.5;
 }
 
 .checklist{
@@ -208,7 +197,13 @@ body{
 }
 
 .check span{
-    line-height:1.55;
+    line-height:1.5;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    font-weight:800;
 }
 
 .btnrow{
@@ -225,8 +220,6 @@ body{
     background:#172235;
     border:1px solid #30405a;
     color:#e9eef7;
-    cursor:pointer;
-    font-weight:800;
 }
 
 .btn:hover{
@@ -277,7 +270,7 @@ body{
     padding:14px;
     border-radius:10px;
     margin:12px 0;
-    line-height:1.75;
+    line-height:1.7;
     font-size:13px;
 }
 
@@ -329,65 +322,7 @@ body{
     margin-top:6px;
 }
 
-.firewall{
-    border:1px solid #684d18;
-    background:
-        linear-gradient(145deg,#17140b,#0d1017);
-}
-
-.firewallTitle{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:21px;
-    font-weight:900;
-    margin-bottom:10px;
-}
-
-.lockbox{
-    padding:18px;
-    border-radius:12px;
-    background:#211417;
-    border:1px solid #7b3439;
-    color:#ffaaaa;
-    text-align:center;
-    font-size:18px;
-    font-weight:900;
-    line-height:1.7;
-}
-
-.pauseBox{
-    text-align:center;
-    padding:25px;
-    background:#111927;
-    border:1px solid #30405a;
-    border-radius:14px;
-    margin-top:15px;
-}
-
-.timer{
-    font-size:48px;
-    font-weight:900;
-    margin:15px 0;
-}
-
-.authBox{
-    padding:20px;
-    border-radius:12px;
-    background:#102b1d;
-    border:1px solid #276c46;
-    text-align:center;
-}
-
-.authCode{
-    font-size:24px;
-    font-weight:900;
-    margin:10px 0;
-}
-
-textarea,
-input[type=text],
-input[type=number]{
+textarea,input[type=text],input[type=number]{
     width:100%;
     background:#0a101a;
     border:1px solid #2a374c;
@@ -478,24 +413,84 @@ summary{
 }
 
 @media(max-width:600px){
-
-    .app{
-        padding:10px;
-    }
-
-    .card{
-        padding:16px;
-    }
-
-    .question{
-        font-size:17px;
-    }
-
-    .timer{
-        font-size:40px;
-    }
+    .app{padding:10px}
+    .card{padding:16px}
+    .question{font-size:17px}
 }
 
+/* =========================================================
+   DYNAMIC SETUP / CONFIRMATION EXAMPLES
+   Added without changing the existing visual system.
+========================================================= */
+.setupExamplePanel{
+    margin-top:16px;
+    display:grid;
+    gap:12px;
+}
+.setupExample{
+    background:#0b1320;
+    border:1px solid #2b405e;
+    border-radius:12px;
+    padding:15px;
+    overflow:hidden;
+}
+.setupExampleHead{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:9px;
+}
+.setupExampleTitle{
+    font-size:14px;
+    font-weight:900;
+}
+.setupExampleTf{
+    font-size:10px;
+    padding:5px 9px;
+    border-radius:15px;
+    background:#12294a;
+    border:1px solid #315f9a;
+    color:#a9ccff;
+}
+.setupExampleText{
+    color:#b2bdcd;
+    font-size:12px;
+    line-height:1.85;
+}
+.setupExampleText strong{color:#eaf1fb}
+.setupExampleSequence{
+    margin-top:10px;
+    padding:9px 11px;
+    border-radius:8px;
+    background:#101b2c;
+    border:1px solid #273d5b;
+    color:#d6e5fb;
+    font-size:11px;
+    line-height:1.7;
+}
+.setupDiagram{
+    margin-top:12px;
+    background:#070c14;
+    border:1px solid #202f45;
+    border-radius:9px;
+    padding:11px;
+    overflow:auto;
+    font-family:monospace;
+    white-space:pre;
+    direction:ltr;
+    text-align:left;
+    color:#c7d8ef;
+    font-size:11px;
+    line-height:1.45;
+}
+.setupRule{
+    margin-top:10px;
+    color:#f2d777;
+    font-size:11px;
+    line-height:1.7;
+}
 </style>
 </head>
 
@@ -505,25 +500,16 @@ summary{
 
 <header class="header">
 
-    <div class="logo">
-        🦅 SNIPER GOD'S PLAN
-    </div>
+    <div class="logo">🦅 SNIPER GOD'S PLAN</div>
 
     <div class="subtitle">
-        DISCIPLINE V1 — V3.6.9 STRUCTURAL SNIPER + V5 SUPER SCALP
+        V3.6.9 — STRUCTURAL SNIPER + V5 SUPER SCALP
     </div>
 
     <div class="motto">
-
         Trust the process. It's all just part of the journey and God's plan
-        to make you a better and stronger person.
-
-        <br><br>
-
-        <strong>
-            The system protects you from yourself.
-        </strong>
-
+        to make you a better and stronger person. Be patient, follow God's plan,
+        and don't be scared.
     </div>
 
     <div class="statusbar">
@@ -540,12 +526,8 @@ summary{
             TRADES: 0 / 3
         </div>
 
-        <div id="riskBadge" class="badge green">
+        <div id="riskBadge" class="badge">
             RISK: ACTIVE
-        </div>
-
-        <div id="firewallBadge" class="badge">
-            FIREWALL: STANDBY
         </div>
 
     </div>
@@ -553,175 +535,82 @@ summary{
 </header>
 
 
-<!-- =====================================================
-     DAILY PREPARATION
-===================================================== -->
-
 <section id="dailyPreparation" class="card">
 
-    <h2>
-        🔒 DAILY PREPARATION
-    </h2>
+    <h2>🔒 DAILY PREPARATION</h2>
 
     <div class="description">
-
-        این مرحله فقط یک‌بار در ابتدای روز انجام می‌شود
-        و برای هر دو موتور V3.6.9 و V5 مشترک است.
-
-        <br>
-
-        Daily Preparation خودش Entry Signal نیست؛
-        هدف آن آماده‌سازی ذهن برای اجرای قوانین سیستم است.
-
+        قبل از شروع سیستم، هر سه مرحله Daily Preparation باید انجام شده باشد.
+        اگر حتی یکی از مراحل کامل نشده باشد، سیستم اجازه ورود به مرحله بعد را نمی‌دهد.
     </div>
 
     <div class="checklist">
 
         <label class="check">
-
-            <input
-                type="checkbox"
-                id="gratitude">
+            <input type="checkbox" id="gratitude">
 
             <span>
-
-                <strong>
-                    🙏 Daily Gratitude
-                </strong>
-
-                <br>
-
+                <strong>🙏 Daily Gratitude</strong><br>
                 شکرگزاری روزانه را انجام داده‌ام.
-
             </span>
-
         </label>
 
-
         <label class="check">
-
-            <input
-                type="checkbox"
-                id="focus333">
+            <input type="checkbox" id="focus333">
 
             <span>
-
-                <strong>
-                    🧠 3:33 Focus Exercise
-                </strong>
-
-                <br>
-
+                <strong>🧠 3:33 Focus Exercise</strong><br>
                 تمرین تمرکز 3:33 را انجام داده‌ام.
-
             </span>
-
         </label>
-
 
         <label class="check">
-
-            <input
-                type="checkbox"
-                id="meditation">
+            <input type="checkbox" id="meditation">
 
             <span>
-
-                <strong>
-                    🧘 Meditation
-                </strong>
-
-                <br>
-
+                <strong>🧘 Meditation</strong><br>
                 مدیتیشن روزانه را انجام داده‌ام.
-
             </span>
-
         </label>
 
     </div>
 
-    <div
-        id="prepMessage"
-        class="alert warning">
-
-        🔒 Complete all three preparation steps
-        to unlock the trading system.
-
+    <div id="prepMessage" class="alert warning">
+        🔒 Complete all three preparation steps to unlock the system.
     </div>
 
-    <button
-        class="btn primary"
-        onclick="completePreparation()">
-
+    <button class="btn primary" onclick="completePreparation()">
         CONTINUE →
-
     </button>
 
 </section>
 
 
-<!-- =====================================================
-     SESSION
-===================================================== -->
+<section id="sessionSection" class="card hidden">
 
-<section
-    id="sessionSection"
-    class="card hidden">
-
-    <h2>
-        🌍 SESSION SELECTION
-    </h2>
+    <h2>🌍 SESSION SELECTION</h2>
 
     <div class="description">
-
         Session فقط Trading Hours و Liquidity Context را مشخص می‌کند.
-
-        <br>
-
         Session به‌تنهایی Direction Filter یا Entry Signal نیست.
-
     </div>
 
     <div class="options">
 
-        <div
-            class="option"
-            onclick="selectSession('London',this)">
-
-            <strong>
-                🇬🇧 LONDON
-            </strong>
-
-            <small>
-                London Trading Hours
-            </small>
-
+        <div class="option" onclick="selectSession('London',this)">
+            <strong>🇬🇧 LONDON</strong>
+            <small>London Trading Hours</small>
         </div>
 
-
-        <div
-            class="option"
-            onclick="selectSession('New York',this)">
-
-            <strong>
-                🇺🇸 NEW YORK
-            </strong>
-
-            <small>
-                New York Trading Hours
-            </small>
-
+        <div class="option" onclick="selectSession('New York',this)">
+            <strong>🇺🇸 NEW YORK</strong>
+            <small>New York Trading Hours</small>
         </div>
 
     </div>
 
-    <div
-        id="sessionMessage"
-        class="alert info">
-
+    <div id="sessionMessage" class="alert info">
         Session فعلی را انتخاب کن.
-
     </div>
 
     <button
@@ -729,81 +618,41 @@ summary{
         class="btn primary"
         disabled
         onclick="goToMode()">
-
         CONTINUE →
-
     </button>
 
 </section>
 
 
-<!-- =====================================================
-     MODE
-===================================================== -->
+<section id="modeSection" class="card hidden">
 
-<section
-    id="modeSection"
-    class="card hidden">
-
-    <h2>
-        ⚔️ SELECT TRADING MODE
-    </h2>
+    <h2>⚔️ SELECT TRADING MODE</h2>
 
     <div class="description">
-
-        دو موتور مستقل وجود دارد.
-
-        <br><br>
-
-        V3.6.9 برای Structural Sniper است.
-
-        <br>
-
-        V5 برای Super Scalp سریع است.
-
+        موتور معاملاتی موردنظر را انتخاب کن.
+        V3.6.9 برای Structural Sniper و V5 برای Super Scalp است.
     </div>
 
     <div class="options">
 
-        <div
-            class="option"
-            onclick="selectMode('DAY',this)">
+        <div class="option" onclick="selectMode('DAY',this)">
 
-            <strong>
-                🦅 DAY TRADE — V3.6.9
-            </strong>
+            <strong>🦅 DAY TRADE — V3.6.9</strong>
 
             <small>
-
-                Context → Structure → Liquidity →
-                HTF Reaction → Location →
-                M15 → M5 → M1 →
-                Risk → Discipline → Entry
-
+                Context → Structure → Liquidity → Location →
+                Confirmation → Execution → Management
             </small>
 
         </div>
 
+        <div class="option" onclick="selectMode('SCALP',this)">
 
-        <div
-            class="option"
-            onclick="selectMode('SCALP',this)">
-
-            <strong>
-                ⚡ SUPER SCALP — V5
-            </strong>
+            <strong>⚡ SUPER SCALP — V5</strong>
 
             <small>
-
-                Immediate Location →
-                Liquidity Event →
-                M1 Structure →
-                Trigger →
-                SL →
-                Target →
-                Fast Discipline →
-                Entry
-
+                Immediate Liquidity → Event → M1 Structure →
+                Trigger → Tight SL → Nearby Target
             </small>
 
         </div>
@@ -823,28 +672,17 @@ summary{
 </section>
 
 
-<!-- =====================================================
-     ASSISTANT
-===================================================== -->
-
-<section
-    id="assistantSection"
-    class="card hidden">
+<section id="assistantSection" class="card hidden">
 
     <h2 id="assistantTitle">
         TRADING ASSISTANT
     </h2>
 
     <div class="progress">
-
         <div id="progressBar"></div>
-
     </div>
 
-    <div
-        id="stepCounter"
-        class="description">
-    </div>
+    <div id="stepCounter" class="description"></div>
 
     <div id="questionArea"></div>
 
@@ -856,30 +694,22 @@ summary{
             id="backBtn"
             class="btn"
             onclick="previousStep()">
-
             ← BACK
-
         </button>
-
 
         <button
             id="resetBtn"
             class="btn danger"
             onclick="resetPlan()">
-
             🔄 RESET PLAN
-
         </button>
-
 
         <button
             id="nextBtn"
             class="btn primary"
             onclick="nextStep()"
             disabled>
-
             NEXT →
-
         </button>
 
     </div>
@@ -887,261 +717,60 @@ summary{
 </section>
 
 
-<!-- =====================================================
-     DISCIPLINE FIREWALL
-===================================================== -->
+<section id="journalSection" class="card hidden">
 
-<section
-    id="firewallSection"
-    class="card firewall hidden">
-
-    <div class="firewallTitle">
-
-        🔒 DISCIPLINE FIREWALL
-
-    </div>
+    <h2>📓 TRADE JOURNAL</h2>
 
     <div class="description">
-
-        Setup از نظر تکنیکی آماده شده است.
-        اما قبل از اجرای معامله باید مشخص شود
-        که تصمیم تو حاصل سیستم است، نه هیجان.
-
-        <br><br>
-
-        <strong>
-            این مرحله Entry Signal نیست.
-            این مرحله اجازه اجرای Signal است.
-        </strong>
-
+        این بخش فقط بعد از تکمیل Strategy Assistant باز می‌شود.
+        اطلاعات Strategy و تمام انتخاب‌های مراحل به‌صورت خودکار ثبت شده‌اند.
+        فقط اطلاعات واقعی اجرای معامله را وارد کن.
     </div>
 
-    <div
-        id="firewallQuestionArea">
-    </div>
-
-    <div
-        id="firewallDecisionArea">
-    </div>
-
-    <div class="btnrow">
-
-        <button
-            id="firewallBackBtn"
-            class="btn"
-            onclick="firewallBack()">
-
-            ← BACK
-
-        </button>
-
-        <button
-            id="firewallNextBtn"
-            class="btn primary"
-            onclick="nextFirewallStep()"
-            disabled>
-
-            NEXT →
-
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PAUSE
-===================================================== -->
-
-<section
-    id="pauseSection"
-    class="card hidden">
-
-    <h2>
-        ⏸️ 10-SECOND PAUSE
-    </h2>
-
-    <div class="description">
-
-        Setup تأیید شده است.
-
-        <br>
-
-        الان هیچ کاری نکن.
-
-        <br><br>
-
-        فقط بررسی کن:
-
-        <strong>
-            آیا واقعاً طبق پلن می‌خواهم وارد شوم؟
-        </strong>
-
-    </div>
-
-    <div class="pauseBox">
-
-        <div>
-            DO NOT CLICK ENTRY
-        </div>
-
-        <div
-            id="pauseTimer"
-            class="timer">
-
-            10
-
-        </div>
-
-        <button
-            id="pauseStartBtn"
-            class="btn warning"
-            onclick="startPause()">
-
-            START 10-SECOND PAUSE
-
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     AUTHORIZATION
-===================================================== -->
-
-<section
-    id="authorizationSection"
-    class="card hidden">
-
-    <h2>
-        🟢 EXECUTION AUTHORIZATION
-    </h2>
-
-    <div class="authBox">
-
-        <div>
-            Discipline Firewall PASSED
-        </div>
-
-        <div
-            id="authCode"
-            class="authCode">
-
-            AUTHORIZED
-
-        </div>
-
-        <div class="description">
-
-            فقط در این مرحله اجازه ثبت اجرای معامله وجود دارد.
-
-        </div>
-
-        <button
-            class="btn success"
-            onclick="openTradeJournal()">
-
-            OPEN TRADE JOURNAL →
-
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     JOURNAL
-===================================================== -->
-
-<section
-    id="journalSection"
-    class="card hidden">
-
-    <h2>
-        📓 TRADE JOURNAL
-    </h2>
-
-    <div
-        id="journalReadyMessage"
-        class="alert success">
-
-        Strategy Decision ثبت شده است.
-
+    <div id="journalReadyMessage" class="alert success">
+        🟢 Strategy Decision ثبت شد. اطلاعات اجرای معامله را تکمیل کن.
     </div>
 
     <div class="grid">
 
         <div>
-
-            <label class="description">
-                Direction
-            </label>
-
+            <label class="description">Direction</label>
             <input
                 id="jDirection"
                 type="text"
                 placeholder="LONG / SHORT">
-
         </div>
 
-
         <div>
-
-            <label class="description">
-                Entry
-            </label>
-
+            <label class="description">Entry</label>
             <input
                 id="jEntry"
                 type="number"
                 step="any">
-
         </div>
 
-
         <div>
-
-            <label class="description">
-                SL
-            </label>
-
+            <label class="description">SL</label>
             <input
                 id="jSL"
                 type="number"
                 step="any">
-
         </div>
 
-
         <div>
-
-            <label class="description">
-                TP
-            </label>
-
+            <label class="description">TP</label>
             <input
                 id="jTP"
                 type="number"
                 step="any">
-
         </div>
 
-
         <div>
-
-            <label class="description">
-                Result / R
-            </label>
-
+            <label class="description">Result / R</label>
             <input
                 id="jResult"
                 type="text"
                 placeholder="WIN +1R / LOSS -1R">
-
         </div>
 
     </div>
@@ -1149,46 +778,36 @@ summary{
     <br>
 
     <label class="description">
-
-        AUTO STRATEGY + DISCIPLINE RECORD
-
+        AUTO STRATEGY RECORD — Automatically generated from Assistant decisions
     </label>
 
     <textarea
         id="jStrategyRecord"
-        readonly>
-    </textarea>
+        readonly
+        placeholder="Strategy decision record will appear here..."></textarea>
 
     <br>
 
     <label class="description">
-
         Setup / Reason / Notes
-
     </label>
 
     <textarea
         id="jNotes"
-        placeholder="Reason for trade...">
-    </textarea>
+        placeholder="Reason for trade..."></textarea>
 
     <div class="btnrow">
 
         <button
             class="btn success"
             onclick="addTrade()">
-
             + SAVE TRADE
-
         </button>
-
 
         <button
             class="btn danger"
             onclick="clearJournal()">
-
             CLEAR JOURNAL
-
         </button>
 
     </div>
@@ -1202,198 +821,56 @@ summary{
 </section>
 
 
-<!-- =====================================================
-     PLAYBOOK
-===================================================== -->
+<section id="playbookSection" class="card hidden">
 
-<section
-    id="playbookSection"
-    class="card hidden">
-
-    <h2>
-        📖 FULL PLAYBOOK
-    </h2>
+    <h2>📖 FULL PLAYBOOK</h2>
 
     <div class="description">
-
         مرجع داخلی SNIPER GOD'S PLAN.
-
     </div>
 
-
     <details>
-
-        <summary>
-            🔒 MASTER LAW
-        </summary>
-
+        <summary>🔒 PART 0 — MASTER LAW</summary>
         <div class="detailbody">
 
-            دو موتور مستقل:
+            SNIPER GOD'S PLAN از دو موتور مستقل تشکیل شده است:
 
             <br><br>
 
-            V3.6.9 Structural Sniper
-
-            <br>
-
+            V3.6.9 Structural Sniper<br>
             V5 Super Scalp
 
             <br><br>
 
-            Maximum Daily Trades = 3
-
-            <br>
-
+            Maximum Daily Trades = 3<br>
             2 Consecutive Losses → STOP FOR THE DAY
 
-            <br><br>
-
-            No valid setup → No Trade
-
-            <br>
-
-            No discipline authorization → No Entry
-
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🦅 V3.6.9 ARCHITECTURE
-        </summary>
-
+        <summary>🧠 V3.6.9 — MASTER ARCHITECTURE</summary>
         <div class="detailbody">
 
-            Context
-
-            →
-
-            Structure
-
-            →
-
-            Liquidity
-
-            →
-
-            HTF Liquidity Reaction
-
-            →
-
-            Location
-
-            →
-
-            Setup
-
-            →
-
-            M15 Confirmation
-
-            →
-
-            M5 Structure
-
-            →
-
-            M1 Trigger
-
-            →
-
-            Risk
-
-            →
-
-            Discipline Firewall
-
-            →
-
-            Entry
+            Context → Structure → Liquidity →
+            HTF Liquidity Reaction → Location →
+            Setup → Confirmation → Execution →
+            Management → Exit
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            ⚡ V5 SUPER SCALP ARCHITECTURE
-        </summary>
-
-        <div class="detailbody">
-
-            Session
-
-            →
-
-            Immediate Location
-
-            →
-
-            Liquidity Event
-
-            →
-
-            M1 Structure
-
-            →
-
-            M1 Trigger
-
-            →
-
-            SL
-
-            →
-
-            Nearby Target
-
-            →
-
-            Fast Discipline Firewall
-
-            →
-
-            Entry
-
-            <br><br>
-
-            V5 نباید مسیر V3.6.9 را طی کند.
-
-        </div>
-
-    </details>
-
-
-    <details>
-
-        <summary>
-            🌐 HTF CONTEXT
-        </summary>
-
+        <summary>🌐 HTF CONTEXT</summary>
         <div class="detailbody">
 
             Monthly → Weekly → Daily → H4 → H1
 
             <br><br>
 
-            H4 Bullish = HH → HL → HH
-
-            <br>
-
-            H4 Bearish = LL → LH → LL
-
-            <br>
-
-            H4 Range = Valid Range
-
-            <br>
-
+            H4 Bullish = HH → HL → HH<br>
+            H4 Bearish = LL → LH → LL<br>
+            H4 Range = Valid Range Structure<br>
             H4 Transition = Previous Structure Broken +
             New Structure Not Confirmed
 
@@ -1402,27 +879,18 @@ summary{
             H4 Transition = NO TRADE CONTEXT
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🔄 H1 CORRECTION / COUNTER-TREND
-        </summary>
-
+        <summary>🔄 H1 CORRECTION / COUNTER-TREND</summary>
         <div class="detailbody">
 
-            H4 و H1 هم‌جهت →
-
-            Alignment
+            اگر H4 و H1 هم‌جهت باشند → Alignment.
 
             <br><br>
 
-            H4 Bullish + H1 Bearish →
-
-            H1 Correction
+            اگر H4 Bullish و H1 Bearish باشد →
+            H1 Correction فعال است.
 
             <br><br>
 
@@ -1430,14 +898,8 @@ summary{
 
             <br><br>
 
-            Touch #1 = Context
-
-            <br>
-
-            Touch #2 = Critical Event
-
-            <br>
-
+            Touch #1 = Context Only<br>
+            Touch #2 = Critical Event<br>
             Touch #3 = Quality Enhancement
 
             <br><br>
@@ -1445,97 +907,47 @@ summary{
             Touch به‌تنهایی Entry نیست.
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            💧 LIQUIDITY MAP
-        </summary>
-
+        <summary>💧 LIQUIDITY MAP</summary>
         <div class="detailbody">
 
-            Monthly High / Low
-
-            <br>
-
-            Weekly High / Low
-
-            <br>
-
-            Daily High / Low
-
-            <br>
-
-            Previous Day High / Low
-
-            <br>
-
-            H4 Major Swing
-
-            <br>
-
-            H1 Major Swing
-
-            <br>
-
-            Daily Swing
-
-            <br>
-
-            Asia High / Low
-
-            <br>
-
-            London High / Low
-
-            <br>
-
-            New York High / Low
-
-            <br>
-
-            M15 / M5 / M1 Liquidity
-
-            <br>
-
-            Internal Liquidity
-
-            <br>
-
-            EQ
-
-            <br>
-
+            Monthly High / Low<br>
+            Weekly High / Low<br>
+            Daily High / Low<br>
+            Previous Day High / Low<br>
+            H4 Major Swing High / Low<br>
+            H1 Major Swing High / Low<br>
+            Daily Swing High / Low<br>
+            Asia High / Low<br>
+            London High / Low<br>
+            New York High / Low<br>
+            M15 Liquidity<br>
+            M5 Liquidity<br>
+            M1 Micro Liquidity<br>
+            Internal Liquidity<br>
+            EQ<br>
             Range High / Low
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🔥 HTF LIQUIDITY REACTION
-        </summary>
-
+        <summary>🔥 HTF LIQUIDITY REACTION</summary>
         <div class="detailbody">
 
-            Model A:
+            وقتی قیمت وارد HTF Liquidity Pool می‌شود،
+            تا مشخص شدن واکنش Entry ممنوع است.
 
-            <br>
+            <br><br>
 
+            MODEL A:<br>
             Break → Close Beyond → Hold → Acceptance
 
             <br><br>
 
-            Model B:
-
-            <br>
-
+            MODEL B:<br>
             Sweep → Rejection → Reclaim → Reversal Confirmation
 
             <br><br>
@@ -1543,58 +955,45 @@ summary{
             Reaction Pending = WAIT
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            📍 LOCATION ENGINE
-        </summary>
-
+        <summary>🔄 RECLAIM</summary>
         <div class="detailbody">
 
-            HTF Extreme
+            Break / Sweep<br>
+            ↓<br>
+            Return<br>
+            ↓<br>
+            Valid Close<br>
+            ↓<br>
+            Hold / Reaction
 
-            <br>
+            <br><br>
 
-            Daily Swing
+            Wick ≠ Reclaim
 
-            <br>
+        </div>
+    </details>
 
-            Previous Day High / Low
+    <details>
+        <summary>📍 LOCATION ENGINE</summary>
+        <div class="detailbody">
 
-            <br>
+            در Location می‌توان چند عامل هم‌زمان وجود داشته باشد.
 
-            Session Liquidity
+            <br><br>
 
-            <br>
-
-            Range High / Low
-
-            <br>
-
-            Supply / Demand
-
-            <br>
-
-            Major Swing
-
-            <br>
-
-            Reversal Zone
-
-            <br>
-
-            Reclaimed Level
-
-            <br>
-
-            Breakout Retest
-
-            <br>
-
+            HTF Extreme<br>
+            Daily Swing<br>
+            Previous Day High / Low<br>
+            Session Liquidity<br>
+            Range High / Low<br>
+            Supply / Demand<br>
+            Major Swing<br>
+            Reversal Zone<br>
+            Reclaimed Level<br>
+            Breakout Retest<br>
             Structural Edge
 
             <br><br>
@@ -1602,157 +1001,135 @@ summary{
             Range Middle / EQ = NO TRADE
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🎯 V3.6.9 CONFIRMATION
-        </summary>
-
+        <summary>🦅 V3.6.9 M15 CONFIRMATION</summary>
         <div class="detailbody">
 
-            M15:
-
-            <br>
-
-            Sweep → Rejection → MSS
+            MODEL 1:<br>
+            Liquidity Sweep → Rejection → MSS
 
             <br><br>
 
-            Sweep → Displacement → Structure Shift
+            MODEL 2:<br>
+            Sweep → Strong Displacement →
+            Close → Structure Shift
 
             <br><br>
 
-            Breakout → Close → Retest → Hold
+            MODEL 3:<br>
+            Breakout → Close Beyond → Retest → Hold
 
             <br><br>
 
-            Fake Breakout → Failure → Reclaim → Structure
-
-            <br><br>
-
-            M5:
-
-            <br>
-
-            MSS → Displacement → BOS → Retest → Hold
-
-            <br><br>
-
-            M1:
-
-            <br>
-
-            Break → Retest → Trigger
-
-            <br>
-
-            Engulfing
-
-            <br>
-
-            MSS
-
-            <br>
-
-            Displacement
-
-            <br>
-
-            Micro Sweep → Reclaim
+            MODEL 4:<br>
+            Fake Breakout → Failure → Return →
+            Reclaim → Structure Confirmation
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🛑 MASTER NO-TRADE
-        </summary>
-
+        <summary>🟦 V3.6.9 M5</summary>
         <div class="detailbody">
 
-            Context نامشخص
+            M5 وظیفه دارد Confirmation را به ساختار قابل معامله تبدیل کند.
 
-            <br>
+            <br><br>
 
-            H4 Transition
+            MSS<br>
+            Displacement<br>
+            BOS<br>
+            Retest<br>
+            Hold
 
-            <br>
+            <br><br>
 
-            H1 Structure نامشخص
+            Sequence ایده‌آل:
 
-            <br>
+            <br><br>
 
-            Range Middle / EQ
+            M15 Confirmation →
+            M5 MSS →
+            M5 Displacement →
+            Retest / Hold →
+            M1 Trigger
 
-            <br>
+        </div>
+    </details>
 
-            Liquidity نامشخص
+    <details>
+        <summary>🎯 V3.6.9 M1</summary>
+        <div class="detailbody">
 
-            <br>
+            M1 فقط Execution Trigger است.
 
-            HTF Reaction Pending
+            <br><br>
 
-            <br>
+            Break → Retest → Trigger<br>
+            Engulfing Trigger<br>
+            M1 MSS<br>
+            M1 Displacement<br>
+            Micro Sweep → Reclaim → Trigger
 
-            Location ضعیف
+        </div>
+    </details>
 
-            <br>
+    <details>
+        <summary>⚡ V5 SUPER SCALP</summary>
+        <div class="detailbody">
 
-            Confirmation ناقص
+            V5 برای حرکات کوتاه و سریع طراحی شده است.
 
-            <br>
+            <br><br>
 
-            M5 Structure ناقص در V3.6.9
+            HTF Hard Filter فعال نیست.<br>
+            M5 اجباری نیست.
 
-            <br>
+            <br><br>
 
-            M1 Trigger ناقص
+            Session →
+            Immediate Location →
+            Liquidity Event →
+            M1 Structure →
+            M1 Trigger →
+            Tight SL →
+            Nearby Target
 
-            <br>
+        </div>
+    </details>
 
-            Target Space ناکافی
+    <details>
+        <summary>🛑 MASTER NO-TRADE</summary>
+        <div class="detailbody">
 
-            <br>
-
-            Risk نامناسب
-
-            <br>
-
-            Discipline Firewall Failed
-
-            <br>
-
-            3 Trades Completed
-
-            <br>
-
+            Context نامشخص<br>
+            H4 Transition<br>
+            H1 Structure نامشخص<br>
+            Range Middle<br>
+            Liquidity نامشخص<br>
+            HTF Reaction Pending<br>
+            Location ضعیف<br>
+            Confirmation ناقص<br>
+            M5 Structure ناقص در V3.6.9<br>
+            M1 Trigger ناقص<br>
+            Reclaim ناقص<br>
+            Target Space ناکافی<br>
+            Risk نامناسب<br>
+            Setup Invalid<br>
+            3 Trades Completed<br>
             2 Consecutive Losses
 
         </div>
-
     </details>
 
 </section>
 
 
-<!-- =====================================================
-     DECISION TREE
-===================================================== -->
+<section id="treeSection" class="card hidden">
 
-<section
-    id="treeSection"
-    class="card hidden">
-
-    <h2>
-        🧭 DECISION TREE
-    </h2>
+    <h2>🧭 DECISION TREE</h2>
 
     <div class="tree">
 
@@ -1765,79 +1142,61 @@ DAILY PREPARATION
        │
        ▼
 SESSION
+London / New York
        │
        ▼
 MODE
        │
-       ├──────────────────────────────┐
-       ▼                              ▼
-V3.6.9 STRUCTURAL                 V5 SUPER SCALP
-       │                              │
-       ▼                              ▼
-DAILY LIMIT                     IMMEDIATE LOCATION
-       │                              │
-       ▼                              ▼
-MONTHLY                         LIQUIDITY EVENT
-       │                              │
-WEEKLY                           M1 STRUCTURE
-       │                              │
-DAILY                            M1 TRIGGER
-       │                              │
-H4 STATE                          SL
-       │                              │
-H1 STATE                         TARGET
-       │                              │
-COUNTER-TREND                       │
-       │                              │
-LIQUIDITY                           │
-       │                              │
-HTF REACTION                        │
-       │                              │
-LOCATION                            │
-       │                              │
-M15 CONFIRMATION                    │
-       │                              │
-M5 STRUCTURE                        │
-       │                              │
-M1 TRIGGER                          │
-       │                              │
-RISK                                │
-       │                              │
-       └──────────────┬───────────────┘
-                      │
-                      ▼
-              DISCIPLINE FIREWALL
-                      │
-             ┌────────┴────────┐
-             ▼                 ▼
-           FAIL              PASS
-             │                 │
-             ▼                 ▼
-        HARD LOCK        10 SECOND PAUSE
-                               │
-                               ▼
-                         AUTHORIZATION
-                               │
-                               ▼
-                             ENTRY
-                               │
-                               ▼
-                            JOURNAL
+       ├───────────────┐
+       ▼               ▼
+ V3.6.9 DAY       V5 SUPER SCALP
+       │               │
+       ▼               ▼
+DAILY LIMIT       DAILY LIMIT
+       │               │
+       ▼               ▼
+MONTHLY           SESSION
+       │               │
+WEEKLY             LOCATION
+       │               │
+DAILY              LIQUIDITY EVENT
+       │               │
+H4 STATE           M1 STRUCTURE
+       │               │
+H1 STATE           M1 TRIGGER
+       │               │
+COUNTER-TREND       SL
+       │               │
+LIQUIDITY           TARGET
+       │               │
+HTF REACTION       ENTRY
+       │
+LOCATION
+       │
+M15 CONFIRMATION
+       │
+M5 STRUCTURE
+       │
+M1 TRIGGER
+       │
+RISK + SL + TP
+       │
+TARGET SPACE
+       │
+ENTRY
+       │
+MANAGEMENT
+       │
+EXIT
 
 MASTER:
-
-NO CONTEXT → NO TRADE
-NO LOCATION → NO TRADE
-NO CONFIRMATION → NO TRADE
-NO TARGET → NO TRADE
-INVALID SL → NO TRADE
-FOMO → NO ENTRY
-REVENGE → NO ENTRY
-IMPULSIVE → NO ENTRY
-RULE BREAK → NO ENTRY
-FIREWALL FAIL → HARD LOCK
-3 TRADES → STOP
-2 CONSECUTIVE LOSSES → STOP
+No Context → No Trade
+No Location → No Trade
+No Required Confirmation → No Trade
+No Target Space → No Trade
+Invalid Risk → No Trade
+3 Trades → STOP
+2 Consecutive Losses → STOP
 
     </div>
 
@@ -1846,15 +1205,11 @@ FIREWALL FAIL → HARD LOCK
 
 <footer class="footer">
 
-    SNIPER GOD'S PLAN — DISCIPLINE V1
-
-    <br><br>
-
-    Market gives the setup → SNIPER executes.
+    SNIPER GOD'S PLAN — V3.6.9 + V5 SUPER SCALP
 
     <br>
 
-    Emotion does not execute.
+    Market gives the setup → SNIPER executes.
 
 </footer>
 
@@ -1879,47 +1234,28 @@ const state = {
 
     answers:{},
 
-    firewallStep:0,
-
-    firewallAnswers:{},
-
-    firewallPassed:false,
-
-    authorized:false,
-
-    pauseComplete:false,
-
-    hardLocked:false,
-
-    currentSetupId:null,
-
     trades:JSON.parse(
         localStorage.getItem("sniperTrades") || "[]"
-    )
+    ),
+
+    directionResult:null,
+
+    pendingJournal:null
 
 };
 
 
-/* =========================================================
-   DATE / DAILY ENGINE
-========================================================= */
+const dailyTrades = () => {
 
-function todayString(){
-
-    return new Date()
+    const today = new Date()
         .toISOString()
         .slice(0,10);
 
-}
-
-
-function dailyTrades(){
-
     return state.trades.filter(
-        t => t.date === todayString()
+        t => t.date === today
     );
 
-}
+};
 
 
 function consecutiveLosses(){
@@ -1930,14 +1266,13 @@ function consecutiveLosses(){
 
     for(let i=today.length-1;i>=0;i--){
 
-        const result=
-            String(today[i].result || "")
+        const result=(today[i].result || "")
             .toUpperCase()
             .trim();
 
         if(
             result.includes("LOSS") ||
-            result.startsWith("-")
+            result.includes("-")
         ){
 
             count++;
@@ -1955,52 +1290,33 @@ function consecutiveLosses(){
 }
 
 
-function tradingLocked(){
-
-    return(
-        dailyTrades().length>=3 ||
-        consecutiveLosses()>=2
-    );
-
-}
-
-
 /* =========================================================
    DAILY PREPARATION
 ========================================================= */
 
 function completePreparation(){
 
-    const a=
-        document.getElementById("gratitude").checked;
+    const a=document
+        .getElementById("gratitude")
+        .checked;
 
-    const b=
-        document.getElementById("focus333").checked;
+    const b=document
+        .getElementById("focus333")
+        .checked;
 
-    const c=
-        document.getElementById("meditation").checked;
+    const c=document
+        .getElementById("meditation")
+        .checked;
 
 
     if(!a || !b || !c){
 
-        const msg=
-            document.getElementById("prepMessage");
+        document.getElementById("prepMessage")
+            .className="alert danger";
 
-        msg.className="alert danger";
-
-        msg.innerHTML=
+        document.getElementById("prepMessage")
+            .innerHTML=
             "🔴 SYSTEM LOCKED — هر سه مرحله Daily Preparation باید کامل شوند.";
-
-        return;
-
-    }
-
-
-    if(tradingLocked()){
-
-        alert(
-            "🔴 TRADING DAY IS ALREADY CLOSED."
-        );
 
         return;
 
@@ -2009,15 +1325,11 @@ function completePreparation(){
 
     state.preparation=true;
 
+    document.getElementById("dailyPreparation")
+        .classList.add("hidden");
 
-    document.getElementById(
-        "dailyPreparation"
-    ).classList.add("hidden");
-
-
-    document.getElementById(
-        "sessionSection"
-    ).classList.remove("hidden");
+    document.getElementById("sessionSection")
+        .classList.remove("hidden");
 
 }
 
@@ -2030,16 +1342,13 @@ function selectSession(session,element){
 
     state.session=session;
 
-
     document.querySelectorAll(
         "#sessionSection .option"
-    ).forEach(
-        x=>x.classList.remove("selected")
+    ).forEach(x =>
+        x.classList.remove("selected")
     );
 
-
     element.classList.add("selected");
-
 
     const badge=
         document.getElementById("sessionBadge");
@@ -2050,19 +1359,17 @@ function selectSession(session,element){
     badge.classList.add("active");
 
 
-    const msg=
-        document.getElementById("sessionMessage");
+    document.getElementById("sessionMessage")
+        .className="alert success";
 
-    msg.className="alert success";
-
-    msg.innerHTML=
+    document.getElementById("sessionMessage")
+        .innerHTML=
         "🟢 "+session+
         " selected. Session فقط Trading Hours و Liquidity Context است.";
 
 
-    document.getElementById(
-        "sessionContinue"
-    ).disabled=false;
+    document.getElementById("sessionContinue")
+        .disabled=false;
 
 }
 
@@ -2071,15 +1378,11 @@ function goToMode(){
 
     if(!state.session)return;
 
+    document.getElementById("sessionSection")
+        .classList.add("hidden");
 
-    document.getElementById(
-        "sessionSection"
-    ).classList.add("hidden");
-
-
-    document.getElementById(
-        "modeSection"
-    ).classList.remove("hidden");
+    document.getElementById("modeSection")
+        .classList.remove("hidden");
 
 }
 
@@ -2092,13 +1395,11 @@ function selectMode(mode,element){
 
     state.mode=mode;
 
-
     document.querySelectorAll(
         "#modeSection .option"
-    ).forEach(
-        x=>x.classList.remove("selected")
+    ).forEach(x =>
+        x.classList.remove("selected")
     );
-
 
     element.classList.add("selected");
 
@@ -2106,25 +1407,22 @@ function selectMode(mode,element){
     const badge=
         document.getElementById("modeBadge");
 
-
     badge.textContent=
         mode==="DAY"
         ? "MODE: V3.6.9 DAY TRADE"
         : "MODE: V5 SUPER SCALP";
 
-
     badge.classList.add("active");
 
 
-    document.getElementById(
-        "modeContinue"
-    ).disabled=false;
+    document.getElementById("modeContinue")
+        .disabled=false;
 
 }
 
 
 /* =========================================================
-   START SYSTEM
+   START
 ========================================================= */
 
 function startSystem(){
@@ -2132,10 +1430,13 @@ function startSystem(){
     if(!state.mode)return;
 
 
-    if(tradingLocked()){
+    const todayTrades=dailyTrades();
+
+
+    if(todayTrades.length>=3){
 
         alert(
-            "🔴 TRADING DAY CLOSED — Maximum 3 trades or 2 consecutive losses."
+            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
         );
 
         return;
@@ -2143,75 +1444,73 @@ function startSystem(){
     }
 
 
+    if(consecutiveLosses()>=2){
+
+        alert(
+            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
+        );
+
+        return;
+
+    }
+
+
+    document.getElementById("modeSection")
+        .classList.add("hidden");
+
+    document.getElementById("assistantSection")
+        .classList.remove("hidden");
+
+    /*
+       IMPORTANT:
+       Journal is intentionally NOT shown here.
+
+       It will only appear after the final
+       Strategy Gate is completed.
+    */
+
+    document.getElementById("journalSection")
+        .classList.add("hidden");
+
+    document.getElementById("playbookSection")
+        .classList.remove("hidden");
+
+    document.getElementById("treeSection")
+        .classList.remove("hidden");
+
+
     state.step=0;
 
     state.answers={};
-
-    state.firewallStep=0;
-
-    state.firewallAnswers={};
-
-    state.firewallPassed=false;
-
-    state.authorized=false;
-
-    state.pauseComplete=false;
-
-    state.hardLocked=false;
+    state.directionResult=null;
+    state.pendingJournal=null;
 
 
-    document.getElementById(
-        "modeSection"
-    ).classList.add("hidden");
+    document.getElementById("jStrategyRecord")
+        .value="";
 
+    document.getElementById("jDirection")
+        .value="";
 
-    document.getElementById(
-        "assistantSection"
-    ).classList.remove("hidden");
+    document.getElementById("jEntry")
+        .value="";
 
+    document.getElementById("jSL")
+        .value="";
 
-    document.getElementById(
-        "firewallSection"
-    ).classList.add("hidden");
+    document.getElementById("jTP")
+        .value="";
 
+    document.getElementById("jResult")
+        .value="";
 
-    document.getElementById(
-        "pauseSection"
-    ).classList.add("hidden");
-
-
-    document.getElementById(
-        "authorizationSection"
-    ).classList.add("hidden");
-
-
-    document.getElementById(
-        "journalSection"
-    ).classList.add("hidden");
-
-
-    document.getElementById(
-        "playbookSection"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-        "treeSection"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).textContent=
-        "FIREWALL: STANDBY";
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).className="badge";
+    document.getElementById("jNotes")
+        .value="";
 
 
     renderStep();
+
+    renderJournal();
 
     updateTradeBadge();
 
@@ -2219,7 +1518,7 @@ function startSystem(){
 
 
 /* =========================================================
-   V3.6.9 STEPS
+   STEP BUILDER
 ========================================================= */
 
 const daySteps=[
@@ -2322,7 +1621,7 @@ const daySteps=[
 
 {
     title:"STEP 9 — LIQUIDITY MAP",
-    question:"در حال حاضر کدام Liquidity Levelها فعال یا نزدیک هستند؟",
+    question:"در حال حاضر کدام Liquidity Levelها در قیمت فعال یا نزدیک هستند؟",
     multi:true,
     options:[
         ["MONTHLY / WEEKLY LIQUIDITY","Monthly یا Weekly High/Low."],
@@ -2339,7 +1638,7 @@ const daySteps=[
 
 {
     title:"STEP 10 — HTF LIQUIDITY REACTION",
-    question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی ایجاد شده است؟",
+    question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی در تایم‌فریم مربوطه ایجاد شده است؟",
     multi:false,
     options:[
         ["BREAK & ACCEPTANCE","Break → Close Beyond → Hold → Acceptance."],
@@ -2370,16 +1669,16 @@ const daySteps=[
 
 {
     title:"STEP 12 — LIQUIDITY EVENT",
-    question:"در کدام تایم‌فریم‌ها و با چه نوع Liquidity Event ایجاد شده است؟",
+    question:"در کدام تایم‌فریم‌ها و با چه نوعی Liquidity Event ایجاد شده است؟",
     multi:true,
     options:[
-        ["M15 SWEEP","M15 Sweep + Reaction."],
-        ["M15 FAKE BREAKOUT","M15 Fake Breakout + Failure."],
-        ["M15 RECLAIM","Break/Sweep → Return → Valid Close → Hold."],
-        ["M15 BREAKOUT","M15 Break + Close Beyond."],
-        ["M5 LIQUIDITY EVENT","M5 Liquidity Event."],
-        ["M1 MICRO SWEEP","M1 Micro Liquidity Sweep."],
-        ["M1 RECLAIM","M1 Micro Level Reclaim."],
+        ["M15 SWEEP","در M15 Sweep + Reaction ایجاد شده."],
+        ["M15 FAKE BREAKOUT","در M15 Fake Breakout + Failure ایجاد شده."],
+        ["M15 RECLAIM","در M15 Break/Sweep → Return → Valid Close → Hold."],
+        ["M15 BREAKOUT","در M15 Break + Close Beyond ایجاد شده."],
+        ["M5 LIQUIDITY EVENT","در M5 Liquidity Event ایجاد شده."],
+        ["M1 MICRO SWEEP","در M1 Micro Liquidity Sweep ایجاد شده."],
+        ["M1 RECLAIM","در M1 Micro Level Reclaim ایجاد شده."],
         ["NONE","Liquidity Event معتبر وجود ندارد."]
     ]
 },
@@ -2426,7 +1725,7 @@ const daySteps=[
 
 {
     title:"STEP 16 — TARGET SPACE",
-    question:"آیا بین Entry و Target فضای کافی وجود دارد؟",
+    question:"آیا بین Entry و Target، فضای کافی و قابل معامله وجود دارد؟",
     multi:false,
     options:[
         ["YES","Target Space کافی است."],
@@ -2437,7 +1736,7 @@ const daySteps=[
 
 {
     title:"STEP 17 — FINAL RISK GATE",
-    question:"آیا Entry، SL، TP و Risk کامل و معتبر هستند؟",
+    question:"آیا Entry، SL، TP و Risk به‌صورت کامل مشخص و معتبر هستند؟",
     multi:false,
     options:[
         ["VALID","SL پشت Invalidation Point و Target مشخص است."],
@@ -2460,10 +1759,6 @@ const daySteps=[
 ];
 
 
-/* =========================================================
-   V5 FAST SUPER SCALP
-========================================================= */
-
 const scalpSteps=[
 
 {
@@ -2478,7 +1773,7 @@ const scalpSteps=[
 },
 
 {
-    title:"V5 — STEP 2: MARKET ACTIVITY",
+    title:"V5 — STEP 2: SESSION",
     question:"در Session انتخاب‌شده، آیا بازار از نظر حرکت و Liquidity قابل معامله است؟",
     multi:false,
     options:[
@@ -2489,7 +1784,7 @@ const scalpSteps=[
 
 {
     title:"V5 — STEP 3: IMMEDIATE LOCATION",
-    question:"در تایم‌فریم‌های نزدیک، قیمت اکنون کجا قرار دارد؟",
+    question:"در تایم‌فریم‌های نزدیک به قیمت، قیمت اکنون در کدام Locationها قرار دارد؟",
     multi:true,
     options:[
         ["SESSION LIQUIDITY","Asia / London / New York High/Low."],
@@ -2500,14 +1795,14 @@ const scalpSteps=[
         ["RECENT SWING","Recent Micro / Local Swing."],
         ["RECLAIMED LEVEL","Level تازه Reclaim شده."],
         ["BREAKOUT RETEST","Breakout Retest نزدیک."],
-        ["RANGE MIDDLE","قیمت در Middle Range است."],
+        ["RANGE MIDDLE","قیمت در Middle Range قرار دارد؛ Location ضعیف."],
         ["UNCLEAR","Location مشخص نیست."]
     ]
 },
 
 {
     title:"V5 — STEP 4: LIQUIDITY EVENT",
-    question:"در تایم‌فریم M1/M5 چه Liquidity Eventی همین حالا ایجاد شده؟",
+    question:"در تایم‌فریم M1/M5، چه Liquidity Eventهایی همین حالا ایجاد شده‌اند؟",
     multi:true,
     options:[
         ["M1 MICRO SWEEP","M1 Liquidity Sweep."],
@@ -2550,21 +1845,21 @@ const scalpSteps=[
 
 {
     title:"V5 — STEP 7: SL LOCATION",
-    question:"نقطه Invalidation کجاست و SL باید کجا قرار بگیرد؟",
+    question:"در تایم‌فریم M1، نقطه Invalidation کجاست و SL باید کجا قرار بگیرد؟",
     multi:false,
     options:[
-        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر."],
-        ["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep."],
-        ["BEHIND RECLAIM INVALIDATION","SL پشت Invalidation Setup."],
-        ["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation."],
-        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است."],
-        ["UNCLEAR","Invalidation Point مشخص نیست."]
+        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر قرار می‌گیرد."],
+        ["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep قرار می‌گیرد."],
+        ["BEHIND RECLAIM INVALIDATION","SL پشت Level/Structureای قرار می‌گیرد که با شکست آن Setup باطل می‌شود."],
+        ["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation قرار می‌گیرد."],
+        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است؛ NO TRADE."],
+        ["UNCLEAR","Invalidation Point مشخص نیست؛ WAIT."]
     ]
 },
 
 {
     title:"V5 — STEP 8: TARGET",
-    question:"در مسیر Entry نزدیک‌ترین Target معتبر کدام است؟",
+    question:"در مسیر Entry در تایم‌فریم‌های نزدیک، Target اصلی کدام است؟",
     multi:true,
     options:[
         ["NEARBY LIQUIDITY","اولین Liquidity نزدیک."],
@@ -2572,7 +1867,7 @@ const scalpSteps=[
         ["LOCAL SWING","Nearby Local Swing."],
         ["RECENT HIGH / LOW","Recent High/Low."],
         ["RANGE EDGE","لبه Range."],
-        ["NO CLEAR TARGET","Target مشخص نیست."]
+        ["NO CLEAR TARGET","Target مشخص نیست؛ NO TRADE."]
     ]
 },
 
@@ -2589,6 +1884,413 @@ const scalpSteps=[
 
 ];
 
+
+/* =========================================================
+   SETUP / CONFIRMATION EDUCATION ENGINE
+   These are explanatory examples only. They do not replace
+   or alter the existing decision logic.
+========================================================= */
+
+const setupExamples = {
+
+    "M15 SWEEP": {
+        tf:"M15",
+        title:"M15 — LIQUIDITY SWEEP",
+        text:"در این مثال، قیمت ابتدا یک Liquidity Level مشخص را می‌گیرد و از آن عبور می‌کند، اما قرار نیست صرفاً به خاطر Wick معامله کنیم. برای Bullish Sweep، Sell-Side Liquidity زیر یک Low گرفته می‌شود و قیمت دوباره بالای Level برمی‌گردد. برای Bearish Sweep، Buy-Side Liquidity بالای یک High گرفته می‌شود و قیمت دوباره زیر Level برمی‌گردد.",
+        sequence:"Sweep → Rejection / Return → سپس Confirmation ساختاری M15. خودِ Sweep به‌تنهایی Entry نیست.",
+        diagram:`Liquidity Level ─────────────────\n                         ↓ Sweep\n                  ____/\\____\n                 /          \\____\n                /                ↑\n        Sell-Side Liquidity      Return\n        ─────────────────────────────\n                  Bullish example`,
+        rule:"نکته: Sweep باید نسبت به Liquidity مشخص باشد؛ Wick تنها = Confirmation نیست."
+    },
+
+    "M15 FAKE BREAKOUT": {
+        tf:"M15",
+        title:"M15 — FAKE BREAKOUT",
+        text:"قیمت از High/Low مهم عبور می‌کند و ابتدا شبیه Breakout دیده می‌شود، اما ادامه نمی‌دهد. سپس Failure و Return به داخل محدوده شکل می‌گیرد. مثال Bullish: قیمت زیر Range Low می‌رود، نمی‌تواند آنجا بماند و دوباره داخل Range برمی‌گردد.",
+        sequence:"Break → Failure → Return → Reclaim → Structure Confirmation.",
+        diagram:`Range High ─────────────────────\n                                  /\\\n                                 /  \\\n                                /    ↓ Failure\nRange Low  ────────────────\\__/──────\n                            ↑\n                       Fake Break\n                         ↓\n                       Return`,
+        rule:"Fake Breakout زمانی معتبرتر است که Failure و Return واضح باشد؛ عبور لحظه‌ای به‌تنهایی کافی نیست."
+    },
+
+    "M15 RECLAIM": {
+        tf:"M15",
+        title:"M15 — RECLAIM",
+        text:"قیمت یک Level را Break یا Sweep می‌کند، سپس به Level برمی‌گردد و یک Close معتبر در سمت موردنظر ایجاد می‌کند. در Bullish Reclaim، قیمت Level را از پایین می‌شکند/می‌گیرد و دوباره بالای آن Close و Hold می‌کند.",
+        sequence:"Break / Sweep → Return → Valid Close → Hold / Reaction.",
+        diagram:`Level ─────────────────────────\n             ↓ Break / Sweep\n             \\____\n                  \\____ Return\n                       ↑\n                 VALID CLOSE\n                       │\n                       └── HOLD`,
+        rule:"Wick ≠ Reclaim. Close و واکنش بعد از برگشت اهمیت دارد."
+    },
+
+    "M15 BREAKOUT": {
+        tf:"M15",
+        title:"M15 — BREAKOUT",
+        text:"در Breakout معتبر، قیمت یک Level ساختاری/Range را می‌شکند و M15 باید Close در سمت جدید نشان دهد. بعد از آن Retest/Hold می‌تواند کیفیت Setup را افزایش دهد.",
+        sequence:"Break → Close Beyond → Retest / Hold → ادامه.",
+        diagram:`Resistance ───────────────────\n                    /\\\   ← Break\n                   /  \\________\n                  /             \\\n─────────────────/───────────────\n                       ↑\n                  Close Beyond`,
+        rule:"صرفاً Wick بالای Level = Breakout معتبر نیست؛ Close Beyond لازم است."
+    },
+
+    "SWEEP → MSS": {
+        tf:"M15",
+        title:"M15 — SWEEP → MSS",
+        text:"این یک زنجیره Confirmation است. مثال Bullish: Sell-Side Liquidity در M15 Sweep می‌شود، قیمت Rejection/Return می‌دهد و سپس آخرین Lower High مهم M15 شکسته می‌شود؛ این شکست همان Bullish MSS است.",
+        sequence:"ترتیب منطقی: ① Sweep → ② Rejection/Return → ③ M15 Bullish MSS. این مراحل لازم نیست در یک کندل یا دقیقاً هم‌زمان باشند.",
+        diagram:`SELL-SIDE LIQUIDITY\n────────────────────────\n          ↓ ① SWEEP\n        __/\\__\n       /      \\___\n                  \\__ ② Return\n                     \\____\n                          ↑\n                 ③ BULLISH MSS\n                 ────────────→`,
+        rule:"برای Bullish، MSS باید بعد از Event نقدینگی و در جهت برگشت ایجاد شود؛ برای Bearish همین منطق معکوس است."
+    },
+
+    "SWEEP → DISPLACEMENT": {
+        tf:"M15",
+        title:"M15 — SWEEP → DISPLACEMENT",
+        text:"بعد از Sweep، حرکت برگشتی باید قدرت کافی نشان دهد. Displacement یعنی حرکت جهت‌دار قوی با بدنه‌های قابل توجه و عبور واضح از ساختار/موانع نزدیک. در مثال Bullish، Sweep پایین انجام شده و سپس حرکت صعودی قوی شکل می‌گیرد.",
+        sequence:"Sweep → Strong Displacement → Close → Structure Shift.",
+        diagram:`Liquidity ───────────────────\n          ↓ Sweep\n       ___/\\____\n              \\____\n                   \\  ↑\n                    \\ │ Strong\n                     \\│ Displacement\n                      \\──────→`,
+        rule:"Displacement صرفاً یک کندل سبز/قرمز نیست؛ باید حرکت معنادار و ساختارشکن ایجاد کند."
+    },
+
+    "BREAKOUT → RETEST → HOLD": {
+        tf:"M15",
+        title:"M15 — BREAKOUT → RETEST → HOLD",
+        text:"قیمت Level را می‌شکند و بالای آن Close می‌کند. سپس برای Retest به Level برمی‌گردد و آن Level در نقش حمایت/مقاومت جدید Hold می‌شود. مثال Bullish: Resistance شکسته، Retest انجام و قیمت بالای Level حفظ می‌شود.",
+        sequence:"Break → Close Beyond → Retest → Hold → سپس Lower-TF execution.",
+        diagram:`Resistance ─────────────────\n                  ↑ Break\n                 / \\\n                /   \\___\n───────────────/─────────\\──\n                         ↑\n                       Retest\n                         │\n                       HOLD\n                         └──→`,
+        rule:"Retest باید به Level شکسته‌شده مرتبط باشد؛ Touch بدون Hold کیفیت کمتری دارد."
+    },
+
+    "FAKE BREAKOUT → RECLAIM": {
+        tf:"M15",
+        title:"M15 — FAKE BREAKOUT → RECLAIM",
+        text:"قیمت Level را می‌شکند اما Acceptance نمی‌گیرد. سپس برمی‌گردد و Level را Reclaim می‌کند. مثال Bullish: قیمت زیر Support می‌رود، Failure رخ می‌دهد و Close دوباره بالای Support شکل می‌گیرد.",
+        sequence:"Failure → Return → Reclaim → Structure Confirmation.",
+        diagram:`Support ───────────────────\n             ↓ Fake Break\n───────────────\\____\n                     \\___ Return\n                         ↑\n                     RECLAIM\n                         │\n                         └──→`,
+        rule:"هدف تشخیص Failure است، نه شکار هر Wick. Reclaim باید با Close معتبر همراه باشد."
+    },
+
+    "MSS": {
+        tf:"M5",
+        title:"M5 — MARKET STRUCTURE SHIFT (MSS)",
+        text:"MSS یعنی ساختار کوتاه‌مدت در M5 از حالت قبلی خارج شده و شکست معناداری در جهت جدید ایجاد شده است. مثال Bullish: بعد از Confirmation M15، قیمت آخرین Lower High مهم M5 را می‌شکند.",
+        sequence:"در V3.6.9 معمولاً M15 Confirmation مقدم است؛ سپس M5 MSS ساختار قابل معامله را تأیید می‌کند.",
+        diagram:`Lower High ───────────────\n                 /\\\          ↑\n                /  \\_________/│\n               /               │\n──────────────/────────────────┘\n                 BULLISH MSS\n                    → → →`,
+        rule:"M5 MSS به‌تنهایی جایگزین M15 Confirmation نیست؛ نقش آن پایین آوردن Confirmation به ساختار قابل معامله است."
+    },
+
+    "DISPLACEMENT": {
+        tf:"M5",
+        title:"M5 — DISPLACEMENT",
+        text:"حرکت جهت‌دار قوی در M5 که نشان می‌دهد بعد از Shift، مشارکت واقعی در جهت حرکت وجود دارد. مثال Bullish: پس از MSS، چند کندل با حرکت واضح صعودی Levelهای نزدیک را پشت سر می‌گذارند.",
+        sequence:"M5 MSS → Displacement → سپس Retest / Hold در صورت شکل‌گیری.",
+        diagram:`M5 structure\n───────┐\n       └──→  ┌─┐\n             │ │\n             │ │ ┌─┐\n             │ │ │ │ ┌──→\n             └─┴─┴─┴────`,
+        rule:"Displacement کیفیت MSS را تقویت می‌کند؛ هر حرکت کوچک یا کندل منفرد الزاماً Displacement نیست."
+    },
+
+    "BOS": {
+        tf:"M5",
+        title:"M5 — BREAK OF STRUCTURE (BOS)",
+        text:"BOS در این سیستم یعنی شکستن یک Swing/Structure معتبر در جهت ادامه یا تأیید سناریو. مثال Bullish: بعد از Shift، یک Swing High مهم شکسته و قیمت بالای آن تثبیت می‌شود.",
+        sequence:"Structure → Break → Close / Hold. جای BOS باید با Context و سناریو هماهنگ باشد.",
+        diagram:`Swing High ───────────────\n                 ────────┐  ↑\n                         └──┘ Break\n                           /\\\n                          /  \\→\n──────────────────────────────`,
+        rule:"هر High/Low کوچک BOS قابل اتکا نیست؛ Swing معتبر و مرتبط با سناریو مهم است."
+    },
+
+    "RETEST + HOLD": {
+        tf:"M5",
+        title:"M5 — RETEST + HOLD",
+        text:"بعد از Break، قیمت به Level شکسته‌شده برمی‌گردد و آن را حفظ می‌کند. مثال Bullish: مقاومت شکسته‌شده به Support تبدیل می‌شود و قیمت بالای آن باقی می‌ماند.",
+        sequence:"Break → Return → Retest → Hold → M1 Trigger.",
+        diagram:`Level ───────────────────\n             ↑ Break\n            / \\\n───────────/──────\\──────\n                    \\\n                     ↑ Retest\n                     │ HOLD →`,
+        rule:"Retest بدون Hold هنوز Confirmation کامل نیست."
+    },
+
+    "BREAK → RETEST → TRIGGER": {
+        tf:"M1",
+        title:"M1 — BREAK → RETEST → TRIGGER",
+        text:"در M1، Break یک Micro Level را می‌شکند؛ قیمت برای Retest برمی‌گردد؛ سپس Trigger ورود ایجاد می‌شود. مثال Bullish: Micro Resistance شکسته می‌شود، Retest موفق و بعد Entry Trigger صعودی شکل می‌گیرد.",
+        sequence:"Break → Retest → Hold/Reaction → Entry Trigger. M1 اینجا Execution است، نه جایگزین Context بالاتر.",
+        diagram:`M1 Level ─────────────────\n             ↑ BREAK\n            / \\\n───────────/──────\\──────\n                    ↑ RETEST\n                    │\n                    └──→ TRIGGER → ENTRY`,
+        rule:"ورود نباید صرفاً روی Break انجام شود اگر Setup سیستم Retest را طلب می‌کند."
+    },
+
+    "ENGULFING": {
+        tf:"M1",
+        title:"M1 — ENGULFING TRIGGER",
+        text:"یک کندل جهت‌دار بدنه کندل قبلی یا بخش مهمی از آن را می‌پوشاند و در Location/Structure مناسب ایجاد می‌شود. این Trigger فقط وقتی ارزش دارد که با Setup بالاتر هم‌جهت باشد.",
+        sequence:"Higher-TF Setup → M1 Location → Engulfing → Entry execution.",
+        diagram:`Previous candle\n       ┌─────┐\n       │  ←  │\n───────┴─────┴──────\n          ┌──────────┐\n          │ ENGULF ↑ │\n          └──────────┘ →`,
+        rule:"Engulfing در وسط Range یا بدون Context معتبر، به‌تنهایی Setup نیست."
+    },
+
+    "M1 MSS": {
+        tf:"M1",
+        title:"M1 — MICRO MSS",
+        text:"M1 MSS یک تغییر ساختار Micro برای اجرای دقیق‌تر Entry است. مثال Bullish: بعد از Setup معتبر، آخرین Lower High میکرو شکسته می‌شود و قیمت Shift صعودی می‌دهد.",
+        sequence:"Setup بالاتر → M1 MSS → Trigger/Entry. M1 MSS نقش Execution دارد.",
+        diagram:`Micro LH ───────────────\n             /\\          ↑\n            /  \\_________│\n           /              └→ MSS\n──────────/──────────────────→`,
+        rule:"M1 MSS نباید به‌تنهایی برای ساختن یک معامله از هیچ استفاده شود."
+    },
+
+    "M1 DISPLACEMENT": {
+        tf:"M1",
+        title:"M1 — MICRO DISPLACEMENT",
+        text:"حرکت سریع و واضح M1 در جهت Setup که نشان می‌دهد Trigger واقعی شکل گرفته است. مثال Bullish: بعد از Sweep/Reclaim یا MSS، قیمت با قدرت از Micro Structure عبور می‌کند.",
+        sequence:"M1 Setup → Micro MSS/Context → Displacement → Entry Trigger.",
+        diagram:`──────┐\n      ┌┘┌─┐\n     ┌┘ │ │\n    ┌┘  │ │ ┌─→\n────┴───┴─┴─┴────`,
+        rule:"سرعت به‌تنهایی کافی نیست؛ باید در محل و جهت Setup اتفاق بیفتد."
+    },
+
+    "MICRO SWEEP → RECLAIM": {
+        tf:"M1",
+        title:"M1 — MICRO SWEEP → RECLAIM",
+        text:"قیمت یک Micro Liquidity را Sweep می‌کند، سپس Level را Reclaim می‌کند و Trigger ورود شکل می‌گیرد. مثال Bullish: Low قبلی گرفته می‌شود، قیمت بالای آن برمی‌گردد و M1 Trigger می‌دهد.",
+        sequence:"Micro Sweep → Return → Reclaim → Trigger → Entry.",
+        diagram:`Micro Low ─────────────────\n          ↓ Sweep\n       ___/\\___\n              \\___\n                  ↑ RECLAIM\n                  └──→ TRIGGER`,
+        rule:"Reclaim باید با Close/Reaction معتبر همراه باشد؛ صرفاً برگشت Wick کافی نیست."
+    },
+
+    "M1 MICRO SWEEP": {
+        tf:"M1",
+        title:"V5 M1 — MICRO SWEEP",
+        text:"در V5 یک Micro Liquidity نزدیک قیمت Sweep می‌شود تا Event کوتاه‌مدت ایجاد کند. سپس جهت واقعی باید از Structure/Trigger M1 مشخص شود.",
+        sequence:"Micro Sweep → M1 Structure → M1 Trigger. Sweep به‌تنهایی Entry نیست.",
+        diagram:`Liquidity ───────────────\n        ↓ SWEEP\n     ___/\\___\n             \\___ → structure → trigger`,
+        rule:"در V5 نیز Event باید با Trigger همراه شود؛ شکار Wick ممنوع."
+    },
+
+    "M5 SWEEP": {
+        tf:"M5",
+        title:"V5 M5 — SWEEP",
+        text:"Sweep یک High/Low نزدیک در M5 برای ایجاد Immediate Liquidity Event است. بعد از آن باید M1 Structure و Trigger مشخص شود.",
+        sequence:"M5 Sweep → M1 Structure → M1 Trigger.",
+        diagram:`M5 High ───────────────\n             /\\\ ← sweep\n────────────/───\\──────\n                    ↓\n                 M1 trigger`,
+        rule:"M5 Sweep در V5 نقش Event دارد و خودش مجوز Entry نیست."
+    },
+
+    "BREAKOUT": {
+        tf:"V5 — M1/M5",
+        title:"V5 — IMMEDIATE BREAKOUT",
+        text:"یک Level نزدیک قیمت شکسته می‌شود و حرکت سریع ایجاد می‌کند. برای ورود باید ساختار M1 و Trigger واقعی وجود داشته باشد.",
+        sequence:"Breakout → M1 Structure → Trigger → Tight SL → Nearby Target.",
+        diagram:`Level ─────────────────\n              /\\\ → BREAK\n─────────────/────────────→\n                         Trigger`,
+        rule:"Breakout بدون Structure/Trigger، فرصت کامل V5 نیست."
+    },
+
+    "FAKE BREAKOUT": {
+        tf:"V5 — M1/M5",
+        title:"V5 — FAKE BREAKOUT",
+        text:"Level نزدیک قیمت شکسته می‌شود اما Failure و Return رخ می‌دهد. سپس Reclaim یا Structure Trigger برای ورود بررسی می‌شود.",
+        sequence:"Break → Failure → Return → Reclaim → M1 Trigger.",
+        diagram:`Level ─────────────────\n               ↑ fake break\n──────────────/\\___\n                    \\___ Return\n                         └→ Trigger`,
+        rule:"Failure باید واضح باشد؛ هر Pullback بعد از Breakout، Fake Breakout نیست."
+    },
+
+    "RECLAIM": {
+        tf:"V5 — M1/M5",
+        title:"V5 — RECLAIM",
+        text:"Level شکسته/گرفته می‌شود و سپس قیمت دوباره آن را پس می‌گیرد. بعد از Reclaim باید M1 Trigger برای اجرای Super Scalp ایجاد شود.",
+        sequence:"Break/Sweep → Return → Reclaim → M1 Trigger.",
+        diagram:`Level ─────────────────\n       ↓ sweep/break\n───────\\____\n              \\___ ↑ reclaim\n                   └→ trigger`,
+        rule:"Reclaim بدون Trigger نهایی، Entry محسوب نمی‌شود."
+    },
+
+    "SESSION LIQUIDITY SWEEP": {
+        tf:"Session / M1-M5",
+        title:"V5 — SESSION LIQUIDITY SWEEP",
+        text:"یکی از High/Lowهای Session مثل Asia High/Low یا Session High/Low گرفته می‌شود. بعد از Event باید واکنش و Trigger کوتاه‌مدت مشخص شود.",
+        sequence:"Session Level → Sweep → Reaction → M1 Structure → Trigger.",
+        diagram:`SESSION HIGH ─────────────\n                  ↓ sweep\n                 /\\\__\n                      \\___ reaction\n                          └→ M1 trigger`,
+        rule:"Session Liquidity فقط Location/Event است؛ Session به‌تنهایی Direction Signal نیست."
+    },
+
+    "MSS + DISPLACEMENT": {
+        tf:"M1",
+        title:"V5 M1 — MSS + DISPLACEMENT",
+        text:"در این ترکیب، M1 ابتدا Shift ساختاری می‌دهد و سپس حرکت جهت‌دار قوی آن را تأیید می‌کند. این توالی نسبت به MSS تنها کیفیت بالاتری دارد.",
+        sequence:"MSS → Displacement → Trigger / Entry.",
+        diagram:`Structure ─────────────\n              ↑ MSS\n             /\\____\n                  \\___\n                      \\ → DISPLACEMENT\n                       └→`,
+        rule:"MSS و Displacement باید در یک سناریوی مشخص و جهت‌دار قرار بگیرند."
+    },
+
+    "BREAK + RETEST": {
+        tf:"M1",
+        title:"V5 M1 — BREAK + RETEST",
+        text:"Micro Level شکسته می‌شود، قیمت به آن برمی‌گردد و واکنش نشان می‌دهد. این Retest می‌تواند محل Trigger دقیق Super Scalp باشد.",
+        sequence:"Break → Retest → Hold/Reaction → Entry.",
+        diagram:`Level ─────────────────\n             ↑ break\n────────────/──────\\────\n                     ↑\n                   retest\n                     └→ entry`,
+        rule:"Break بدون Retest، اگر Setup انتخابی Break + Retest باشد، کامل نیست."
+    },
+
+    "MICRO SWEEP → MSS → DISPLACEMENT": {
+        tf:"M1",
+        title:"V5 M1 — MICRO SWEEP → MSS → DISPLACEMENT",
+        text:"این یکی از زنجیره‌های باکیفیت V5 است: Micro Liquidity گرفته می‌شود، ساختار M1 تغییر می‌کند و سپس Displacement جهت جدید را تأیید می‌کند.",
+        sequence:"① Micro Sweep → ② M1 MSS → ③ M1 Displacement → Entry.",
+        diagram:`Liquidity ───────────────\n      ↓ ① sweep\n    __/\\___\n           \\__\n               ↑ ② MSS\n                \\──────→ ③ displacement\n                         └→`,
+        rule:"ترتیب منطقی حفظ شود؛ سه برچسب صرفاً به خاطر رخ دادن در یک ناحیه، خودکار هم‌زمان محسوب نمی‌شوند."
+    },
+
+    "BREAK → RETEST → ENTRY": {
+        tf:"M1",
+        title:"V5 M1 — BREAK → RETEST → ENTRY",
+        text:"Breakout نزدیک قیمت، سپس Retest و در نهایت Trigger ورود. این Setup برای اجرای سریع طراحی شده و باید SL و Target نزدیک و منطقی باشند.",
+        sequence:"Break → Retest → Entry Trigger.",
+        diagram:`Level ─────────────────\n            ↑ BREAK\n───────────/──────\\────\n                    ↑ RETEST\n                    └────→ ENTRY`,
+        rule:"ورود باید بعد از Retest/Reaction انجام شود، نه صرفاً با اولین عبور."
+    },
+
+    "SWEEP → RECLAIM → TRIGGER": {
+        tf:"M1",
+        title:"V5 M1 — SWEEP → RECLAIM → TRIGGER",
+        text:"Liquidity ابتدا Sweep می‌شود، Level دوباره Reclaim می‌شود و سپس Trigger M1 برای ورود ایجاد می‌شود. مثال Bullish: Sell-Side Sweep → Reclaim → Long Trigger.",
+        sequence:"Sweep → Reclaim → Trigger → Entry.",
+        diagram:`SELL-SIDE ───────────────\n       ↓ sweep\n    ___/\\___\n           \\___\n               ↑ RECLAIM\n               └──→ TRIGGER`,
+        rule:"Reclaim باید واقعی باشد؛ Wick برگشتی بدون Close/Reaction کافی نیست."
+    },
+
+    "ENGULFING / MOMENTUM": {
+        tf:"M1",
+        title:"V5 M1 — ENGULFING / MOMENTUM",
+        text:"Trigger سریع M1 که از یک کندل جهت‌دار قوی یا Momentum واضح استفاده می‌کند. باید در Location و بعد از Event مناسب اتفاق بیفتد.",
+        sequence:"Location → Liquidity Event → Momentum/Engulfing → Entry.",
+        diagram:`Event\n───────┐\n       └──┐\n          ┌──────────┐\n          │ MOMENTUM │ → ENTRY\n          └──────────┘`,
+        rule:"Momentum وسط فضای خالی بازار یا بدون Liquidity Event، به‌تنهایی Setup کامل نیست."
+    },
+
+    "M1 MSS + DISPLACEMENT": {
+        tf:"M1",
+        title:"V5 M1 — MSS + DISPLACEMENT",
+        text:"ترکیب Shift ساختاری و حرکت قوی در M1 برای اجرای سریع. ابتدا Micro Structure تغییر می‌کند و سپس Displacement آن را تأیید می‌کند.",
+        sequence:"M1 MSS → M1 Displacement → Entry Trigger.",
+        diagram:`LH ─────────────\n      \\___ ↑ MSS\n          \\──────→\n             strong displacement`,
+        rule:"این Trigger همچنان باید به Location و Liquidity Event متصل باشد."
+    },
+
+    "BEHIND MICRO SWING": {
+        tf:"M1",
+        title:"M1 — SL BEHIND MICRO SWING",
+        text:"Invalidation پشت آخرین Micro Swing معتبر قرار می‌گیرد؛ اگر آن Swing شکسته شود، منطق Trigger دیگر معتبر نیست.",
+        sequence:"Entry → Invalidation Point → SL beyond invalidation.",
+        diagram:`Micro Swing Low ───────\n              ↑ entry\n              │\n              │ SL\n              ↓\n──────────────X invalidation`,
+        rule:"SL نباید صرفاً برای کوچک شدن ریسک به نقطه‌ای گذاشته شود که منطق Setup را خراب کند."
+    },
+
+    "BEHIND SWEEP EXTREME": {
+        tf:"M1",
+        title:"M1 — SL BEHIND SWEEP EXTREME",
+        text:"وقتی Setup بر پایه Sweep است، Extreme مربوط به Sweep نقطه کلیدی Invalidation است. SL باید پشت آن Extreme قرار بگیرد با Buffer مناسب سیستم.",
+        sequence:"Sweep Extreme → Invalidation → SL beyond extreme.",
+        diagram:`Liquidity ─────────────\n          ↓ sweep\n       ___/\\___ ← extreme\n              │\n              X SL beyond\n              │`,
+        rule:"اگر SL لازم بیش از حد وسیع شود، Super Scalp باید رد شود."
+    },
+
+    "BEHIND RECLAIM INVALIDATION": {
+        tf:"M1",
+        title:"M1 — SL BEHIND RECLAIM INVALIDATION",
+        text:"در Setupهای Reclaim، نقطه‌ای که Reclaim را بی‌اعتبار می‌کند باید مشخص باشد. SL پشت همان Invalidation قرار می‌گیرد.",
+        sequence:"Reclaim → Define Invalidation → SL beyond invalidation.",
+        diagram:`Level ─────────────────\n          ↑ reclaim\n──────────┴──────────────\n          ↑ entry\n          │\n          X invalidation / SL`,
+        rule:"اگر نقطه Invalid شدن Setup مشخص نباشد، Entry نباید اجرا شود."
+    },
+
+    "BEHIND BREAKOUT RETEST": {
+        tf:"M1",
+        title:"M1 — SL BEHIND BREAKOUT RETEST",
+        text:"بعد از Breakout و Retest، نقطه invalidation زیر/بالای Retest ساختاری قرار می‌گیرد، متناسب با جهت معامله.",
+        sequence:"Break → Retest → Define invalidation → SL.",
+        diagram:`Broken Level ───────────\n              ↑ break\n─────────────/──────\\────\n                     ↑ entry\n                     X SL / invalidation`,
+        rule:"SL باید پشت نقطه‌ای باشد که با شکستن آن Retest دیگر معتبر نیست."
+    },
+
+    "NEARBY LIQUIDITY": {
+        tf:"V5 — Target",
+        title:"V5 — NEARBY LIQUIDITY TARGET",
+        text:"برای Super Scalp هدف اصلی معمولاً اولین Liquidity نزدیک و قابل دستیابی است؛ هدف نباید آن‌قدر دور باشد که منطق Super Scalp را از بین ببرد.",
+        sequence:"Entry → Nearby Liquidity → TP / Exit.",
+        diagram:`ENTRY ●──────────────→ ● TARGET\n                         nearby liquidity`,
+        rule:"فضای کافی بین Entry و Target باید وجود داشته باشد؛ Target نامشخص = No Trade."
+    },
+
+    "SESSION LIQUIDITY": {
+        tf:"Session / Target",
+        title:"V5 — SESSION LIQUIDITY TARGET",
+        text:"اگر Session High/Low در مسیر حرکت نزدیک و واضح باشد، می‌تواند Target منطقی باشد.",
+        sequence:"Entry → Session High/Low → Target.",
+        diagram:`ENTRY ●────────────→ SESSION HIGH\n                         ─────────────●`,
+        rule:"Session Level باید واقعاً در مسیر و فضای قابل معامله باشد."
+    },
+
+    "LOCAL SWING": {
+        tf:"M1/M5 — Target",
+        title:"V5 — LOCAL SWING TARGET",
+        text:"یک Swing نزدیک و واضح می‌تواند هدف کوتاه‌مدت باشد. در Super Scalp هدف نزدیک مهم‌تر از دنبال کردن حرکت بسیار بزرگ است.",
+        sequence:"Entry → Local Swing → Exit / TP.",
+        diagram:`ENTRY ●──────────→ SWING HIGH\n                         ●\n                        / \\\n                       /   \\`,
+        rule:"Target باید قبل از ورود قابل شناسایی باشد."
+    },
+
+    "RECENT HIGH / LOW": {
+        tf:"M1/M5 — Target",
+        title:"V5 — RECENT HIGH / LOW TARGET",
+        text:"Recent High/Low نزدیک قیمت می‌تواند Target کوتاه‌مدت باشد، به شرطی که فضای حرکت کافی باشد.",
+        sequence:"Entry → Recent High/Low → Exit.",
+        diagram:`ENTRY ●────────────→ RECENT HIGH ●`,
+        rule:"اگر Target خیلی نزدیک باشد و فضای معامله کافی نباشد، Setup ارزش اجرا ندارد."
+    },
+
+    "RANGE EDGE": {
+        tf:"M1/M5 — Target",
+        title:"V5 — RANGE EDGE TARGET",
+        text:"اگر قیمت داخل Range و نزدیک لبه مقابل باشد، Range Edge می‌تواند Target باشد. وسط Range برای Entry مناسب نیست.",
+        sequence:"Entry near one side → Range Edge → Target.",
+        diagram:`RANGE LOW ●────── ENTRY ●────────→ ● RANGE HIGH`,
+        rule:"Range Middle = Location ضعیف / No Trade برای Entry."
+    }
+};
+
+function getSetupExample(label){
+    return setupExamples[label] || null;
+}
+
+function renderSetupExamples(selectedLabels){
+    const area=document.getElementById("setupExampleArea");
+    if(!area)return;
+    const examples=selectedLabels.map(getSetupExample).filter(Boolean);
+    if(!examples.length){
+        area.innerHTML="";
+        return;
+    }
+    area.innerHTML=`<div class="setupExamplePanel">${examples.map(ex=>`
+        <div class="setupExample">
+            <div class="setupExampleHead">
+                <div class="setupExampleTitle">📌 ${escapeHtml(ex.title)}</div>
+                <div class="setupExampleTf">TIMEFRAME: ${escapeHtml(ex.tf)}</div>
+            </div>
+            <div class="setupExampleText">${escapeHtml(ex.text)}</div>
+            <div class="setupExampleSequence"><strong>SEQUENCE:</strong> ${escapeHtml(ex.sequence)}</div>
+            <div class="setupDiagram">${escapeHtml(ex.diagram)}</div>
+            <div class="setupRule">⚠️ ${escapeHtml(ex.rule)}</div>
+        </div>
+    `).join("")}</div>`;
+}
+
+function renderSequenceGuide(){
+    const s=getCurrentStep();
+    if(!s)return "";
+    if(s.title.includes("M15 CONFIRMATION")){
+        return `<div class="alert info"><strong>🔗 CONFIRMATION SEQUENCE RULE</strong><br>M15 Event و M15 Confirmation باید به‌صورت منطقی پشت سر هم شکل بگیرند. لازم نیست همه اجزا در یک کندل یا دقیقاً هم‌زمان باشند. M15 Confirmation باید قبل از ساختار اجرایی M5 و Trigger نهایی M1 شکل گرفته باشد.</div>`;
+    }
+    if(s.title.includes("M5 STRUCTURE")){
+        return `<div class="alert info"><strong>🔗 TIMEFRAME HAND-OFF</strong><br>M5 قرار نیست هم‌زمان با M15 ساخته شود. در سناریوی استاندارد، M15 Confirmation ابتدا شکل می‌گیرد؛ سپس M5 آن سناریو را به Structure قابل معامله تبدیل می‌کند. ممکن است حرکات زمانی روی چارت overlap داشته باشند، اما ترتیب منطقی تأیید حفظ می‌شود.</div>`;
+    }
+    if(s.title.includes("M1 EXECUTION")){
+        return `<div class="alert info"><strong>🔗 EXECUTION SEQUENCE</strong><br>M1 آخرین لایه است: Setup/Confirmation بالاتر → M5 Structure → M1 Trigger. M1 Trigger نباید صرفاً به دلیل هم‌زمانی با یک Event بالاتر، جای Confirmation قبلی را بگیرد.</div>`;
+    }
+    if(s.title.includes("V5 — STEP 4")){
+        return `<div class="alert info"><strong>⚡ V5 EVENT RULE</strong><br>در V5 Event می‌تواند سریع و نزدیک به Trigger رخ دهد؛ با این حال Liquidity Event و M1 Structure/Trigger از نظر منطقی باید قابل تشخیص باشند. «هم‌زمانی» به معنی «یکی بودن» مراحل نیست.</div>`;
+    }
+    if(s.title.includes("V5 — STEP 5") || s.title.includes("V5 — STEP 6")){
+        return `<div class="alert info"><strong>⚡ V5 EXECUTION ORDER</strong><br>Event → M1 Structure → M1 Trigger. این سه مورد می‌توانند در فاصله زمانی بسیار کوتاه رخ دهند، اما Trigger باید نتیجه/تأیید Structure باشد، نه صرفاً یک حرکت تصادفی هم‌زمان.</div>`;
+    }
+    return "";
+}
 
 /* =========================================================
    STEP HELPERS
@@ -2617,9 +2319,324 @@ function getSelectedAnswers(){
 }
 
 
+function isSelected(index){
+
+    return getSelectedAnswers()
+        .includes(index);
+
+}
+
+
+function isExclusiveOption(label){
+
+    const text=label.toUpperCase();
+
+    return(
+        text==="NONE" ||
+        text==="NO" ||
+        text.includes("NO TRADE") ||
+        text.includes("NO CLEAR TARGET") ||
+        text.includes("INVALID") ||
+        text==="UNCLEAR" ||
+        text.includes("TOO WIDE")
+    );
+
+}
+
+
+/* =========================================================
+   RENDER STEP
+========================================================= */
+
+function renderStep(){
+
+    const steps=currentSteps();
+
+    const s=steps[state.step];
+
+    if(!s)return;
+
+
+    const selected=getSelectedAnswers();
+
+
+    document.getElementById("assistantTitle")
+        .textContent=
+        state.mode==="DAY"
+        ? "🦅 V3.6.9 DAY TRADE ASSISTANT"
+        : "⚡ V5 SUPER SCALP ASSISTANT";
+
+
+    document.getElementById("stepCounter")
+        .textContent=
+        `Step ${state.step+1} of ${steps.length}`;
+
+
+    document.getElementById("progressBar")
+        .style.width=
+        ((state.step+1)/steps.length*100)+"%";
+
+
+    let html=`
+
+        <div class="question">
+
+            ${s.title}
+
+            <br>
+
+            ${s.question}
+
+            ${
+                s.multi
+                ?
+                `<div class="multiHint">
+                    ☑ MULTI-SELECTION — می‌توانی چند گزینه را هم‌زمان انتخاب کنی.
+                </div>`
+                :
+                ``
+            }
+
+        </div>
+
+        <div class="options">
+
+    `;
+
+
+    s.options.forEach((opt,i)=>{
+
+        const active=selected.includes(i);
+
+        html+=`
+
+            <div
+                class="option ${active?"selected":""}"
+                onclick="chooseAnswer(${i},this)"
+            >
+
+                <strong>${opt[0]}</strong>
+
+                <small>${opt[1]}</small>
+
+            </div>
+
+        `;
+
+    });
+
+
+    html+=`</div>`;
+
+
+    html += renderSequenceGuide();
+    html += `<div id="setupExampleArea"></div>`;
+
+    document.getElementById("questionArea")
+        .innerHTML=html;
+
+    renderSetupExamples(selected.map(i=>s.options[i][0]));
+
+    updateDecisionMessage();
+
+
+    document.getElementById("backBtn")
+        .disabled=state.step===0;
+
+
+    document.getElementById("nextBtn")
+        .disabled=selected.length===0;
+
+
+    document.getElementById("nextBtn")
+        .textContent=
+        state.step===steps.length-1
+        ? "FINISH"
+        : "NEXT →";
+
+}
+
+
+/* =========================================================
+   CHOOSE ANSWER
+========================================================= */
+
+function chooseAnswer(index,element){
+
+    const s=getCurrentStep();
+
+    const label=s.options[index][0];
+
+    let selected=[
+        ...getSelectedAnswers()
+    ];
+
+
+    if(!s.multi){
+
+        selected=[index];
+
+    }
+
+
+    else{
+
+        const exclusive=isExclusiveOption(label);
+
+
+        if(exclusive){
+
+            selected=[index];
+
+        }else{
+
+            selected=selected.filter(i =>
+                !isExclusiveOption(
+                    s.options[i][0]
+                )
+            );
+
+
+            if(selected.includes(index)){
+
+                selected=selected.filter(
+                    i=>i!==index
+                );
+
+            }else{
+
+                selected.push(index);
+
+            }
+
+        }
+
+    }
+
+
+    state.answers[state.step]=selected;
+
+    renderStep();
+
+}
+
+
+/* =========================================================
+   DECISION MESSAGE
+========================================================= */
+
+function updateDecisionMessage(){
+
+    const selectedIndexes=getSelectedAnswers();
+
+
+    if(selectedIndexes.length===0){
+
+        document.getElementById("decisionArea")
+            .innerHTML="";
+
+        return;
+
+    }
+
+
+    const s=getCurrentStep();
+
+
+    const selectedLabels=
+        selectedIndexes.map(
+            i=>s.options[i][0]
+        );
+
+
+    const hasHardStop=
+        selectedLabels.some(
+            label=>isHardStop(label)
+        );
+
+
+    const hasWait=
+        selectedLabels.some(
+            label=>isWaitCondition(label)
+        );
+
+
+    if(hasHardStop){
+
+        document.getElementById("decisionArea")
+            .innerHTML=`
+
+            <div class="alert danger">
+
+                🔴 NO TRADE / STOP CONDITION
+
+                <br>
+
+                <small>
+                    ${selectedLabels.join(" + ")}
+                </small>
+
+            </div>
+
+            `;
+
+        return;
+
+    }
+
+
+    if(hasWait){
+
+        document.getElementById("decisionArea")
+            .innerHTML=`
+
+            <div class="alert warning">
+
+                🟡 WAIT — SETUP DEVELOPING
+
+                <br>
+
+                <small>
+                    ${selectedLabels.join(" + ")}
+                </small>
+
+            </div>
+
+            `;
+
+        return;
+
+    }
+
+
+    document.getElementById("decisionArea")
+        .innerHTML=`
+
+        <div class="alert success">
+
+            🟢 CONDITION ACCEPTED
+
+            <br>
+
+            <small>
+                ${selectedLabels.join(" + ")}
+            </small>
+
+        </div>
+
+        `;
+
+}
+
+
+/* =========================================================
+   HARD STOP LOGIC
+========================================================= */
+
 function isHardStop(label){
 
-    const text=String(label).toUpperCase();
+    const text=label.toUpperCase();
+
 
     return(
 
@@ -2652,7 +2669,8 @@ function isHardStop(label){
 
 function isWaitCondition(label){
 
-    const text=String(label).toUpperCase();
+    const text=label.toUpperCase();
+
 
     return(
 
@@ -2660,32 +2678,9 @@ function isWaitCondition(label){
 
         text==="WAIT" ||
 
-        text.includes("UNCLEAR")
+        text.includes("UNCLEAR") ||
 
-    );
-
-}
-
-
-function isExclusiveOption(label){
-
-    const text=String(label).toUpperCase();
-
-    return(
-
-        text==="NONE" ||
-
-        text==="NO" ||
-
-        text.includes("NO TRADE") ||
-
-        text.includes("NO CLEAR TARGET") ||
-
-        text.includes("INVALID") ||
-
-        text==="UNCLEAR" ||
-
-        text.includes("TOO WIDE")
+        text.includes("MSS ONLY")
 
     );
 
@@ -2693,462 +2688,329 @@ function isExclusiveOption(label){
 
 
 /* =========================================================
-   RENDER STEP
+   AUTO STRATEGY RECORD
 ========================================================= */
 
-function renderStep(){
-
-    if(state.hardLocked)return;
-
+function buildStrategyRecord(){
 
     const steps=currentSteps();
+    const lines=[];
 
-    const s=steps[state.step];
+    lines.push("==============================");
+    lines.push("SNIPER GOD'S PLAN — STRATEGY RECORD");
+    lines.push("==============================");
+    lines.push("Engine: "+(state.mode==="DAY" ? "V3.6.9 STRUCTURAL SNIPER" : "V5 SUPER SCALP"));
+    lines.push("Session: "+(state.session || "Not selected"));
+    lines.push("");
 
-    if(!s)return;
-
-
-    const selected=
-        getSelectedAnswers();
-
-
-    document.getElementById(
-        "assistantTitle"
-    ).textContent=
-        state.mode==="DAY"
-        ? "🦅 V3.6.9 DAY TRADE ASSISTANT"
-        : "⚡ V5 SUPER SCALP ASSISTANT";
-
-
-    document.getElementById(
-        "stepCounter"
-    ).textContent=
-        `Step ${state.step+1} of ${steps.length}`;
-
-
-    document.getElementById(
-        "progressBar"
-    ).style.width=
-        ((state.step+1)/steps.length*100)+"%";
-
-
-    let html=`
-
-        <div class="question">
-
-            ${s.title}
-
-            <br>
-
-            ${s.question}
-
-            ${
-                s.multi
-                ?
-                `<div class="multiHint">
-                    ☑ MULTI-SELECTION
-                </div>`
-                :
-                ``
-            }
-
-        </div>
-
-        <div class="options">
-
-    `;
-
-
-    s.options.forEach((opt,i)=>{
-
-        const active=
-            selected.includes(i);
-
-
-        html+=`
-
-            <div
-                class="option ${active?"selected":""}"
-                onclick="chooseAnswer(${i})">
-
-                <strong>
-                    ${opt[0]}
-                </strong>
-
-                <small>
-                    ${opt[1]}
-                </small>
-
-            </div>
-
-        `;
-
+    steps.forEach((step,index)=>{
+        const answers=state.answers[index] || [];
+        if(!answers.length)return;
+        const selected=answers.map(i=>step.options[i][0]);
+        lines.push(`${index+1}. ${step.title}`);
+        lines.push("   Question: "+step.question);
+        lines.push("   Selected: "+selected.join(" + "));
+        lines.push("");
     });
 
-
-    html+=`</div>`;
-
-
-    document.getElementById(
-        "questionArea"
-    ).innerHTML=html;
-
-
-    updateDecisionMessage();
-
-
-    document.getElementById(
-        "backBtn"
-    ).disabled=
-        state.step===0;
-
-
-    document.getElementById(
-        "nextBtn"
-    ).disabled=
-        selected.length===0;
-
-
-    document.getElementById(
-        "nextBtn"
-    ).textContent=
-        state.step===steps.length-1
-        ? "CONTINUE TO FIREWALL"
-        : "NEXT →";
-
-}
-
-
-/* =========================================================
-   CHOOSE ANSWER
-========================================================= */
-
-function chooseAnswer(index){
-
-    if(state.hardLocked)return;
-
-
-    const s=getCurrentStep();
-
-    const label=s.options[index][0];
-
-    let selected=[
-        ...getSelectedAnswers()
-    ];
-
-
-    if(!s.multi){
-
-        selected=[index];
-
-    }else{
-
-        const exclusive=
-            isExclusiveOption(label);
-
-
-        if(exclusive){
-
-            selected=[index];
-
-        }else{
-
-            selected=
-                selected.filter(
-                    i =>
-                        !isExclusiveOption(
-                            s.options[i][0]
-                        )
-                );
-
-
-            if(selected.includes(index)){
-
-                selected=
-                    selected.filter(
-                        i=>i!==index
-                    );
-
-            }else{
-
-                selected.push(index);
-
-            }
-
+    if(state.directionResult){
+        const r=state.directionResult;
+        lines.push("==============================");
+        lines.push("DIRECTION ENGINE");
+        lines.push("==============================");
+        lines.push("Recommendation: "+r.direction);
+        lines.push("Confidence: "+r.confidence);
+        lines.push("BUY SCORE: "+r.buyScore);
+        lines.push("SELL SCORE: "+r.sellScore);
+        lines.push("");
+        if(r.buyReasons.length){
+            lines.push("BUY EVIDENCE:");
+            r.buyReasons.forEach(x=>lines.push("• "+x));
+            lines.push("");
         }
-
+        if(r.sellReasons.length){
+            lines.push("SELL EVIDENCE:");
+            r.sellReasons.forEach(x=>lines.push("• "+x));
+            lines.push("");
+        }
+        if(r.neutralReasons.length){
+            lines.push("NEUTRAL / CONFLICT:");
+            r.neutralReasons.forEach(x=>lines.push("• "+x));
+            lines.push("");
+        }
     }
 
+    lines.push("==============================");
+    lines.push("FINAL STRATEGY DECISION");
+    lines.push("==============================");
 
-    state.answers[state.step]=selected;
+    const finalIndex=steps.length-1;
+    const finalAnswers=state.answers[finalIndex] || [];
+    lines.push(finalAnswers.length
+        ? finalAnswers.map(i=>steps[finalIndex].options[i][0]).join(" + ")
+        : "Not completed");
 
-    renderStep();
+    return lines.join("\n");
+}
 
+
+function openTradeJournal(){
+
+    const record=buildStrategyRecord();
+    const recordInput=document.getElementById("jStrategyRecord");
+    if(recordInput)recordInput.value=record;
+
+    const directionInput=document.getElementById("jDirection");
+    if(directionInput && state.directionResult){
+        directionInput.value=state.directionResult.direction;
+    }
+
+    const notes=document.getElementById("jNotes");
+    if(notes){
+        notes.value=buildJournalNotes();
+    }
+
+    const msg=document.getElementById("journalReadyMessage");
+    if(msg){
+        msg.className="alert success";
+        msg.innerHTML=`🟢 ${state.directionResult ? state.directionResult.direction : "WAIT"} — ${state.directionResult ? state.directionResult.confidence : "LOW"}<br>تمام انتخاب‌های Strategy و نتیجه Direction Engine به‌صورت خودکار در Journal ثبت شدند. فقط اطلاعات واقعی معامله را وارد کن.`;
+    }
+
+    document.getElementById("journalSection").classList.remove("hidden");
+
+    setTimeout(()=>{
+        document.getElementById("journalSection").scrollIntoView({behavior:"smooth",block:"start"});
+    },100);
+}
+
+
+function buildJournalNotes(){
+    const r=state.directionResult;
+    if(!r)return "";
+    let text="===== DIRECTION ENGINE =====\n";
+    text+="Recommendation: "+r.direction+"\n";
+    text+="Confidence: "+r.confidence+"\n";
+    text+="BUY SCORE: "+r.buyScore+"\n";
+    text+="SELL SCORE: "+r.sellScore+"\n\n";
+    if(r.buyReasons.length){text+="BUY EVIDENCE:\n";r.buyReasons.forEach(x=>text+="• "+x+"\n");text+="\n";}
+    if(r.sellReasons.length){text+="SELL EVIDENCE:\n";r.sellReasons.forEach(x=>text+="• "+x+"\n");text+="\n";}
+    if(r.neutralReasons.length){text+="NEUTRAL / CONFLICT:\n";r.neutralReasons.forEach(x=>text+="• "+x+"\n");}
+    return text;
 }
 
 
 /* =========================================================
-   DECISION MESSAGE
-========================================================= */
-
-function updateDecisionMessage(){
-
-    const selectedIndexes=
-        getSelectedAnswers();
-
-
-    if(selectedIndexes.length===0){
-
-        document.getElementById(
-            "decisionArea"
-        ).innerHTML="";
-
-        return;
-
-    }
-
-
-    const s=getCurrentStep();
-
-
-    const labels=
-        selectedIndexes.map(
-            i=>s.options[i][0]
-        );
-
-
-    const hard=
-        labels.some(
-            label=>isHardStop(label)
-        );
-
-
-    const wait=
-        labels.some(
-            label=>isWaitCondition(label)
-        );
-
-
-    if(hard){
-
-        document.getElementById(
-            "decisionArea"
-        ).innerHTML=`
-
-            <div class="alert danger">
-
-                🔴 NO TRADE / STOP CONDITION
-
-                <br>
-
-                ${labels.join(" + ")}
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    if(wait){
-
-        document.getElementById(
-            "decisionArea"
-        ).innerHTML=`
-
-            <div class="alert warning">
-
-                🟡 WAIT — SETUP DEVELOPING
-
-                <br>
-
-                ${labels.join(" + ")}
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    document.getElementById(
-        "decisionArea"
-    ).innerHTML=`
-
-        <div class="alert success">
-
-            🟢 CONDITION ACCEPTED
-
-            <br>
-
-            ${labels.join(" + ")}
-
-        </div>
-
-    `;
-
-}
-
-
-/* =========================================================
-   NEXT STEP
+   NEXT
 ========================================================= */
 
 function nextStep(){
 
-    if(state.hardLocked)return;
-
-
     const steps=currentSteps();
-
     const s=steps[state.step];
+    const selectedIndexes=getSelectedAnswers();
+    if(!selectedIndexes.length)return;
 
+    const selectedLabels=selectedIndexes.map(i=>s.options[i][0]);
 
-    const indexes=
-        getSelectedAnswers();
-
-
-    if(indexes.length===0)return;
-
-
-    const labels=
-        indexes.map(
-            i=>s.options[i][0]
-        );
-
-
-    if(
-        labels.some(
-            label=>isHardStop(label)
-        )
-    ){
-
-        hardLock(
-            "🔴 NO TRADE",
-            "شرط انتخاب‌شده Setup را invalid کرده است."
-        );
-
+    if(selectedLabels.some(label=>isHardStop(label))){
+        const stopLabel=selectedLabels.find(label=>isHardStop(label));
+        showFinalState("🔴 NO TRADE","شرط انتخاب‌شده Setup را invalid کرده است: "+stopLabel);
         return;
-
     }
 
-
-    if(
-        labels.some(
-            label=>isWaitCondition(label)
-        )
-    ){
-
-        showWaitState(
-            labels.join(" + ")
-        );
-
+    if(state.mode==="DAY" && selectedLabels.includes("REACTION PENDING")){
+        showFinalState("🟡 WAIT — HTF LIQUIDITY REACTION PENDING","تا زمانی که واکنش Liquidity Pool تایم‌فریم بالاتر مشخص نشود، Entry ممنوع است.");
         return;
-
     }
 
-
-    if(
-        state.mode==="DAY" &&
-        labels.includes("REACTION PENDING")
-    ){
-
-        showWaitState(
-            "HTF LIQUIDITY REACTION PENDING"
-        );
-
+    if(selectedLabels.some(label=>isWaitCondition(label)) && selectedLabels.length===1){
+        showFinalState("🟡 WAIT — SETUP DEVELOPING",selectedLabels[0]);
         return;
-
     }
 
-
-    if(
-        state.step===steps.length-1
-    ){
-
-        const finalLabel=labels[0];
-
-
-        if(
-            finalLabel==="ENTRY READY" ||
-            finalLabel==="V5 ENTRY READY"
-        ){
-
-            document.getElementById(
-                "assistantSection"
-            ).classList.add("hidden");
-
-
-            openFirewall();
-
+    if(state.step===steps.length-1){
+        const finalLabel=selectedLabels[0];
+        if(finalLabel==="ENTRY READY" || finalLabel==="V5 ENTRY READY"){
+            runDirectionEngine();
             return;
-
         }
-
-
-        if(finalLabel.includes("WAIT")){
-
-            showWaitState(finalLabel);
-
-        }else{
-
-            hardLock(
-                "🔴 NO TRADE",
-                finalLabel
-            );
-
-        }
-
+        showFinalState(finalLabel.includes("WAIT") ? "🟡 WAIT — SETUP DEVELOPING" : "🔴 NO TRADE",finalLabel);
         return;
-
     }
-
 
     state.step++;
-
     renderStep();
+}
 
+
+function runDirectionEngine(){
+    state.directionResult=state.mode==="DAY" ? calculateDayDirection() : calculateScalpDirection();
+    state.pendingJournal=buildStrategyRecord();
+    renderDirectionEngine();
+    openTradeJournal();
+
+    const nextBtn=document.getElementById("nextBtn");
+    nextBtn.disabled=false;
+    nextBtn.textContent="STRATEGY COMPLETE";
+    nextBtn.onclick=finishStrategy;
+}
+
+
+function getStepLabels(stepIndex){
+    const steps=currentSteps();
+    if(!steps[stepIndex])return [];
+    return (state.answers[stepIndex]||[]).map(i=>steps[stepIndex].options[i][0]);
+}
+
+
+function directionalTextScore(){
+    let buy=0,sell=0;
+    const reasonsBuy=[],reasonsSell=[];
+    allSelectedLabels().forEach(item=>{
+        const text=item.label.toUpperCase();
+        if(text.includes("BULLISH")||text.includes("LONG")||text.includes("BUY")){buy++;reasonsBuy.push(item.title+": "+item.label);}
+        if(text.includes("BEARISH")||text.includes("SHORT")||text.includes("SELL")){sell++;reasonsSell.push(item.title+": "+item.label);}
+    });
+    return {buy,sell,reasonsBuy,reasonsSell};
+}
+
+
+function allSelectedLabels(){
+    const result=[];
+    currentSteps().forEach((step,index)=>{
+        (state.answers[index]||[]).forEach(i=>result.push({step:index+1,title:step.title,label:step.options[i][0]}));
+    });
+    return result;
+}
+
+
+function calculateDayDirection(){
+    let buy=0,sell=0;
+    const buyReasons=[],sellReasons=[],neutralReasons=[];
+    const addBuy=(p,r)=>{buy+=p;buyReasons.push(`${r} (+${p})`);};
+    const addSell=(p,r)=>{sell+=p;sellReasons.push(`${r} (+${p})`);};
+    const neutral=r=>neutralReasons.push(r);
+
+    const monthly=getStepLabels(2),weekly=getStepLabels(3),daily=getStepLabels(4),h4=getStepLabels(5),h1=getStepLabels(6),ct=getStepLabels(7),htf=getStepLabels(9),events=getStepLabels(11),m15=getStepLabels(12),m5=getStepLabels(13),m1=getStepLabels(14);
+
+    if(monthly.includes("BULLISH"))addBuy(1,"Monthly Bullish Context");
+    if(monthly.includes("BEARISH"))addSell(1,"Monthly Bearish Context");
+    if(weekly.includes("BULLISH / EXPANSION"))addBuy(2,"Weekly Bullish / Expansion");
+    if(weekly.includes("BEARISH / EXPANSION"))addSell(2,"Weekly Bearish / Expansion");
+    if(daily.includes("BULLISH"))addBuy(2,"Daily Bullish Context");
+    if(daily.includes("BEARISH"))addSell(2,"Daily Bearish Context");
+    if(h4.includes("BULLISH"))addBuy(3,"H4 Bullish Market State");
+    if(h4.includes("BEARISH"))addSell(3,"H4 Bearish Market State");
+    if(h4.includes("RANGE"))neutral("H4 Range");
+
+    if(h1.includes("ALIGNMENT")){
+        if(h4.includes("BULLISH"))addBuy(2,"H1/H4 Bullish Alignment");
+        if(h4.includes("BEARISH"))addSell(2,"H1/H4 Bearish Alignment");
+    }
+    if(h1.includes("H1 CORRECTION"))neutral("H1 Correction — direction is not reversed automatically");
+    if(ct.includes("TOUCH #2"))neutral("Counter-Trend Touch #2 — Critical Event");
+    if(ct.includes("TOUCH #3"))neutral("Counter-Trend Touch #3 — Quality Enhancement");
+    if(htf.includes("SWEEP & REVERSAL"))neutral("HTF Sweep & Reversal — side must be confirmed by structure");
+    if(htf.includes("BREAK & ACCEPTANCE"))neutral("HTF Break & Acceptance — continuation evidence");
+
+    m15.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(3,"M15 Bullish Confirmation");if(t.includes("BEARISH"))addSell(3,"M15 Bearish Confirmation");});
+    m5.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(2,"M5 Bullish Structure");if(t.includes("BEARISH"))addSell(2,"M5 Bearish Structure");});
+    m1.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(3,"M1 Bullish Execution");if(t.includes("BEARISH"))addSell(3,"M1 Bearish Execution");});
+    events.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(2,"Bullish Liquidity Event");if(t.includes("BEARISH"))addSell(2,"Bearish Liquidity Event");});
+
+    const explicit=directionalTextScore();
+    if(explicit.buy)buy+=Math.min(explicit.buy,2);
+    if(explicit.sell)sell+=Math.min(explicit.sell,2);
+    explicit.reasonsBuy.forEach(r=>buyReasons.push(r));
+    explicit.reasonsSell.forEach(r=>sellReasons.push(r));
+
+    return buildDirectionResult(buy,sell,buyReasons,sellReasons,neutralReasons);
+}
+
+
+function calculateScalpDirection(){
+    let buy=0,sell=0;
+    const buyReasons=[],sellReasons=[],neutralReasons=[];
+    const addBuy=(p,r)=>{buy+=p;buyReasons.push(`${r} (+${p})`);};
+    const addSell=(p,r)=>{sell+=p;sellReasons.push(`${r} (+${p})`);};
+    const neutral=r=>neutralReasons.push(r);
+
+    const location=getStepLabels(2),liquidity=getStepLabels(3),structure=getStepLabels(4),trigger=getStepLabels(5);
+    location.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(2,"V5 Bullish Location");if(t.includes("BEARISH"))addSell(2,"V5 Bearish Location");if(t==="RANGE MIDDLE")neutral("Range Middle");});
+    liquidity.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(3,"V5 Bullish Liquidity Event");if(t.includes("BEARISH"))addSell(3,"V5 Bearish Liquidity Event");if(!t.includes("BULLISH")&&!t.includes("BEARISH"))neutral("V5 Liquidity Event: "+label+" — direction requires structural confirmation");});
+    structure.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(4,"V5 Bullish M1 Structure");if(t.includes("BEARISH"))addSell(4,"V5 Bearish M1 Structure");});
+    trigger.forEach(label=>{const t=label.toUpperCase();if(t.includes("BULLISH"))addBuy(5,"V5 Bullish M1 Trigger");if(t.includes("BEARISH"))addSell(5,"V5 Bearish M1 Trigger");});
+    neutral("V5 SL Location checked");
+    neutral("V5 Nearby Target checked");
+    const explicit=directionalTextScore();
+    buy+=Math.min(explicit.buy,2);sell+=Math.min(explicit.sell,2);
+    explicit.reasonsBuy.forEach(r=>buyReasons.push(r));explicit.reasonsSell.forEach(r=>sellReasons.push(r));
+    return buildDirectionResult(buy,sell,buyReasons,sellReasons,neutralReasons);
+}
+
+
+function buildDirectionResult(buy,sell,buyReasons,sellReasons,neutralReasons){
+    let direction="WAIT",confidence="LOW",decisionType="wait";
+    const total=buy+sell,difference=Math.abs(buy-sell);
+    if(total>=4){
+        if(buy>=4&&sell>=4&&difference<=2){direction="WAIT";confidence="CONFLICT";decisionType="conflict";neutralReasons.push("BUY and SELL evidence are too close — Directional Conflict");}
+        else if(buy>sell&&buy>=5&&difference>=2){direction="BUY";decisionType="buy";confidence=(buy>=10&&difference>=5)?"HIGH":"MEDIUM";}
+        else if(sell>buy&&sell>=5&&difference>=2){direction="SELL";decisionType="sell";confidence=(sell>=10&&difference>=5)?"HIGH":"MEDIUM";}
+    }
+    return {direction,confidence,decisionType,buyScore:buy,sellScore:sell,buyReasons,sellReasons,neutralReasons};
+}
+
+
+function renderDirectionEngine(){
+    const r=state.directionResult;if(!r)return;
+    let css="warning",icon="🟡",title="WAIT — NO CLEAR DIRECTION";
+    if(r.decisionType==="buy"){css="success";icon="🟢";title="BUY — LONG SETUP";}
+    if(r.decisionType==="sell"){css="danger";icon="🔴";title="SELL — SHORT SETUP";}
+    if(r.decisionType==="conflict"){css="warning";icon="⚠️";title="WAIT — DIRECTIONAL CONFLICT";}
+    const list=(arr,empty)=>arr.length?arr.map(x=>`<li>${escapeHtml(x)}</li>`).join(""):`<li>${empty}</li>`;
+    document.getElementById("questionArea").innerHTML=`<div class="alert ${css}" style="font-size:22px;font-weight:900;text-align:center">${icon} ${title}<br><span style="font-size:13px;font-weight:normal">Confidence: ${escapeHtml(r.confidence)}</span></div><div class="grid"><div class="stat"><div class="label">BUY SCORE</div><div class="value">${r.buyScore}</div></div><div class="stat"><div class="label">SELL SCORE</div><div class="value">${r.sellScore}</div></div><div class="stat"><div class="label">SESSION</div><div class="value" style="font-size:17px">${escapeHtml(state.session||"Unknown")}</div></div><div class="stat"><div class="label">STRATEGY</div><div class="value" style="font-size:17px">${state.mode==="DAY"?"V3.6.9":"V5"}</div></div></div><br><details open><summary>🟢 BUY EVIDENCE</summary><div class="detailbody"><ul>${list(r.buyReasons,"No strong BUY evidence.")}</ul></div></details><details open><summary>🔴 SELL EVIDENCE</summary><div class="detailbody"><ul>${list(r.sellReasons,"No strong SELL evidence.")}</ul></div></details><details><summary>⚪ NEUTRAL / CONFLICT</summary><div class="detailbody"><ul>${list(r.neutralReasons,"None.")}</ul></div></details><div class="alert info"><strong>Direction Engine:</strong> تصمیم فقط بر اساس انتخاب‌های ثبت‌شده در همین Strategy است. اگر شواهد جهت‌دار کافی نباشد، سیستم BUY یا SELL را به زور صادر نمی‌کند.</div>`;
+    document.getElementById("decisionArea").innerHTML=`<div class="alert success">📓 JOURNAL READY<br>تمام انتخاب‌های Strategy، Direction و دلایل تصمیم برای Journal آماده شده‌اند.</div>`;
+}
+
+
+function finishStrategy(){
+    const btn=document.getElementById("nextBtn");
+    btn.disabled=true;
+    btn.textContent="STRATEGY COMPLETE";
+    btn.onclick=null;
+    document.getElementById("decisionArea").innerHTML=`<div class="alert success">🟢 STRATEGY COMPLETE<br><br>Direction: <strong>${escapeHtml(state.directionResult?state.directionResult.direction:"WAIT")}</strong><br><br>Journal آماده ثبت معامله است. Entry / SL / TP / Result را تکمیل کن و سپس روی SAVE TRADE بزن.</div>`;
 }
 
 
 /* =========================================================
-   BACK
+   FINAL STATE
 ========================================================= */
 
-function previousStep(){
+function showFinalState(title,text){
 
-    if(state.hardLocked)return;
-
-
-    if(state.step===0)return;
+    let type="danger";
 
 
-    state.step--;
+    if(title.includes("ENTRY")){
 
-    renderStep();
+        type="success";
 
-}
+    }else if(title.includes("WAIT")){
+
+        type="warning";
+
+    }
 
 
-/* =========================================================
-   WAIT STATE
-========================================================= */
-
-function showWaitState(text){
-
-    document.getElementById(
-        "questionArea"
-    ).innerHTML=`
+    document.getElementById("questionArea")
+        .innerHTML=`
 
         <div
-            class="alert warning"
-            style="font-size:18px;font-weight:900">
+            class="alert ${type}"
+            style="font-size:18px;font-weight:900"
+        >
 
-            🟡 WAIT — SETUP DEVELOPING
+            ${title}
 
         </div>
 
@@ -3156,1081 +3018,140 @@ function showWaitState(text){
 
             ${text}
 
-            <br><br>
-
-            تا زمانی که شرط کامل نشود،
-            Entry مجاز نیست.
-
         </div>
-
-    `;
-
-
-    document.getElementById(
-        "decisionArea"
-    ).innerHTML=`
-
-        <div class="alert warning">
-
-            SYSTEM STATUS: WAIT
-
-        </div>
-
-    `;
-
-
-    document.getElementById(
-        "nextBtn"
-    ).disabled=true;
-
-}
-
-
-/* =========================================================
-   HARD LOCK
-========================================================= */
-
-function hardLock(title,text){
-
-    state.hardLocked=true;
-
-    document.getElementById(
-        "firewallBadge"
-    ).textContent=
-        "FIREWALL: HARD LOCK";
-
-    document.getElementById(
-        "firewallBadge"
-    ).className=
-        "badge red";
-
-
-    document.getElementById(
-        "questionArea"
-    ).innerHTML=`
-
-        <div class="lockbox">
-
-            ${title}
-
-            <br>
-
-            ${text}
-
-            <br><br>
-
-            این Setup قابل اجرا نیست.
-
-            <br>
-
-            برای بررسی فرصت بعدی باید
-            Setup را Reset کنی.
-
-        </div>
-
-    `;
-
-
-    document.getElementById(
-        "decisionArea"
-    ).innerHTML=`
-
-        <div class="alert danger">
-
-            🔒 HARD LOCK
-
-            <br>
-
-            Back و تغییر پاسخ‌ها برای عبور از
-            این Lock مجاز نیست.
-
-        </div>
-
-    `;
-
-
-    document.getElementById(
-        "nextBtn"
-    ).disabled=true;
-
-
-    document.getElementById(
-        "backBtn"
-    ).disabled=true;
-
-}
-
-
-/* =========================================================
-   DISCIPLINE FIREWALL QUESTIONS
-========================================================= */
-
-const fullFirewall=[
-
-{
-    title:"FIREWALL 1 — FOMO",
-    question:"آیا این ورود به دلیل ترس از دست دادن حرکت بازار است؟",
-    options:[
-        ["NO","اگر Setup نباشد وارد نمی‌شوم."],
-        ["YES","FOMO detected → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 2 — REVENGE",
-    question:"آیا این معامله برای جبران ضرر قبلی است؟",
-    options:[
-        ["NO","هدف من اجرای سیستم است، نه جبران ضرر."],
-        ["YES","Revenge Trading → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 3 — IMPULSE",
-    question:"آیا قبل از دیدن Setup تصمیم ورود گرفته‌ام و حالا دنبال دلیل می‌گردم؟",
-    options:[
-        ["NO","تصمیم بر اساس Setup است."],
-        ["YES","Impulsive Decision → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 4 — RULE BREAK",
-    question:"آیا برای این معامله یکی از قوانین سیستم را عمداً نادیده گرفته‌ام؟",
-    options:[
-        ["NO","تمام قوانین رعایت شده‌اند."],
-        ["YES","Rule Break → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 5 — INVALIDATION",
-    question:"آیا دقیقاً می‌دانم چه چیزی Setup را باطل می‌کند؟",
-    options:[
-        ["YES","Invalidation Point مشخص است."],
-        ["NO","Invalidation نامشخص → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 6 — RISK",
-    question:"آیا Risk و SL قبل از Entry مشخص و قابل قبول هستند؟",
-    options:[
-        ["YES","Risk کنترل شده است."],
-        ["NO","Risk Undefined → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 7 — ACCEPT LOSS",
-    question:"اگر این معامله SL شود، آیا بدون تغییر قانون آن را می‌پذیرم؟",
-    options:[
-        ["YES","Loss بخشی از سیستم است."],
-        ["NO","Emotional Risk → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 8 — MISSED TRADE",
-    question:"اگر این معامله را از دست بدهم، آیا باز هم حاضر هستم طبق پلن بمانم؟",
-    options:[
-        ["YES","No Chase."],
-        ["NO","Chasing Behavior → NO ENTRY."]
-    ]
-},
-
-{
-    title:"FIREWALL 9 — JOURNAL TEST",
-    question:"آیا حاضر هستم همین تصمیم را بدون خجالت در Journal ثبت کنم؟",
-    options:[
-        ["YES","Decision قابل ثبت است."],
-        ["NO","اگر نمی‌توانم ثبتش کنم، اجرا نمی‌کنم."]
-    ]
-},
-
-{
-    title:"FIREWALL 10 — FINAL HONESTY",
-    question:"اگر الان احساساتم را حذف کنیم، آیا هنوز طبق قوانین سیستم وارد می‌شوم؟",
-    options:[
-        ["YES","Decision is System-Based."],
-        ["NO","Emotion detected → NO ENTRY."]
-    ]
-}
-
-];
-
-
-const fastFirewall=[
-
-{
-    title:"V5 FIREWALL 1 — FOMO",
-    question:"آیا فقط به خاطر سرعت حرکت بازار می‌خواهم وارد شوم؟",
-    options:[
-        ["NO","Setup اولویت دارد."],
-        ["YES","FOMO → NO ENTRY."]
-    ]
-},
-
-{
-    title:"V5 FIREWALL 2 — IMPULSE",
-    question:"آیا Trigger واقعی دارم یا فقط احساس می‌کنم قیمت باید حرکت کند؟",
-    options:[
-        ["REAL TRIGGER","Trigger واقعی وجود دارد."],
-        ["IMPULSE","Impulse → NO ENTRY."]
-    ]
-},
-
-{
-    title:"V5 FIREWALL 3 — SL",
-    question:"آیا SL دقیقاً پشت Invalidation قرار دارد؟",
-    options:[
-        ["YES","SL valid."],
-        ["NO","Invalid SL → NO ENTRY."]
-    ]
-},
-
-{
-    title:"V5 FIREWALL 4 — TARGET",
-    question:"آیا Target نزدیک و مشخص است؟",
-    options:[
-        ["YES","Target valid."],
-        ["NO","No Target → NO ENTRY."]
-    ]
-},
-
-{
-    title:"V5 FIREWALL 5 — CHASE",
-    question:"آیا قیمت بدون من حرکت کرده و الان دارم آن را Chase می‌کنم؟",
-    options:[
-        ["NO","No Chase."],
-        ["YES","Chasing → NO ENTRY."]
-    ]
-},
-
-{
-    title:"V5 FIREWALL 6 — FINAL",
-    question:"اگر این فرصت را از دست بدهم، آیا حاضر هستم معامله نکنم؟",
-    options:[
-        ["YES","Discipline Passed."],
-        ["NO","Emotional Attachment → NO ENTRY."]
-    ]
-}
-
-];
-
-
-/* =========================================================
-   FIREWALL ENGINE
-========================================================= */
-
-function firewallSteps(){
-
-    return state.mode==="DAY"
-        ? fullFirewall
-        : fastFirewall;
-
-}
-
-
-function openFirewall(){
-
-    state.firewallStep=0;
-
-    state.firewallAnswers={};
-
-    state.firewallPassed=false;
-
-    state.authorized=false;
-
-    state.pauseComplete=false;
-
-    state.hardLocked=false;
-
-
-    document.getElementById(
-        "firewallSection"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).textContent=
-        state.mode==="DAY"
-        ? "FIREWALL: FULL"
-        : "FIREWALL: FAST";
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).className=
-        "badge yellow";
-
-
-    renderFirewall();
-
-
-    setTimeout(()=>{
-
-        document.getElementById(
-            "firewallSection"
-        ).scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
-
-    },100);
-
-}
-
-
-function getFirewallAnswer(){
-
-    return state.firewallAnswers[
-        state.firewallStep
-    ];
-
-}
-
-
-function renderFirewall(){
-
-    const steps=
-        firewallSteps();
-
-    const s=
-        steps[state.firewallStep];
-
-
-    if(!s)return;
-
-
-    const selected=
-        getFirewallAnswer();
-
-
-    let html=`
-
-        <div class="question">
-
-            ${s.title}
-
-            <br>
-
-            ${s.question}
-
-        </div>
-
-        <div class="options">
-
-    `;
-
-
-    s.options.forEach((opt,i)=>{
-
-        const active=
-            selected===i;
-
-
-        html+=`
-
-            <div
-                class="option ${
-                    active
-                    ? "selected"
-                    : ""
-                }"
-                onclick="chooseFirewallAnswer(${i})">
-
-                <strong>
-                    ${opt[0]}
-                </strong>
-
-                <small>
-                    ${opt[1]}
-                </small>
-
-            </div>
 
         `;
 
-    });
 
+    document.getElementById("decisionArea")
+        .innerHTML=`
 
-    html+=`</div>`;
+        <div class="alert info">
 
-
-    document.getElementById(
-        "firewallQuestionArea"
-    ).innerHTML=html;
-
-
-    updateFirewallDecision();
-
-
-    document.getElementById(
-        "firewallBackBtn"
-    ).disabled=
-        state.firewallStep===0;
-
-
-    document.getElementById(
-        "firewallNextBtn"
-    ).disabled=
-        selected===undefined;
-
-
-    document.getElementById(
-        "firewallNextBtn"
-    ).textContent=
-        state.firewallStep===steps.length-1
-        ? "FINAL FIREWALL CHECK"
-        : "NEXT →";
-
-}
-
-
-function chooseFirewallAnswer(index){
-
-    if(state.hardLocked)return;
-
-
-    state.firewallAnswers[
-        state.firewallStep
-    ]=index;
-
-
-    renderFirewall();
-
-}
-
-
-function firewallAnswerIsDangerous(){
-
-    const steps=
-        firewallSteps();
-
-    const s=
-        steps[state.firewallStep];
-
-    const selected=
-        getFirewallAnswer();
-
-
-    if(selected===undefined)return false;
-
-
-    const label=
-        s.options[selected][0]
-        .toUpperCase();
-
-
-    if(state.mode==="DAY"){
-
-        return label==="YES" ||
-               label==="NO";
-
-    }
-
-
-    return(
-        label==="YES" ||
-        label==="IMPULSE" ||
-        label==="NO"
-    );
-
-}
-
-
-function updateFirewallDecision(){
-
-    const selected=
-        getFirewallAnswer();
-
-
-    if(selected===undefined){
-
-        document.getElementById(
-            "firewallDecisionArea"
-        ).innerHTML="";
-
-        return;
-
-    }
-
-
-    const danger=
-        firewallAnswerIsDangerous();
-
-
-    const steps=
-        firewallSteps();
-
-    const s=
-        steps[state.firewallStep];
-
-
-    const label=
-        s.options[selected][0];
-
-
-    if(danger){
-
-        document.getElementById(
-            "firewallDecisionArea"
-        ).innerHTML=`
-
-            <div class="alert danger">
-
-                🔴 FIREWALL FAILURE RISK
-
-                <br>
-
-                ${label}
-
-            </div>
-
-        `;
-
-    }else{
-
-        document.getElementById(
-            "firewallDecisionArea"
-        ).innerHTML=`
-
-            <div class="alert success">
-
-                🟢 DISCIPLINE CONDITION ACCEPTED
-
-                <br>
-
-                ${label}
-
-            </div>
-
-        `;
-
-    }
-
-}
-
-
-/* =========================================================
-   FIREWALL NEXT
-========================================================= */
-
-function nextFirewallStep(){
-
-    const steps=
-        firewallSteps();
-
-    const selected=
-        getFirewallAnswer();
-
-
-    if(selected===undefined)return;
-
-
-    const s=
-        steps[state.firewallStep];
-
-
-    const label=
-        s.options[selected][0]
-        .toUpperCase();
-
-
-    /*
-        HARD FAIL DEFINITIONS
-    */
-
-    const fail=
-        label==="YES" ||
-        label==="IMPULSE" ||
-        label==="NO";
-
-
-    /*
-        Special cases:
-        Questions where YES is the correct answer.
-    */
-
-    const questionTitle=
-        s.title;
-
-
-    let actualFail=false;
-
-
-    if(state.mode==="DAY"){
-
-        if(
-            questionTitle.includes("FOMO") ||
-            questionTitle.includes("REVENGE") ||
-            questionTitle.includes("IMPULSE") ||
-            questionTitle.includes("RULE BREAK")
-        ){
-
-            actualFail=
-                label==="YES";
-
-        }
-
-        else{
-
-            actualFail=
-                label==="NO";
-
-        }
-
-    }else{
-
-        if(
-            questionTitle.includes("FOMO") ||
-            questionTitle.includes("IMPULSE") ||
-            questionTitle.includes("CHASE")
-        ){
-
-            actualFail=
-                label==="YES" ||
-                label==="IMPULSE";
-
-        }else{
-
-            actualFail=
-                label==="NO";
-
-        }
-
-    }
-
-
-    if(actualFail){
-
-        firewallHardLock(
-            "🔴 DISCIPLINE FIREWALL FAILED",
-            label
-        );
-
-        return;
-
-    }
-
-
-    if(
-        state.firewallStep===
-        steps.length-1
-    ){
-
-        passFirewall();
-
-        return;
-
-    }
-
-
-    state.firewallStep++;
-
-    renderFirewall();
-
-}
-
-
-/* =========================================================
-   FIREWALL BACK
-========================================================= */
-
-function firewallBack(){
-
-    if(
-        state.firewallStep===0
-    )return;
-
-
-    state.firewallStep--;
-
-    renderFirewall();
-
-}
-
-
-/* =========================================================
-   FIREWALL HARD LOCK
-========================================================= */
-
-function firewallHardLock(title,text){
-
-    state.hardLocked=true;
-
-    state.firewallPassed=false;
-
-    state.authorized=false;
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).textContent=
-        "FIREWALL: FAILED";
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).className=
-        "badge red";
-
-
-    document.getElementById(
-        "firewallQuestionArea"
-    ).innerHTML=`
-
-        <div class="lockbox">
-
-            ${title}
-
-            <br><br>
-
-            ${text}
-
-            <br><br>
-
-            معامله مجاز نیست.
-
-        </div>
-
-    `;
-
-
-    document.getElementById(
-        "firewallDecisionArea"
-    ).innerHTML=`
-
-        <div class="alert danger">
-
-            🔒 HARD LOCK
-
-            <br>
-
-            سیستم اجازه Entry نمی‌دهد.
-
-            <br><br>
-
-            برای فرصت بعدی باید
-            Reset Plan انجام شود.
-
-        </div>
-
-    `;
-
-
-    document.getElementById(
-        "firewallNextBtn"
-    ).disabled=true;
-
-
-    document.getElementById(
-        "firewallBackBtn"
-    ).disabled=true;
-
-}
-
-
-/* =========================================================
-   FIREWALL PASS
-========================================================= */
-
-function passFirewall(){
-
-    state.firewallPassed=true;
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).textContent=
-        "FIREWALL: PASSED";
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).className=
-        "badge green";
-
-
-    document.getElementById(
-        "firewallSection"
-    ).classList.add("hidden");
-
-
-    document.getElementById(
-        "pauseSection"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-        "pauseTimer"
-    ).textContent="10";
-
-
-    document.getElementById(
-        "pauseStartBtn"
-    ).disabled=false;
-
-
-    document.getElementById(
-        "pauseStartBtn"
-    ).textContent=
-        "START 10-SECOND PAUSE";
-
-
-    setTimeout(()=>{
-
-        document.getElementById(
-            "pauseSection"
-        ).scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
-
-    },100);
-
-}
-
-
-/* =========================================================
-   10 SECOND PAUSE
-========================================================= */
-
-let pauseInterval=null;
-
-
-function startPause(){
-
-    if(!state.firewallPassed)return;
-
-
-    const btn=
-        document.getElementById(
-            "pauseStartBtn"
-        );
-
-
-    btn.disabled=true;
-
-    let seconds=10;
-
-
-    document.getElementById(
-        "pauseTimer"
-    ).textContent=seconds;
-
-
-    pauseInterval=
-        setInterval(()=>{
-
-            seconds--;
-
-            document.getElementById(
-                "pauseTimer"
-            ).textContent=seconds;
-
-
-            if(seconds<=0){
-
-                clearInterval(
-                    pauseInterval
-                );
-
-                completePause();
-
+            Engine:
+            ${
+                state.mode==="DAY"
+                ? "V3.6.9 STRUCTURAL SNIPER"
+                : "V5 SUPER SCALP"
             }
 
-        },1000);
+            <br>
 
-}
+            Session:
+            ${state.session}
 
+            <br>
 
-function completePause(){
+            Daily Trades:
+            ${dailyTrades().length}/3
 
-    state.pauseComplete=true;
+        </div>
 
-
-    document.getElementById(
-        "pauseTimer"
-    ).textContent=
-        "✓";
-
-
-    document.getElementById(
-        "pauseStartBtn"
-    ).textContent=
-        "PAUSE COMPLETE";
+        `;
 
 
-    document.getElementById(
-        "authorizationSection"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-        "authCode"
-    ).textContent=
-        "🟢 EXECUTION AUTHORIZED";
-
-
-    setTimeout(()=>{
-
-        document.getElementById(
-            "authorizationSection"
-        ).scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
-
-    },100);
+    document.getElementById("nextBtn")
+        .disabled=true;
 
 }
 
 
 /* =========================================================
-   STRATEGY RECORD
+   RESET
 ========================================================= */
 
-function buildStrategyRecord(){
+function resetPlan(){
 
-    const steps=
-        currentSteps();
-
-    let lines=[];
-
-
-    lines.push(
-        "================================"
-    );
-
-    lines.push(
-        "SNIPER GOD'S PLAN — DECISION RECORD"
-    );
-
-    lines.push(
-        "================================"
-    );
-
-
-    lines.push(
-        "Engine: "+
-        (
-            state.mode==="DAY"
-            ? "V3.6.9 STRUCTURAL SNIPER"
-            : "V5 SUPER SCALP"
+    if(
+        !confirm(
+            "Reset the current plan and return to the beginning?"
         )
-    );
+    ){
+
+        return;
+
+    }
 
 
-    lines.push(
-        "Session: "+
-        (state.session || "Unknown")
-    );
+    state.preparation=false;
+
+    state.session=null;
+
+    state.mode=null;
+
+    state.step=0;
+
+    state.answers={};
+    state.directionResult=null;
+    state.pendingJournal=null;
 
 
-    lines.push(
-        "Date: "+
-        todayString()
-    );
+    document.getElementById("assistantSection")
+        .classList.add("hidden");
+
+    document.getElementById("journalSection")
+        .classList.add("hidden");
+
+    document.getElementById("playbookSection")
+        .classList.add("hidden");
+
+    document.getElementById("treeSection")
+        .classList.add("hidden");
+
+    document.getElementById("sessionSection")
+        .classList.add("hidden");
+
+    document.getElementById("modeSection")
+        .classList.add("hidden");
+
+    document.getElementById("dailyPreparation")
+        .classList.remove("hidden");
 
 
-    lines.push("");
+    document.getElementById("gratitude")
+        .checked=false;
+
+    document.getElementById("focus333")
+        .checked=false;
+
+    document.getElementById("meditation")
+        .checked=false;
 
 
-    steps.forEach((step,index)=>{
+    document.getElementById("sessionContinue")
+        .disabled=true;
 
-        const answers=
-            state.answers[index] || [];
-
-
-        if(!answers.length)return;
+    document.getElementById("modeContinue")
+        .disabled=true;
 
 
-        const labels=
-            answers.map(
-                i=>step.options[i][0]
-            );
-
-
-        lines.push(
-            `${index+1}. ${step.title}`
+    document.querySelectorAll(".option")
+        .forEach(
+            x=>x.classList.remove("selected")
         );
 
 
-        lines.push(
-            "Selected: "+
-            labels.join(" + ")
-        );
+    document.getElementById("modeBadge")
+        .textContent=
+        "MODE: NOT SELECTED";
 
 
-        lines.push("");
-
-    });
-
-
-    lines.push(
-        "================================"
-    );
-
-    lines.push(
-        "DISCIPLINE FIREWALL"
-    );
-
-    lines.push(
-        "================================"
-    );
+    document.getElementById("modeBadge")
+        .classList.remove("active");
 
 
-    const fw=
-        firewallSteps();
+    document.getElementById("sessionBadge")
+        .textContent=
+        "SESSION: NOT SELECTED";
 
 
-    fw.forEach((step,index)=>{
-
-        const answer=
-            state.firewallAnswers[index];
+    document.getElementById("sessionBadge")
+        .classList.remove("active");
 
 
-        if(answer===undefined)return;
-
-
-        lines.push(
-            `${index+1}. ${step.title}`
-        );
-
-
-        lines.push(
-            "Selected: "+
-            step.options[answer][0]
-        );
-
-
-        lines.push("");
-
-    });
-
-
-    lines.push(
-        "================================"
-    );
-
-    lines.push(
-        "FINAL STATUS: "+
-        (
-            state.authorized
-            ? "EXECUTION AUTHORIZED"
-            : "NOT AUTHORIZED"
-        )
-    );
-
-    lines.push(
-        "================================"
-    );
-
-
-    return lines.join("\n");
+    document.getElementById(
+        "jStrategyRecord"
+    ).value="";
 
 }
 
@@ -4239,77 +3160,22 @@ function buildStrategyRecord(){
    JOURNAL
 ========================================================= */
 
-function openTradeJournal(){
-
-    if(
-        !state.firewallPassed ||
-        !state.pauseComplete
-    ){
-
-        alert(
-            "🔴 Execution Authorization is not complete."
-        );
-
-        return;
-
-    }
-
-
-    state.authorized=true;
-
-
-    document.getElementById(
-        "jStrategyRecord"
-    ).value=
-        buildStrategyRecord();
-
-
-    document.getElementById(
-        "journalReadyMessage"
-    ).innerHTML=`
-
-        🟢 EXECUTION AUTHORIZED
-
-        <br>
-
-        Strategy + Discipline Firewall ثبت شد.
-
-        <br>
-
-        فقط اطلاعات واقعی معامله را وارد کن.
-
-    `;
-
-
-    document.getElementById(
-        "journalSection"
-    ).classList.remove("hidden");
-
-
-    setTimeout(()=>{
-
-        document.getElementById(
-            "journalSection"
-        ).scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
-
-    },100);
-
-}
-
-
-/* =========================================================
-   ADD TRADE
-========================================================= */
-
 function addTrade(){
 
-    if(!state.authorized){
+    const today=
+        new Date()
+        .toISOString()
+        .slice(0,10);
+
+
+    const tradesToday=
+        dailyTrades();
+
+
+    if(tradesToday.length>=3){
 
         alert(
-            "🔴 Trade is not authorized by Discipline Firewall."
+            "🔴 Maximum Daily Trades = 3"
         );
 
         return;
@@ -4317,16 +3183,24 @@ function addTrade(){
     }
 
 
-    if(tradingLocked()){
+    if(consecutiveLosses()>=2){
 
         alert(
-            "🔴 Trading Day Closed."
+            "🔴 2 Consecutive Losses — STOP FOR THE DAY"
         );
 
         return;
 
     }
 
+
+    /*
+        Strategy record MUST exist before
+        saving a trade.
+
+        This guarantees that a trade cannot
+        be saved without its decision history.
+    */
 
     const strategyRecord=
         document.getElementById(
@@ -4337,7 +3211,7 @@ function addTrade(){
     if(!strategyRecord){
 
         alert(
-            "🔴 Strategy Record missing."
+            "🔴 Strategy Decision Record is missing. Complete the Strategy Assistant first."
         );
 
         return;
@@ -4349,7 +3223,7 @@ function addTrade(){
 
         id:Date.now(),
 
-        date:todayString(),
+        date:today,
 
         time:new Date()
             .toLocaleTimeString(),
@@ -4365,7 +3239,7 @@ function addTrade(){
         direction:
             document.getElementById(
                 "jDirection"
-            ).value.trim(),
+            ).value,
 
         entry:
             document.getElementById(
@@ -4385,7 +3259,7 @@ function addTrade(){
         result:
             document.getElementById(
                 "jResult"
-            ).value.trim(),
+            ).value,
 
         strategyRecord:
             strategyRecord,
@@ -4400,9 +3274,9 @@ function addTrade(){
 
     if(
         !trade.direction ||
-        trade.entry==="" ||
-        trade.sl==="" ||
-        trade.tp===""
+        !trade.entry ||
+        !trade.sl ||
+        !trade.tp
     ){
 
         alert(
@@ -4425,15 +3299,11 @@ function addTrade(){
     );
 
 
+    clearJournalInputs();
+
     renderJournal();
 
     updateTradeBadge();
-
-
-    clearJournalInputs();
-
-
-    state.authorized=false;
 
 
     if(
@@ -4457,22 +3327,8 @@ function addTrade(){
 
     }
 
-
-    /*
-       IMPORTANT:
-       After a trade is saved, the authorization
-       is consumed.
-
-       A new trade requires a completely new setup
-       and a new Discipline Firewall.
-    */
-
 }
 
-
-/* =========================================================
-   CLEAR JOURNAL INPUTS
-========================================================= */
 
 function clearJournalInputs(){
 
@@ -4500,31 +3356,30 @@ function clearJournalInputs(){
         "jNotes"
     ).value="";
 
+    /*
+        Strategy record is intentionally
+        NOT cleared here because it belongs
+        to the current completed setup and
+        remains visible for review.
+    */
+
 }
 
 
-/* =========================================================
-   JOURNAL TABLE
-========================================================= */
-
 function renderJournal(){
 
-    const data=
-        state.trades;
+    const data=state.trades;
 
 
-    if(!data.length){
+    if(data.length===0){
 
         document.getElementById(
             "journalTable"
-        ).innerHTML=`
-
-            <div class="alert info">
-
-                No trades recorded yet.
-
-            </div>
-
+        ).innerHTML=
+        `
+        <div class="alert info">
+            No trades recorded yet.
+        </div>
         `;
 
         return;
@@ -4534,29 +3389,29 @@ function renderJournal(){
 
     let html=`
 
-        <table>
+    <table>
 
-            <thead>
+        <thead>
 
-                <tr>
+            <tr>
 
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Engine</th>
-                    <th>Session</th>
-                    <th>Direction</th>
-                    <th>Entry</th>
-                    <th>SL</th>
-                    <th>TP</th>
-                    <th>Result</th>
-                    <th>Decision</th>
-                    <th>Notes</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Engine</th>
+                <th>Session</th>
+                <th>Direction</th>
+                <th>Entry</th>
+                <th>SL</th>
+                <th>TP</th>
+                <th>Result</th>
+                <th>Strategy Record</th>
+                <th>Notes</th>
 
-                </tr>
+            </tr>
 
-            </thead>
+        </thead>
 
-            <tbody>
+        <tbody>
 
     `;
 
@@ -4568,74 +3423,40 @@ function renderJournal(){
 
         html+=`
 
-            <tr>
+        <tr>
 
-                <td>
-                    ${escapeHtml(t.date)}
-                </td>
+            <td>${escapeHtml(t.date)}</td>
 
-                <td>
-                    ${escapeHtml(t.time)}
-                </td>
+            <td>${escapeHtml(t.time)}</td>
 
-                <td>
-                    ${escapeHtml(t.engine)}
-                </td>
+            <td>${escapeHtml(t.engine)}</td>
 
-                <td>
-                    ${escapeHtml(t.session)}
-                </td>
+            <td>${escapeHtml(t.session)}</td>
 
-                <td>
-                    ${escapeHtml(t.direction)}
-                </td>
+            <td>${escapeHtml(t.direction)}</td>
 
-                <td>
-                    ${escapeHtml(t.entry)}
-                </td>
+            <td>${escapeHtml(t.entry)}</td>
 
-                <td>
-                    ${escapeHtml(t.sl)}
-                </td>
+            <td>${escapeHtml(t.sl)}</td>
 
-                <td>
-                    ${escapeHtml(t.tp)}
-                </td>
+            <td>${escapeHtml(t.tp)}</td>
 
-                <td>
-                    ${escapeHtml(t.result)}
-                </td>
+            <td>${escapeHtml(t.result)}</td>
 
-                <td>
+            <td>
+                <details>
+                    <summary>VIEW DECISION</summary>
+                    <div class="detailbody">
+                        ${escapeHtml(
+                            t.strategyRecord || ""
+                        ).replace(/\n/g,"<br>")}
+                    </div>
+                </details>
+            </td>
 
-                    <details>
+            <td>${escapeHtml(t.notes)}</td>
 
-                        <summary>
-                            VIEW
-                        </summary>
-
-                        <div class="detailbody">
-
-                            ${
-                                escapeHtml(
-                                    t.strategyRecord || ""
-                                ).replace(
-                                    /\n/g,
-                                    "<br>"
-                                )
-                            }
-
-                        </div>
-
-                    </details>
-
-                </td>
-
-                <td>
-                    ${escapeHtml(t.notes)}
-                </td>
-
-            </tr>
+        </tr>
 
         `;
 
@@ -4644,9 +3465,9 @@ function renderJournal(){
 
     html+=`
 
-            </tbody>
+        </tbody>
 
-        </table>
+    </table>
 
     `;
 
@@ -4657,10 +3478,6 @@ function renderJournal(){
 
 }
 
-
-/* =========================================================
-   CLEAR JOURNAL
-========================================================= */
 
 function clearJournal(){
 
@@ -4677,7 +3494,6 @@ function clearJournal(){
 
     state.trades=[];
 
-
     localStorage.removeItem(
         "sniperTrades"
     );
@@ -4689,10 +3505,6 @@ function clearJournal(){
 
 }
 
-
-/* =========================================================
-   ESCAPE HTML
-========================================================= */
 
 function escapeHtml(value){
 
@@ -4754,11 +3566,15 @@ function updateTradeBadge(){
 
     if(count>=3){
 
-        badge.classList.add("red");
+        badge.classList.add(
+            "red"
+        );
 
     }else{
 
-        badge.classList.add("green");
+        badge.classList.add(
+            "green"
+        );
 
     }
 
@@ -4767,12 +3583,6 @@ function updateTradeBadge(){
         document.getElementById(
             "riskBadge"
         );
-
-
-    riskBadge.classList.remove(
-        "green",
-        "red"
-    );
 
 
     if(
@@ -4791,187 +3601,11 @@ function updateTradeBadge(){
         riskBadge.textContent=
             "RISK: ACTIVE";
 
-        riskBadge.classList.add(
-            "green"
+        riskBadge.classList.remove(
+            "red"
         );
 
     }
-
-}
-
-
-/* =========================================================
-   RESET PLAN
-========================================================= */
-
-function resetPlan(){
-
-    if(
-        !confirm(
-            "Reset current setup and return to Daily Preparation?"
-        )
-    ){
-
-        return;
-
-    }
-
-
-    if(
-        pauseInterval
-    ){
-
-        clearInterval(
-            pauseInterval
-        );
-
-    }
-
-
-    state.preparation=false;
-
-    state.session=null;
-
-    state.mode=null;
-
-    state.step=0;
-
-    state.answers={};
-
-    state.firewallStep=0;
-
-    state.firewallAnswers={};
-
-    state.firewallPassed=false;
-
-    state.authorized=false;
-
-    state.pauseComplete=false;
-
-    state.hardLocked=false;
-
-
-    [
-        "assistantSection",
-        "journalSection",
-        "playbookSection",
-        "treeSection",
-        "sessionSection",
-        "modeSection",
-        "firewallSection",
-        "pauseSection",
-        "authorizationSection"
-    ].forEach(id=>{
-
-        document.getElementById(id)
-            .classList.add("hidden");
-
-    });
-
-
-    document.getElementById(
-        "dailyPreparation"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-        "gratitude"
-    ).checked=false;
-
-
-    document.getElementById(
-        "focus333"
-    ).checked=false;
-
-
-    document.getElementById(
-        "meditation"
-    ).checked=false;
-
-
-    document.getElementById(
-        "sessionContinue"
-    ).disabled=true;
-
-
-    document.getElementById(
-        "modeContinue"
-    ).disabled=true;
-
-
-    document.querySelectorAll(
-        ".option"
-    ).forEach(
-        x=>x.classList.remove("selected")
-    );
-
-
-    document.getElementById(
-        "modeBadge"
-    ).textContent=
-        "MODE: NOT SELECTED";
-
-
-    document.getElementById(
-        "modeBadge"
-    ).classList.remove("active");
-
-
-    document.getElementById(
-        "sessionBadge"
-    ).textContent=
-        "SESSION: NOT SELECTED";
-
-
-    document.getElementById(
-        "sessionBadge"
-    ).classList.remove("active");
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).textContent=
-        "FIREWALL: STANDBY";
-
-
-    document.getElementById(
-        "firewallBadge"
-    ).className="badge";
-
-
-    document.getElementById(
-        "jStrategyRecord"
-    ).value="";
-
-
-    document.getElementById(
-        "jDirection"
-    ).value="";
-
-
-    document.getElementById(
-        "jEntry"
-    ).value="";
-
-
-    document.getElementById(
-        "jSL"
-    ).value="";
-
-
-    document.getElementById(
-        "jTP"
-    ).value="";
-
-
-    document.getElementById(
-        "jResult"
-    ).value="";
-
-
-    document.getElementById(
-        "jNotes"
-    ).value="";
 
 }
 
